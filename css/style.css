@@ -1516,10 +1516,6 @@ background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);}
   object-fit: cover;
 }
 
-/* =========================================== 
-   BLOC TOP HEADLINES - CORRIGÉ POUR VOTRE HTML
-   =========================================== */
-
 .top-headlines {
   width: 360px;
   position: relative;
@@ -1564,7 +1560,6 @@ background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);}
 
 /* Articles individuels */
 .top-headlines .news,
-.top-headlines .news-2,
 .top-headlines .news-3,
 .top-headlines .news-4,
 .top-headlines .news-5,
@@ -1574,6 +1569,21 @@ background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);}
   border-bottom: 1px solid #D1CCEC;
   position: relative;
   background: #ffffff;
+  min-height: 58px;
+}
+
+/* Articles avec arrière-plan alterné */
+.top-headlines .overlap .news-2,
+.top-headlines .news-wrapper .news-2,
+.top-headlines .div-wrapper .news-2,
+.top-headlines .overlap-2 .news-2,
+.top-headlines .overlap-3 .news-2 {
+  width: 100%;
+  padding: 12px 10px;
+  border-bottom: 1px solid #D1CCEC;
+  position: relative;
+  background: #FBFAFF;
+  min-height: 58px;
 }
 
 /* Conteneur overlap pour certains articles */
@@ -1584,6 +1594,7 @@ background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);}
 .top-headlines .overlap-3 {
   width: 100%;
   position: relative;
+  background: #FBFAFF;
 }
 
 /* Lignes de séparation dans les overlaps */
@@ -1597,20 +1608,40 @@ background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);}
   background: #D1CCEC;
 }
 
-/* Métadonnées (numéro et catégorie) */
+/* Métadonnées avec numéros */
 .top-headlines .div-2 {
   margin: 0 0 6px 0;
   font-size: 14px;
   font-family: "Montserrat", Helvetica;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .top-headlines .text-wrapper-10 {
-  color: #0C004F;
+  color: #4A4085;
   font-weight: 700;
-  margin-right: 8px;
+  min-width: 15px;
 }
 
 .top-headlines .text-wrapper-11 {
+  color: #4A4085;
+  font-weight: 700;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* Séparateur entre numéro/catégorie et date */
+.top-headlines .div-2::after {
+  content: "|";
+  color: #0C004F;
+  font-weight: 500;
+  margin: 0 4px;
+}
+
+/* Dates */
+.top-headlines .div-2 .date {
   color: #0C004F;
   font-weight: 500;
 }
@@ -1630,7 +1661,7 @@ background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);}
   overflow: hidden;
 }
 
-/* Lien "View all news" */
+/* Lien "More News" */
 .top-headlines .label-icon-right-2 {
   display: flex;
   align-items: center;
@@ -1655,14 +1686,43 @@ background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);}
   font-weight: bold;
 }
 
+/* Ajout des numéros via CSS counter */
+.top-headlines {
+  counter-reset: news-counter;
+}
+
+.top-headlines .news,
+.top-headlines .overlap .news-2,
+.top-headlines .news-3,
+.top-headlines .news-wrapper .news-2,
+.top-headlines .news-4,
+.top-headlines .div-wrapper .news-2,
+.top-headlines .news-5,
+.top-headlines .overlap-2 .news-2,
+.top-headlines .news-6,
+.top-headlines .overlap-3 .news-2 {
+  counter-increment: news-counter;
+}
+
+.top-headlines .text-wrapper-10::before {
+  content: counter(news-counter) ".";
+  color: #4A4085;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
 /* Hover effects */
 .top-headlines .news:hover,
 .top-headlines .news-2:hover,
 .top-headlines .news-3:hover,
 .top-headlines .news-4:hover,
 .top-headlines .news-5:hover,
-.top-headlines .news-6:hover {
-  background-color: #FBFAFF;
+.top-headlines .news-6:hover,
+.top-headlines .overlap:hover,
+.top-headlines .news-wrapper:hover,
+.top-headlines .div-wrapper:hover,
+.top-headlines .overlap-2:hover,
+.top-headlines .overlap-3:hover {
   cursor: pointer;
 }
 
