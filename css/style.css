@@ -1603,13 +1603,15 @@ body {
 }
 
 .top-headlines .text-wrapper-10 {
-  color: #4A4085;
+      color: #0C004F;
+
   font-weight: 700;
   min-width: 15px;
 }
 
 .top-headlines .text-wrapper-11 {
-  color: #4A4085;
+      color: #0C004F;
+
   font-weight: 700;
   background: transparent;
   border: none;
@@ -1631,18 +1633,16 @@ body {
 }
 
 /* Titres des articles */
-.top-headlines .text-wrapper-9,
-.top-headlines .text-wrapper-12 {
+.top-headlines .text-wrapper-9 {
+  font-family: 'Harriet Text-Regular !imaportant';
+  font-size: 18px;
   color: #0C004F;
-  font-size: 16px;
-  font-family: "Harriet Text", Helvetica;
-  font-weight: 500;
-  margin: 0;
-  line-height: 1.3;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+}
+
+.top-headlines .text-wrapper-12 {
+  font-family: 'Harriet Text-Regular !imaportant';
+  font-size: 18px;
+  color: #0C004F;
 }
 
 .headlines-text {
