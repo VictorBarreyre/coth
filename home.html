@@ -1,298 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
-    <title>Sports News Website</title>
-     <link rel="stylesheet" href="css/style.css" />
-     <style>
-       /* Styles pour les placeholders uniquement */
-       .img-placeholder {
-         background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         color: #999;
-         font-size: 14px;
-         font-weight: 500;
-         text-align: center;
-         border: 1px solid #ddd;
-         width: 100%;
-         height: 100%;
-       }
 
-       /* Conteneur pour la mise en page à deux colonnes */
-       .content-wrapper {
-         position: relative;
-         width: 1920px;
-         display: flex;
-         gap: 40px;
-       }
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <title>Sports News Website</title>
+  <link rel="stylesheet" href="css/style.css" />
 
-       /* Colonne principale */
-       .main-column {
-         position: relative;
-         width: 1320px;
-       }
+</head>
 
-       /* Repositionnement de la colonne droite */
-       .cl-droite {
-         position: relative !important;
-         width: 360px;
-         top: 80px !important;
-         left: 0 !important;
-         flex-shrink: 0;
-       }
-     </style>
-  </head>
-  <body>
-    <div class="scale-wrapper" id="scaleWrapper">
-      <!-- Header reste identique -->
-      <header class="HEADER" role="banner">
-        <div class="overlap">
-          <div class="BG" aria-hidden="true"></div>
-          <div class="avatar" aria-label="User avatar">
-            <div class="overlap-group">
-              <img src="assets/Avatar.svg" alt="User Avatar" />
-            </div>
+<body>
+  <div class="scale-wrapper" id="scaleWrapper">
+    <!-- Header reste identique -->
+    <header class="HEADER" role="banner">
+      <div class="overlap">
+        <div class="BG" aria-hidden="true"></div>
+        <div class="avatar" aria-label="User avatar">
+          <div class="overlap-group">
+            <img src="assets/Avatar.svg" alt="User Avatar" />
           </div>
-          <div class="subscribe-now">
-            <span class="text-wrapper">Subscribe Now<br /></span>
-            <span class="span">Unlimited access</span>
+        </div>
+        <div class="subscribe-now">
+          <span class="text-wrapper">Subscribe Now<br /></span>
+          <span class="span">Unlimited access</span>
+        </div>
+        <button class="loupe" type="button" aria-label="Search">
+          <div class="vector-wrapper">
+            <img src="assets/Loupe.svg" alt="Search Icon" />
           </div>
-          <button class="loupe" type="button" aria-label="Search">
-            <div class="vector-wrapper">
-              <img src="assets/Loupe.svg" alt="Search Icon" />
-            </div>
-          </button>
-        </div>
-        <div style="position: absolute; width: 100px; height: 30px; top: 25px; left: 1388px; ; display: flex; gap: 20px;">
-            <img src="assets/ig.svg" alt="RS Logo" />
-            <img src="assets/FB.svg" alt="RS Logo" />
-        </div>
-        <div class="div">
-          <nav class="nav" role="navigation" aria-label="Main navigation">
-            <a href="#sports" class="text-wrapper-2">Sports</a>
-            <a href="#features" class="text-wrapper-3">Features</a>
-            <a href="#videos" class="text-wrapper-4">Videos</a>
-            <a href="#live" class="text-wrapper-5">Live</a>
-            <button class="forum" type="button" aria-label="Forum">
-              <span class="text-wrapper-6">Forum</span>
-            </button>
-          </nav>
-          <button class="symboles-chevrons" type="button" aria-label="Expand sports menu">
-            <img src="assets/Chevronbas.svg" alt="Chevron Icon" />         
         </button>
-          <button class="icon-wrapper" type="button" aria-label="Expand features menu">
-             <img src="assets/Chevronbas.svg" alt="Chevron Icon" />   
+      </div>
+      <div style="position: absolute; width: 100px; height: 30px; top: 25px; left: 1388px; ; display: flex; gap: 20px;">
+        <img src="assets/ig.svg" alt="RS Logo" />
+        <img src="assets/FB.svg" alt="RS Logo" />
+      </div>
+      <div class="div">
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+          <a href="#sports" class="text-wrapper-2">Sports</a>
+          <a href="#features" class="text-wrapper-3">Features</a>
+          <a href="#videos" class="text-wrapper-4">Videos</a>
+          <a href="#live" class="text-wrapper-5">Live</a>
+          <button class="forum" type="button" aria-label="Forum">
+            <span class="text-wrapper-6">Forum</span>
           </button>
+        </nav>
+        <button class="symboles-chevrons" type="button" aria-label="Expand sports menu">
+          <img src="assets/Chevronbas.svg" alt="Chevron Icon" />
+        </button>
+        <button class="icon-wrapper" type="button" aria-label="Expand features menu">
+          <img src="assets/Chevronbas.svg" alt="Chevron Icon" />
+        </button>
+      </div>
+      <div class="favicon">
+        <div class="overlap-2">
+          <img src="assets/Favicon.svg" alt="Logo" />
         </div>
-        <div class="favicon">
-          <div class="overlap-2">
-                <img src="assets/Favicon.svg" alt="Logo" />
-          </div>
-        </div>
-      </header>
-      
-      <!-- Conteneur pour les deux colonnes -->
-      <div class="content-wrapper">
-        <!-- Colonne principale (gauche) -->
-        <div class="main-column">
-          <main class="cl-gauche" role="main">
-            <article class="article-GR">
-              <div class="tag-5"><span class="text-wrapper-9">Jumping</span></div>
-              <h1 class="opinion-we-can">
-                <span class="text-wrapper-19">Opinion: We </span>
-                <span class="text-wrapper-19">can remedy the scourge of overuse in horse showing</span>
-              </h1>
-              <div class="image-6 img-placeholder">Featured Image 1040x585</div>
-              <p class="by-lindsay-berreth-l-2">
-                By Lindsay Berreth&nbsp;&nbsp;l&nbsp;&nbsp;<time datetime="2025-08-20">20.08.25</time>
-              </p>
-            </article>
+      </div>
+    </header>
 
-            <aside class="display-hor-2" aria-label="Advertisement">
-              <p class="ADVERTISEMENT-2"><span class="span">A</span> <span class="span">dvertisement</span></p>
-              <div class="blc-wrapper"><div class="blc img-placeholder">Ad Banner 980x122</div></div>
-            </aside>
 
-            <section class="element-articles-med" aria-label="Medium Articles">
-              <article class="article-med">
-                <div class="overlap-group-2">
-                  <div class="tag-3"><span class="text-wrapper-9">Culture</span></div>
-                  <h3 class="text-wrapper-18">Mass Staff Departure Concerns LAEC Community</h3>
-                  <p class="by-lindsay-berreth-l">
-                    By Lindsay Berreth&nbsp;&nbsp;l&nbsp;&nbsp;<time datetime="2025-08-20">20.08.25</time>
-                  </p>
-                </div>
-                <div class="image-5 img-placeholder">Article Image 500x282</div>
-              </article>
-              <article class="article-med-2">
-                <div class="overlap-2">
-                  <div class="tag-3"><span class="text-wrapper-9">Culture</span></div>
-                  <h3 class="text-wrapper-18">Mass Staff Departure Concerns LAEC Community</h3>
-                  <p class="by-lindsay-berreth-l">
-                    By Lindsay Berreth&nbsp;&nbsp;l&nbsp;&nbsp;<time datetime="2025-08-20">20.08.25</time>
-                  </p>
-                </div>
-                <div class="image-5 img-placeholder">Article Image 500x282</div>
-              </article>
-              <article class="article-med-3">
-                <div class="overlap-2">
-                  <div class="tag-4"><span class="text-wrapper-9">Jumping</span></div>
-                  <h3 class="text-wrapper-18">In A World Of Bays, GFS Mikado Steals The Spotlight</h3>
-                  <p class="by-kimberly-loushin">
-                    By Kimberly Loushin&nbsp;&nbsp;l&nbsp;&nbsp;<time datetime="2025-08-20">20.08.25</time>
-                  </p>
-                </div>
-                <div class="image-5 img-placeholder">Article Image 500x282</div>
-              </article>
-              <article class="article-med-4">
-                <div class="overlap-2">
-                  <div class="tag-4"><span class="text-wrapper-9">Jumping</span></div>
-                  <h3 class="text-wrapper-18">In A World Of Bays, GFS Mikado Steals The Spotlight</h3>
-                  <p class="by-kimberly-loushin">
-                    By Kimberly Loushin&nbsp;&nbsp;l&nbsp;&nbsp;<time datetime="2025-08-20">20.08.25</time>
-                  </p>
-                </div>
-                <div class="image-5 img-placeholder">Article Image 500x282</div>
-              </article>
-            </section>
+    <div class="logo-placeholder-ad" aria-hidden="true">
+      <div class="logo-top" role="img" aria-label="Company logo">
+        <img src="assets/Logo.svg" alt="Company logo" />
+      </div>
+    
+          <aside class="display-intro" aria-label="Advertisement">
+            <div class="img-placeholder-intro">Advertisement 1000x200</div>
+            <p class="ADVERTISEMENT"><span class="span">A</span> <span class="span">dvertisement</span></p>
+          </aside>
 
-            <aside class="display-hor" aria-label="Advertisement">
-              <p class="ADVERTISEMENT-2"><span class="span">A</span> <span class="span">dvertisement</span></p>
-              <div class="banniere"><div class="blc img-placeholder">Ad Banner 980x122</div></div>
-            </aside>
+    </div>
 
-            <section class="element-articles-sm-2" aria-label="Additional Small Articles">
-              <article class="article-sm">
-                <div class="image-3 img-placeholder">Thumbnail 250x141</div>
-                <div class="overlap-group">
-                  <h3 class="text-wrapper-8">
-                    Hymetii praeclarae duplexque isdem diebus acciderat. Eodem tempore etiam Hymetii praeclarae.
-                  </h3>
-                  <div class="div-wrapper"><span class="text-wrapper-9">Culture</span></div>
-                  <time class="text-wrapper-10" datetime="2025-08-20">20.08.25</time>
-                </div>
-              </article>
-              <article class="article-sm-2">
-                <div class="image-3 img-placeholder">Thumbnail 250x141</div>
-                <h3 class="text-wrapper-11">
-                  Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat. Eodem tempore etiam Hymetii
-                  praeclarae duplexque isdem diebus acciderat.
-                </h3>
-                <div class="tag-2"><span class="text-wrapper-9">Culture</span></div>
-                <time class="text-wrapper-12" datetime="2025-08-20">20.08.25</time>
-              </article>
-              <article class="article-sm-3">
-                <div class="image-3 img-placeholder">Thumbnail 250x141</div>
-                <div class="overlap">
-                  <h3 class="text-wrapper-8">
-                    Hymetii praeclarae duplexque isdem diebus acciderat. Eodem tempore etiam Hymetii praeclarae.
-                  </h3>
-                  <div class="div-wrapper"><span class="text-wrapper-9">Culture</span></div>
-                  <time class="text-wrapper-10" datetime="2025-08-20">20.08.25</time>
-                </div>
-              </article>
-              <article class="article-sm-4">
-                <div class="image-3 img-placeholder">Thumbnail 250x141</div>
-                <h3 class="text-wrapper-11">
-                  Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat. Eodem tempore etiam Hymetii
-                  praeclarae duplexque isdem diebus acciderat.
-                </h3>
-                <div class="tag-2"><span class="text-wrapper-9">Culture</span></div>
-                <time class="text-wrapper-12" datetime="2025-08-20">20.08.25</time>
-              </article>
-            </section>
 
-            <section class="video" aria-label="Live Video Section">
-              <div class="img-placeholder" style="position: absolute; width: 1440px; height: 134px; top: 630px; left: 240px;">BDX Logo</div>
-              <div class="live">
-                <article class="live-2">
-                  <div class="frame"><div class="image-4 img-placeholder">Logo</div></div>
-                  <div class="preuve-EN-junior">
-                    <h3 class="text-wrapper-13">Épreuve EN_17 • Junior Team Compétition - Day 1</h3>
-                    <time class="text-wrapper-14" datetime="2025-07-30T10:00">mercredi, 30.07.2025 - 10:00</time>
-                  </div>
-                </article>
-                <article class="live-3">
-                  <div class="frame"><div class="image-4 img-placeholder">Logo</div></div>
-                  <div class="preuve-EN-junior">
-                    <h3 class="text-wrapper-13">Épreuve EN_17 • Junior Team Compétition - Day 1</h3>
-                    <time class="text-wrapper-14" datetime="2025-07-30T10:00">mercredi, 30.07.2025 - 10:00</time>
-                  </div>
-                </article>
-                <article class="live-4">
-                  <div class="frame"><div class="image-4 img-placeholder">Logo</div></div>
-                  <div class="preuve-EN-junior">
-                    <h3 class="text-wrapper-13">Épreuve EN_17 • Junior Team Compétition - Day 1</h3>
-                    <time class="text-wrapper-14" datetime="2025-07-30T10:00">mercredi, 30.07.2025 - 10:00</time>
-                  </div>
-                </article>
-                <article class="live-5">
-                  <div class="frame"><div class="image-4 img-placeholder">Logo</div></div>
-                  <div class="preuve-EN-junior">
-                    <h3 class="text-wrapper-13">Épreuve EN_17 • Junior Team Compétition - Day 1</h3>
-                    <time class="text-wrapper-14" datetime="2025-07-30T10:00">mercredi, 30.07.2025 - 10:00</time>
-                  </div>
-                </article>
-                <div class="frame-2" aria-hidden="true"></div>
-                <p class="now-live">
-                  <span class="text-wrapper-15">Now</span>
-                  <span class="text-wrapper-16">&nbsp;</span>
-                  <span class="text-wrapper-17">live</span>
+    <!-- Conteneur pour les deux colonnes -->
+    <div class="content-wrapper">
+      <!-- Colonne principale (gauche) -->
+      <div class="main-column">
+        <main class="cl-gauche" role="main">
+          <article class="article-GR">
+            <div class="tag-5"><span class="text-wrapper-9">Jumping</span></div>
+            <h1 class="opinion-we-can">
+              <span class="text-wrapper-19">Opinion: We </span>
+              <span class="text-wrapper-19">can remedy the scourge of overuse in horse showing</span>
+            </h1>
+            <div class="image-6 img-placeholder">Featured Image 1040x585</div>
+            <p class="by-lindsay-berreth-l-2">
+              By Lindsay Berreth&nbsp;&nbsp;l&nbsp;&nbsp;<time datetime="2025-08-20">20.08.25</time>
+            </p>
+          </article>
+
+          <aside class="display-hor-2" aria-label="Advertisement">
+            <p class="ADVERTISEMENT-2"><span class="span">A</span> <span class="span">dvertisement</span></p>
+            <div class="blc-wrapper">
+              <div class="blc img-placeholder">Ad Banner 980x122</div>
+            </div>
+          </aside>
+
+          <section class="element-articles-med" aria-label="Medium Articles">
+            <article class="article-med">
+              <div class="overlap-group-2">
+                <div class="tag-3"><span class="text-wrapper-9">Culture</span></div>
+                <h3 class="text-wrapper-18">Mass Staff Departure Concerns LAEC Community</h3>
+                <p class="by-lindsay-berreth-l">
+                  By Lindsay Berreth&nbsp;&nbsp;l&nbsp;&nbsp;<time datetime="2025-08-20">20.08.25</time>
                 </p>
               </div>
-              <div class="video-2 img-placeholder" style="position: absolute; width: 750px; height: 422px; top: 168px; left: 240px;">Video Player 750x422</div>
-              <div class="logo" role="img" aria-label="Company logo"><div class="mask"></div></div>
-            </section>
+              <div class="image-5 img-placeholder">Article Image 500x282</div>
+            </article>
+            <article class="article-med-2">
+              <div class="overlap-2">
+                <div class="tag-3"><span class="text-wrapper-9">Culture</span></div>
+                <h3 class="text-wrapper-18">Mass Staff Departure Concerns LAEC Community</h3>
+                <p class="by-lindsay-berreth-l">
+                  By Lindsay Berreth&nbsp;&nbsp;l&nbsp;&nbsp;<time datetime="2025-08-20">20.08.25</time>
+                </p>
+              </div>
+              <div class="image-5 img-placeholder">Article Image 500x282</div>
+            </article>
+            <article class="article-med-3">
+              <div class="overlap-2">
+                <div class="tag-4"><span class="text-wrapper-9">Jumping</span></div>
+                <h3 class="text-wrapper-18">In A World Of Bays, GFS Mikado Steals The Spotlight</h3>
+                <p class="by-kimberly-loushin">
+                  By Kimberly Loushin&nbsp;&nbsp;l&nbsp;&nbsp;<time datetime="2025-08-20">20.08.25</time>
+                </p>
+              </div>
+              <div class="image-5 img-placeholder">Article Image 500x282</div>
+            </article>
+            <article class="article-med-4">
+              <div class="overlap-2">
+                <div class="tag-4"><span class="text-wrapper-9">Jumping</span></div>
+                <h3 class="text-wrapper-18">In A World Of Bays, GFS Mikado Steals The Spotlight</h3>
+                <p class="by-kimberly-loushin">
+                  By Kimberly Loushin&nbsp;&nbsp;l&nbsp;&nbsp;<time datetime="2025-08-20">20.08.25</time>
+                </p>
+              </div>
+              <div class="image-5 img-placeholder">Article Image 500x282</div>
+            </article>
+          </section>
 
-            <section class="element-articles-sm" aria-label="Small Articles">
-              <article class="article-sm">
-                <div class="image-3 img-placeholder">Thumbnail 250x141</div>
-                <div class="overlap-group">
-                  <h3 class="text-wrapper-8">
-                    Hymetii praeclarae duplexque isdem diebus acciderat. Eodem tempore etiam Hymetii praeclarae.
-                  </h3>
-                  <div class="div-wrapper"><span class="text-wrapper-9">Culture</span></div>
-                  <time class="text-wrapper-10" datetime="2025-08-20">20.08.25</time>
+          <aside class="display-hor" aria-label="Advertisement">
+            <p class="ADVERTISEMENT-2"><span class="span">A</span> <span class="span">dvertisement</span></p>
+            <div class="banniere">
+              <div class="blc img-placeholder">Ad Banner 980x122</div>
+            </div>
+          </aside>
+
+          <section class="element-articles-sm-2" aria-label="Additional Small Articles">
+            <article class="article-sm">
+              <div class="image-3 img-placeholder">Thumbnail 250x141</div>
+              <div class="overlap-group">
+                <h3 class="text-wrapper-8">
+                  Hymetii praeclarae duplexque isdem diebus acciderat. Eodem tempore etiam Hymetii praeclarae.
+                </h3>
+                <div class="div-wrapper"><span class="text-wrapper-9">Culture</span></div>
+                <time class="text-wrapper-10" datetime="2025-08-20">20.08.25</time>
+              </div>
+            </article>
+            <article class="article-sm-2">
+              <div class="image-3 img-placeholder">Thumbnail 250x141</div>
+              <h3 class="text-wrapper-11">
+                Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat. Eodem tempore etiam Hymetii
+                praeclarae duplexque isdem diebus acciderat.
+              </h3>
+              <div class="tag-2"><span class="text-wrapper-9">Culture</span></div>
+              <time class="text-wrapper-12" datetime="2025-08-20">20.08.25</time>
+            </article>
+            <article class="article-sm-3">
+              <div class="image-3 img-placeholder">Thumbnail 250x141</div>
+              <div class="overlap">
+                <h3 class="text-wrapper-8">
+                  Hymetii praeclarae duplexque isdem diebus acciderat. Eodem tempore etiam Hymetii praeclarae.
+                </h3>
+                <div class="div-wrapper"><span class="text-wrapper-9">Culture</span></div>
+                <time class="text-wrapper-10" datetime="2025-08-20">20.08.25</time>
+              </div>
+            </article>
+            <article class="article-sm-4">
+              <div class="image-3 img-placeholder">Thumbnail 250x141</div>
+              <h3 class="text-wrapper-11">
+                Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat. Eodem tempore etiam Hymetii
+                praeclarae duplexque isdem diebus acciderat.
+              </h3>
+              <div class="tag-2"><span class="text-wrapper-9">Culture</span></div>
+              <time class="text-wrapper-12" datetime="2025-08-20">20.08.25</time>
+            </article>
+          </section>
+
+          <section class="video" aria-label="Live Video Section">
+            <div class="img-placeholder"
+              style="position: absolute; width: 1440px; height: 134px; top: 630px; left: 240px;">BDX Logo</div>
+            <div class="live">
+              <article class="live-2">
+                <div class="frame">
+                  <div class="image-4 img-placeholder">Logo</div>
+                </div>
+                <div class="preuve-EN-junior">
+                  <h3 class="text-wrapper-13">Épreuve EN_17 • Junior Team Compétition - Day 1</h3>
+                  <time class="text-wrapper-14" datetime="2025-07-30T10:00">mercredi, 30.07.2025 - 10:00</time>
                 </div>
               </article>
-              <article class="article-sm-2">
-                <div class="image-3 img-placeholder">Thumbnail 250x141</div>
-                <h3 class="text-wrapper-11">
-                  Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat. Eodem tempore etiam Hymetii
-                  praeclarae duplexque isdem diebus acciderat.
-                </h3>
-                <div class="tag-2"><span class="text-wrapper-9">Culture</span></div>
-                <time class="text-wrapper-12" datetime="2025-08-20">20.08.25</time>
-              </article>
-              <article class="article-sm-3">
-                <div class="image-3 img-placeholder">Thumbnail 250x141</div>
-                <div class="overlap">
-                  <h3 class="text-wrapper-8">
-                    Hymetii praeclarae duplexque isdem diebus acciderat. Eodem tempore etiam Hymetii praeclarae.
-                  </h3>
-                  <div class="div-wrapper"><span class="text-wrapper-9">Culture</span></div>
-                  <time class="text-wrapper-10" datetime="2025-08-20">20.08.25</time>
+              <article class="live-3">
+                <div class="frame">
+                  <div class="image-4 img-placeholder">Logo</div>
+                </div>
+                <div class="preuve-EN-junior">
+                  <h3 class="text-wrapper-13">Épreuve EN_17 • Junior Team Compétition - Day 1</h3>
+                  <time class="text-wrapper-14" datetime="2025-07-30T10:00">mercredi, 30.07.2025 - 10:00</time>
                 </div>
               </article>
-              <article class="article-sm-4">
-                <div class="image-3 img-placeholder">Thumbnail 250x141</div>
-                <h3 class="text-wrapper-11">
-                  Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat. Eodem tempore etiam Hymetii
-                  praeclarae duplexque isdem diebus acciderat.
-                </h3>
-                <div class="tag-2"><span class="text-wrapper-9">Culture</span></div>
-                <time class="text-wrapper-12" datetime="2025-08-20">20.08.25</time>
+              <article class="live-4">
+                <div class="frame">
+                  <div class="image-4 img-placeholder">Logo</div>
+                </div>
+                <div class="preuve-EN-junior">
+                  <h3 class="text-wrapper-13">Épreuve EN_17 • Junior Team Compétition - Day 1</h3>
+                  <time class="text-wrapper-14" datetime="2025-07-30T10:00">mercredi, 30.07.2025 - 10:00</time>
+                </div>
               </article>
-            </section>
+              <article class="live-5">
+                <div class="frame">
+                  <div class="image-4 img-placeholder">Logo</div>
+                </div>
+                <div class="preuve-EN-junior">
+                  <h3 class="text-wrapper-13">Épreuve EN_17 • Junior Team Compétition - Day 1</h3>
+                  <time class="text-wrapper-14" datetime="2025-07-30T10:00">mercredi, 30.07.2025 - 10:00</time>
+                </div>
+              </article>
+              <div class="frame-2" aria-hidden="true"></div>
+              <p class="now-live">
+                <span class="text-wrapper-15">Now</span>
+                <span class="text-wrapper-16">&nbsp;</span>
+                <span class="text-wrapper-17">live</span>
+              </p>
+            </div>
+            <div class="video-2 img-placeholder"
+              style="position: absolute; width: 750px; height: 422px; top: 168px; left: 240px;">Video Player 750x422
+            </div>
+            <div class="logo" role="img" aria-label="Company logo">
+              <div class="mask"></div>
+            </div>
+          </section>
 
-            <section class="forum" aria-label="Forum Widget">
-              <h2 class="text-wrapper-7">Widget Forum</h2>
-            </section>
+          <section class="element-articles-sm" aria-label="Small Articles">
+            <article class="article-sm">
+              <div class="image-3 img-placeholder">Thumbnail 250x141</div>
+              <div class="overlap-group">
+                <h3 class="text-wrapper-8">
+                  Hymetii praeclarae duplexque isdem diebus acciderat. Eodem tempore etiam Hymetii praeclarae.
+                </h3>
+                <div class="div-wrapper"><span class="text-wrapper-9">Culture</span></div>
+                <time class="text-wrapper-10" datetime="2025-08-20">20.08.25</time>
+              </div>
+            </article>
+            <article class="article-sm-2">
+              <div class="image-3 img-placeholder">Thumbnail 250x141</div>
+              <h3 class="text-wrapper-11">
+                Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat. Eodem tempore etiam Hymetii
+                praeclarae duplexque isdem diebus acciderat.
+              </h3>
+              <div class="tag-2"><span class="text-wrapper-9">Culture</span></div>
+              <time class="text-wrapper-12" datetime="2025-08-20">20.08.25</time>
+            </article>
+            <article class="article-sm-3">
+              <div class="image-3 img-placeholder">Thumbnail 250x141</div>
+              <div class="overlap">
+                <h3 class="text-wrapper-8">
+                  Hymetii praeclarae duplexque isdem diebus acciderat. Eodem tempore etiam Hymetii praeclarae.
+                </h3>
+                <div class="div-wrapper"><span class="text-wrapper-9">Culture</span></div>
+                <time class="text-wrapper-10" datetime="2025-08-20">20.08.25</time>
+              </div>
+            </article>
+            <article class="article-sm-4">
+              <div class="image-3 img-placeholder">Thumbnail 250x141</div>
+              <h3 class="text-wrapper-11">
+                Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat. Eodem tempore etiam Hymetii
+                praeclarae duplexque isdem diebus acciderat.
+              </h3>
+              <div class="tag-2"><span class="text-wrapper-9">Culture</span></div>
+              <time class="text-wrapper-12" datetime="2025-08-20">20.08.25</time>
+            </article>
+          </section>
 
-            <article class="MEA-3">
+          <section class="forum" aria-label="Forum Widget">
+            <h2 class="text-wrapper-7">Widget Forum</h2>
+          </section>
+
+          <article class="MEA-3">
+            <div class="texte">
+              <p class="text-wrapper">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="div">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="p">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="text-wrapper-2">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="text-wrapper-3">
+                Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore etiam Hymetii
+                praeclarae duplexque isdem diebus acciderat
+              </p>
+              <p class="text-wrapper-4">
+                Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore
+              </p>
+              <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 77px; left: 1px;">
+                Line</div>
+              <div class="img-placeholder"
+                style="position: absolute; width: 453px; height: 1px; top: 77px; left: 494px;">Line</div>
+              <div class="img-placeholder"
+                style="position: absolute; width: 453px; height: 1px; top: 233px; left: 1px;">Line</div>
+              <div class="img-placeholder"
+                style="position: absolute; width: 453px; height: 1px; top: 203px; left: 494px;">Line</div>
+            </div>
+            <div class="image img-placeholder">Article Image 454x256</div>
+            <h2 class="text-wrapper-5">Eodem tempore etiam Hymeti isdem praeclarae duplexque</h2>
+            <header class="BDX">
+              <div class="tag"><span class="text-wrapper-6">Jumping</span></div>
+            </header>
+          </article>
+
+          <aside class="display-intro-2" aria-label="Advertisement">
+            <div class="image-2 img-placeholder">Advertisement 1000x200</div>
+            <p class="ADVERTISEMENT"><span class="span">A</span> <span class="span">dvertisement</span></p>
+          </aside>
+
+          <section class="MEA-2" aria-label="Additional Featured Articles">
+            <article class="jumping">
               <div class="texte">
                 <p class="text-wrapper">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
                 <p class="div">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
@@ -305,10 +335,14 @@
                 <p class="text-wrapper-4">
                   Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore
                 </p>
-                <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 77px; left: 1px;">Line</div>
-                <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 77px; left: 494px;">Line</div>
-                <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 233px; left: 1px;">Line</div>
-                <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 203px; left: 494px;">Line</div>
+                <div class="img-placeholder"
+                  style="position: absolute; width: 453px; height: 1px; top: 77px; left: 1px;">Line</div>
+                <div class="img-placeholder"
+                  style="position: absolute; width: 453px; height: 1px; top: 77px; left: 494px;">Line</div>
+                <div class="img-placeholder"
+                  style="position: absolute; width: 453px; height: 1px; top: 233px; left: 1px;">Line</div>
+                <div class="img-placeholder"
+                  style="position: absolute; width: 453px; height: 1px; top: 203px; left: 494px;">Line</div>
               </div>
               <div class="image img-placeholder">Article Image 454x256</div>
               <h2 class="text-wrapper-5">Eodem tempore etiam Hymeti isdem praeclarae duplexque</h2>
@@ -316,378 +350,371 @@
                 <div class="tag"><span class="text-wrapper-6">Jumping</span></div>
               </header>
             </article>
-
-            <aside class="display-intro-2" aria-label="Advertisement">
-              <div class="image-2 img-placeholder">Advertisement 1000x200</div>
-              <p class="ADVERTISEMENT"><span class="span">A</span> <span class="span">dvertisement</span></p>
-            </aside>
-
-            <section class="MEA-2" aria-label="Additional Featured Articles">
-              <article class="jumping">
-                <div class="texte">
-                  <p class="text-wrapper">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
-                  <p class="div">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
-                  <p class="p">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
-                  <p class="text-wrapper-2">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
-                  <p class="text-wrapper-3">
-                    Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore etiam Hymetii
-                    praeclarae duplexque isdem diebus acciderat
-                  </p>
-                  <p class="text-wrapper-4">
-                    Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore
-                  </p>
-                  <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 77px; left: 1px;">Line</div>
-                  <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 77px; left: 494px;">Line</div>
-                  <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 233px; left: 1px;">Line</div>
-                  <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 203px; left: 494px;">Line</div>
-                </div>
-                <div class="image img-placeholder">Article Image 454x256</div>
-                <h2 class="text-wrapper-5">Eodem tempore etiam Hymeti isdem praeclarae duplexque</h2>
-                <header class="BDX">
-                  <div class="tag"><span class="text-wrapper-6">Jumping</span></div>
-                </header>
-              </article>
-              <article class="jumping-2">
-                <div class="texte">
-                  <p class="text-wrapper">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
-                  <p class="div">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
-                  <p class="p">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
-                  <p class="text-wrapper-2">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
-                  <p class="text-wrapper-3">
-                    Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore etiam Hymetii
-                    praeclarae duplexque isdem diebus acciderat
-                  </p>
-                  <p class="text-wrapper-4">
-                    Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore
-                  </p>
-                  <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 77px; left: 1px;">Line</div>
-                  <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 77px; left: 494px;">Line</div>
-                  <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 233px; left: 1px;">Line</div>
-                  <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 203px; left: 494px;">Line</div>
-                </div>
-                <div class="image img-placeholder">Article Image 454x256</div>
-                <h2 class="text-wrapper-5">Eodem tempore etiam Hymeti isdem praeclarae duplexque</h2>
-                <header class="BDX">
-                  <div class="tag"><span class="text-wrapper-6">Jumping</span></div>
-                </header>
-              </article>
-              <article class="jumping-3">
-                <div class="texte">
-                  <p class="text-wrapper">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
-                  <p class="div">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
-                  <p class="p">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
-                  <p class="text-wrapper-2">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
-                  <p class="text-wrapper-3">
-                    Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore etiam Hymetii
-                    praeclarae duplexque isdem diebus acciderat
-                  </p>
-                  <p class="text-wrapper-4">
-                    Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore
-                  </p>
-                  <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 77px; left: 1px;">Line</div>
-                  <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 77px; left: 494px;">Line</div>
-                  <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 233px; left: 1px;">Line</div>
-                  <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 203px; left: 494px;">Line</div>
-                </div>
-                <div class="image img-placeholder">Article Image 454x256</div>
-                <h2 class="text-wrapper-5">Eodem tempore etiam Hymeti isdem praeclarae duplexque</h2>
-                <header class="BDX">
-                  <div class="tag"><span class="text-wrapper-6">Jumping</span></div>
-                </header>
-              </article>
-            </section>
-
-            <aside class="display-intro" aria-label="Advertisement">
-              <div class="image-2 img-placeholder">Advertisement 1000x200</div>
-              <p class="ADVERTISEMENT"><span class="span">A</span> <span class="span">dvertisement</span></p>
-            </aside>
-
-            <section class="MEA" aria-label="Featured Articles Section">
-              <article class="jumping">
-                <div class="texte">
-                  <p class="text-wrapper">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
-                  <p class="div">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
-                  <p class="p">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
-                  <p class="text-wrapper-2">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
-                  <p class="text-wrapper-3">
-                    Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore etiam Hymetii
-                    praeclarae duplexque isdem diebus acciderat
-                  </p>
-                  <p class="text-wrapper-4">
-                    Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore
-                  </p>
-                  <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 77px; left: 1px;">Line</div>
-                  <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 77px; left: 494px;">Line</div>
-                  <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 233px; left: 1px;">Line</div>
-                  <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 203px; left: 494px;">Line</div>
-                </div>
-                <div class="image img-placeholder">Article Image 454x256</div>
-                <h2 class="text-wrapper-5">Eodem tempore etiam Hymeti isdem praeclarae duplexque</h2>
-                <header class="BDX">
-                  <div class="tag"><span class="text-wrapper-6">Jumping</span></div>
-                </header>
-              </article>
-              <article class="jumping-2">
-                <div class="texte">
-                  <p class="text-wrapper">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
-                  <p class="div">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
-                  <p class="p">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
-                  <p class="text-wrapper-2">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
-                  <p class="text-wrapper-3">
-                    Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore etiam Hymetii
-                    praeclarae duplexque isdem diebus acciderat
-                  </p>
-                  <p class="text-wrapper-4">
-                    Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore
-                  </p>
-                  <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 77px; left: 1px;">Line</div>
-                  <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 77px; left: 494px;">Line</div>
-                  <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 233px; left: 1px;">Line</div>
-                  <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 203px; left: 494px;">Line</div>
-                </div>
-                <div class="image img-placeholder">Article Image 454x256</div>
-                <h2 class="text-wrapper-5">Eodem tempore etiam Hymeti isdem praeclarae duplexque</h2>
-                <header class="BDX">
-                  <div class="tag"><span class="text-wrapper-6">Jumping</span></div>
-                </header>
-              </article>
-              <article class="jumping-3">
-                <div class="texte">
-                  <p class="text-wrapper">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
-                  <p class="div">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
-                  <p class="p">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
-                  <p class="text-wrapper-2">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
-                  <p class="text-wrapper-3">
-                    Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore etiam Hymetii
-                    praeclarae duplexque isdem diebus acciderat
-                  </p>
-                  <p class="text-wrapper-4">
-                    Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore
-                  </p>
-                  <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 77px; left: 1px;">Line</div>
-                  <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 77px; left: 494px;">Line</div>
-                  <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 233px; left: 1px;">Line</div>
-                  <div class="img-placeholder" style="position: absolute; width: 453px; height: 1px; top: 203px; left: 494px;">Line</div>
-                </div>
-                <div class="image img-placeholder">Article Image 454x256</div>
-                <h2 class="text-wrapper-5">Eodem tempore etiam Hymeti isdem praeclarae duplexque</h2>
-                <header class="BDX">
-                  <div class="tag"><span class="text-wrapper-6">Jumping</span></div>
-                </header>
-              </article>
-            </section>
-          </main>
-        </div>
-
-        <!-- Colonne de droite (sidebar) -->
-        <aside class="cl-droite" role="complementary">
-          <!-- Newsletter Section -->
-          <section class="news-letter">
-            <div class="overlap-4"></div>
-            <h2 class="text-wrapper-14">Sign up</h2>
-            <p class="for-our-weekly">for our weekly newsletter</p>
-            <div class="NL">
-              <div class="overlap-group-2">
-                <div class="vector">✉️</div>
-                <div class="vector-2"></div>
+            <article class="jumping-2">
+              <div class="texte">
+                <p class="text-wrapper">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+                <p class="div">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+                <p class="p">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+                <p class="text-wrapper-2">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+                <p class="text-wrapper-3">
+                  Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore etiam Hymetii
+                  praeclarae duplexque isdem diebus acciderat
+                </p>
+                <p class="text-wrapper-4">
+                  Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore
+                </p>
+                <div class="img-placeholder"
+                  style="position: absolute; width: 453px; height: 1px; top: 77px; left: 1px;">Line</div>
+                <div class="img-placeholder"
+                  style="position: absolute; width: 453px; height: 1px; top: 77px; left: 494px;">Line</div>
+                <div class="img-placeholder"
+                  style="position: absolute; width: 453px; height: 1px; top: 233px; left: 1px;">Line</div>
+                <div class="img-placeholder"
+                  style="position: absolute; width: 453px; height: 1px; top: 203px; left: 494px;">Line</div>
               </div>
-            </div>
-            <button class="symboles-chevrons" type="button" aria-label="Subscribe">
-              <div class="icon">→</div>
-            </button>
+              <div class="image img-placeholder">Article Image 454x256</div>
+              <h2 class="text-wrapper-5">Eodem tempore etiam Hymeti isdem praeclarae duplexque</h2>
+              <header class="BDX">
+                <div class="tag"><span class="text-wrapper-6">Jumping</span></div>
+              </header>
+            </article>
+            <article class="jumping-3">
+              <div class="texte">
+                <p class="text-wrapper">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+                <p class="div">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+                <p class="p">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+                <p class="text-wrapper-2">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+                <p class="text-wrapper-3">
+                  Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore etiam Hymetii
+                  praeclarae duplexque isdem diebus acciderat
+                </p>
+                <p class="text-wrapper-4">
+                  Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore
+                </p>
+                <div class="img-placeholder"
+                  style="position: absolute; width: 453px; height: 1px; top: 77px; left: 1px;">Line</div>
+                <div class="img-placeholder"
+                  style="position: absolute; width: 453px; height: 1px; top: 77px; left: 494px;">Line</div>
+                <div class="img-placeholder"
+                  style="position: absolute; width: 453px; height: 1px; top: 233px; left: 1px;">Line</div>
+                <div class="img-placeholder"
+                  style="position: absolute; width: 453px; height: 1px; top: 203px; left: 494px;">Line</div>
+              </div>
+              <div class="image img-placeholder">Article Image 454x256</div>
+              <h2 class="text-wrapper-5">Eodem tempore etiam Hymeti isdem praeclarae duplexque</h2>
+              <header class="BDX">
+                <div class="tag"><span class="text-wrapper-6">Jumping</span></div>
+              </header>
+            </article>
           </section>
 
-          <!-- Advertisement 1 -->
-          <aside class="display-col-droite-3" aria-label="Advertisement">
-            <div class="image placeholder-ad img-placeholder">Advertisement 300x250</div>
-            <p class="ADVERTISEMENT"><span class="text-wrapper">A</span> <span class="text-wrapper">dvertisement</span></p>
+          <aside class="display-intro" aria-label="Advertisement">
+            <div class="image-2 img-placeholder">Advertisement 1000x200</div>
+            <p class="ADVERTISEMENT"><span class="span">A</span> <span class="span">dvertisement</span></p>
           </aside>
 
-          <!-- Top Headlines Section -->
-          <section class="top-headlines">
-            <header class="BDX">
-              <div class="top-headlines-wrapper">
-                <h2 class="top-headlines-2">
-                  <span class="text-wrapper-13">Top</span> Headlines
-                </h2>
+          <section class="MEA" aria-label="Featured Articles Section">
+            <article class="jumping">
+              <div class="texte">
+                <p class="text-wrapper">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+                <p class="div">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+                <p class="p">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+                <p class="text-wrapper-2">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+                <p class="text-wrapper-3">
+                  Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore etiam Hymetii
+                  praeclarae duplexque isdem diebus acciderat
+                </p>
+                <p class="text-wrapper-4">
+                  Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore
+                </p>
+                <div class="img-placeholder"
+                  style="position: absolute; width: 453px; height: 1px; top: 77px; left: 1px;">Line</div>
+                <div class="img-placeholder"
+                  style="position: absolute; width: 453px; height: 1px; top: 77px; left: 494px;">Line</div>
+                <div class="img-placeholder"
+                  style="position: absolute; width: 453px; height: 1px; top: 233px; left: 1px;">Line</div>
+                <div class="img-placeholder"
+                  style="position: absolute; width: 453px; height: 1px; top: 203px; left: 494px;">Line</div>
               </div>
-            </header>
-            
-            <article class="news">
-              <p class="div-2"><span class="text-wrapper-10">1.</span> <span class="text-wrapper-11">Culture</span></p>
-              <h3 class="text-wrapper-9">Horse show entries drop...</h3>
+              <div class="image img-placeholder">Article Image 454x256</div>
+              <h2 class="text-wrapper-5">Eodem tempore etiam Hymeti isdem praeclarae duplexque</h2>
+              <header class="BDX">
+                <div class="tag"><span class="text-wrapper-6">Jumping</span></div>
+              </header>
             </article>
-            
-            <div class="overlap">
-              <article class="news-2">
-                <div class="line"></div>
-                <p class="div-2"><span class="text-wrapper-10">2.</span> <span class="text-wrapper-11">Sport</span></p>
-                <h3 class="text-wrapper-9">FEI announces new rules...</h3>
-              </article>
-            </div>
-            
-            <article class="news-3">
-              <p class="div-2"><span class="text-wrapper-10">3.</span> <span class="text-wrapper-11">Jumping</span></p>
-              <h3 class="text-wrapper-9">Olympic champion retires...</h3>
-            </article>
-            
-            <div class="news-wrapper">
-              <article class="news-2">
-                <div class="line"></div>
-                <p class="div-2"><span class="text-wrapper-10">4.</span> <span class="text-wrapper-11">Dressage</span></p>
-                <h3 class="text-wrapper-9">World Cup finals preview...</h3>
-              </article>
-            </div>
-            
-            <article class="news-4">
-              <p class="div-2"><span class="text-wrapper-10">5.</span> <span class="text-wrapper-11">Culture</span></p>
-              <h3 class="text-wrapper-12">Young riders development program launches...</h3>
-            </article>
-            
-            <div class="div-wrapper">
-              <article class="news-2">
-                <div class="line"></div>
-                <p class="div-2"><span class="text-wrapper-10">6.</span> <span class="text-wrapper-11">Sport</span></p>
-                <h3 class="text-wrapper-9">Nations Cup schedule...</h3>
-              </article>
-            </div>
-            
-            <article class="news-5">
-              <p class="div-2"><span class="text-wrapper-10">7.</span> <span class="text-wrapper-11">Jumping</span></p>
-              <h3 class="text-wrapper-9">Record prize money...</h3>
-            </article>
-            
-            <div class="overlap-2">
-              <article class="news-2">
-                <div class="line"></div>
-                <p class="div-2"><span class="text-wrapper-10">8.</span> <span class="text-wrapper-11">Culture</span></p>
-                <h3 class="text-wrapper-9">Sustainability initiatives...</h3>
-              </article>
-            </div>
-            
-            <article class="news-6">
-              <p class="div-2"><span class="text-wrapper-10">9.</span> <span class="text-wrapper-11">Sport</span></p>
-              <h3 class="text-wrapper-9">Technology in judging...</h3>
-            </article>
-            
-            <div class="overlap-3">
-              <article class="news-2">
-                <div class="line"></div>
-                <div class="line-2"></div>
-                <p class="div-2"><span class="text-wrapper-10">10.</span> <span class="text-wrapper-11">Dressage</span></p>
-                <h3 class="text-wrapper-9">Training masterclass...</h3>
-              </article>
-            </div>
-            
-            <div class="label-icon-right-2">
-              <a href="#" class="text-wrapper-2">View all news</a>
-              <span class="icon-right-2">→</span>
-            </div>
-          </section>
-
-          <!-- Advertisement 2 -->
-          <aside class="display-col-droite-2" aria-label="Advertisement">
-            <div class="image placeholder-ad img-placeholder">Advertisement 300x250</div>
-            <p class="ADVERTISEMENT"><span class="text-wrapper">A</span> <span class="text-wrapper">dvertisement</span></p>
-          </aside>
-
-          <!-- Magazine Section -->
-          <section class="magasine">
-            <div class="overlap-group">
-              <div class="img placeholder-image img-placeholder">Magazine Cover</div>
-              <button class="CTA" type="button">
-                <span class="text-wrapper-8">Read now</span>
-              </button>
-            </div>
-          </section>
-
-          <!-- Live Results Section -->
-          <section class="live-results">
-            <h2 class="live-results-2">
-              <span class="span">Live</span>
-              <span class="text-wrapper-6"> </span>
-              <span class="text-wrapper-7">Results</span>
-            </h2>
-            
-            <div class="tab-2">
-              <button class="past" type="button">
-                <span class="text-wrapper-5">Past</span>
-              </button>
-              <button class="live" type="button" aria-current="true">
-                <span class="text-wrapper-4">Live</span>
-              </button>
-              <button class="upcoming" type="button">
-                <span class="text-wrapper-3">Upcoming</span>
-              </button>
-            </div>
-            
-            <div class="tab">
-              <article class="result">
-                <p class="p">FN_19 • CSI3* - Grand Prix</p>
-                <p class="element">Thursday, 02.08.2025 - 17:00</p>
-                <div class="picto">
-                  <!-- Icons would go here -->
-                </div>
-              </article>
-              
-              <article class="result-2">
-                <p class="p">EN_17 • Junior Team Competition</p>
-                <p class="element">Wednesday, 30.07.2025 - 10:00</p>
-                <div class="picto">
-                  <!-- Icons would go here -->
-                </div>
-              </article>
-              
-              <article class="result-3">
-                <p class="p">DN_22 • CDI4* - Freestyle</p>
-                <p class="element">Saturday, 04.08.2025 - 14:30</p>
-                <div class="picto">
-                  <!-- Icons would go here -->
-                </div>
-              </article>
-              
-              <article class="result-4">
-                <p class="p">JN_15 • Young Riders Championship</p>
-                <p class="element">Sunday, 05.08.2025 - 09:00</p>
-                <div class="picto">
-                  <!-- Icons would go here -->
-                </div>
-              </article>
-              
-              <div class="label-icon-right">
-                <a href="#" class="text-wrapper-2">View all results</a>
-                <span class="icon-right">→</span>
+            <article class="jumping-2">
+              <div class="texte">
+                <p class="text-wrapper">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+                <p class="div">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+                <p class="p">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+                <p class="text-wrapper-2">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+                <p class="text-wrapper-3">
+                  Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore etiam Hymetii
+                  praeclarae duplexque isdem diebus acciderat
+                </p>
+                <p class="text-wrapper-4">
+                  Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore
+                </p>
+                <div class="img-placeholder"
+                  style="position: absolute; width: 453px; height: 1px; top: 77px; left: 1px;">Line</div>
+                <div class="img-placeholder"
+                  style="position: absolute; width: 453px; height: 1px; top: 77px; left: 494px;">Line</div>
+                <div class="img-placeholder"
+                  style="position: absolute; width: 453px; height: 1px; top: 233px; left: 1px;">Line</div>
+                <div class="img-placeholder"
+                  style="position: absolute; width: 453px; height: 1px; top: 203px; left: 494px;">Line</div>
               </div>
-            </div>
+              <div class="image img-placeholder">Article Image 454x256</div>
+              <h2 class="text-wrapper-5">Eodem tempore etiam Hymeti isdem praeclarae duplexque</h2>
+              <header class="BDX">
+                <div class="tag"><span class="text-wrapper-6">Jumping</span></div>
+              </header>
+            </article>
+            <article class="jumping-3">
+              <div class="texte">
+                <p class="text-wrapper">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+                <p class="div">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+                <p class="p">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+                <p class="text-wrapper-2">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+                <p class="text-wrapper-3">
+                  Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore etiam Hymetii
+                  praeclarae duplexque isdem diebus acciderat
+                </p>
+                <p class="text-wrapper-4">
+                  Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore
+                </p>
+                <div class="img-placeholder"
+                  style="position: absolute; width: 453px; height: 1px; top: 77px; left: 1px;">Line</div>
+                <div class="img-placeholder"
+                  style="position: absolute; width: 453px; height: 1px; top: 77px; left: 494px;">Line</div>
+                <div class="img-placeholder"
+                  style="position: absolute; width: 453px; height: 1px; top: 233px; left: 1px;">Line</div>
+                <div class="img-placeholder"
+                  style="position: absolute; width: 453px; height: 1px; top: 203px; left: 494px;">Line</div>
+              </div>
+              <div class="image img-placeholder">Article Image 454x256</div>
+              <h2 class="text-wrapper-5">Eodem tempore etiam Hymeti isdem praeclarae duplexque</h2>
+              <header class="BDX">
+                <div class="tag"><span class="text-wrapper-6">Jumping</span></div>
+              </header>
+            </article>
           </section>
-        </aside>
+        </main>
       </div>
+
+      <!-- Colonne de droite (sidebar) -->
+      <aside class="cl-droite" role="complementary">
+        <!-- Newsletter Section -->
+        <section class="news-letter">
+          <div class="overlap-4"></div>
+          <h2 class="text-wrapper-14">Sign up</h2>
+          <p class="for-our-weekly">for our weekly newsletter</p>
+          <div class="NL">
+            <div class="overlap-group-2">
+              <div class="vector">✉️</div>
+              <div class="vector-2"></div>
+            </div>
+          </div>
+          <button class="symboles-chevrons" type="button" aria-label="Subscribe">
+            <div class="icon">→</div>
+          </button>
+        </section>
+
+        <!-- Advertisement 1 -->
+        <aside class="display-col-droite-3" aria-label="Advertisement">
+          <div class="image placeholder-ad img-placeholder">Advertisement 300x250</div>
+          <p class="ADVERTISEMENT"><span class="text-wrapper">A</span> <span class="text-wrapper">dvertisement</span>
+          </p>
+        </aside>
+
+        <!-- Top Headlines Section -->
+        <section class="top-headlines">
+          <header class="BDX">
+            <div class="top-headlines-wrapper">
+              <h2 class="top-headlines-2">
+                <span class="text-wrapper-13">Top</span> Headlines
+              </h2>
+            </div>
+          </header>
+
+          <article class="news">
+            <p class="div-2"><span class="text-wrapper-10">1.</span> <span class="text-wrapper-11">Culture</span></p>
+            <h3 class="text-wrapper-9">Horse show entries drop...</h3>
+          </article>
+
+          <div class="overlap">
+            <article class="news-2">
+              <div class="line"></div>
+              <p class="div-2"><span class="text-wrapper-10">2.</span> <span class="text-wrapper-11">Sport</span></p>
+              <h3 class="text-wrapper-9">FEI announces new rules...</h3>
+            </article>
+          </div>
+
+          <article class="news-3">
+            <p class="div-2"><span class="text-wrapper-10">3.</span> <span class="text-wrapper-11">Jumping</span></p>
+            <h3 class="text-wrapper-9">Olympic champion retires...</h3>
+          </article>
+
+          <div class="news-wrapper">
+            <article class="news-2">
+              <div class="line"></div>
+              <p class="div-2"><span class="text-wrapper-10">4.</span> <span class="text-wrapper-11">Dressage</span></p>
+              <h3 class="text-wrapper-9">World Cup finals preview...</h3>
+            </article>
+          </div>
+
+          <article class="news-4">
+            <p class="div-2"><span class="text-wrapper-10">5.</span> <span class="text-wrapper-11">Culture</span></p>
+            <h3 class="text-wrapper-12">Young riders development program launches...</h3>
+          </article>
+
+          <div class="div-wrapper">
+            <article class="news-2">
+              <div class="line"></div>
+              <p class="div-2"><span class="text-wrapper-10">6.</span> <span class="text-wrapper-11">Sport</span></p>
+              <h3 class="text-wrapper-9">Nations Cup schedule...</h3>
+            </article>
+          </div>
+
+          <article class="news-5">
+            <p class="div-2"><span class="text-wrapper-10">7.</span> <span class="text-wrapper-11">Jumping</span></p>
+            <h3 class="text-wrapper-9">Record prize money...</h3>
+          </article>
+
+          <div class="overlap-2">
+            <article class="news-2">
+              <div class="line"></div>
+              <p class="div-2"><span class="text-wrapper-10">8.</span> <span class="text-wrapper-11">Culture</span></p>
+              <h3 class="text-wrapper-9">Sustainability initiatives...</h3>
+            </article>
+          </div>
+
+          <article class="news-6">
+            <p class="div-2"><span class="text-wrapper-10">9.</span> <span class="text-wrapper-11">Sport</span></p>
+            <h3 class="text-wrapper-9">Technology in judging...</h3>
+          </article>
+
+          <div class="overlap-3">
+            <article class="news-2">
+              <div class="line"></div>
+              <div class="line-2"></div>
+              <p class="div-2"><span class="text-wrapper-10">10.</span> <span class="text-wrapper-11">Dressage</span>
+              </p>
+              <h3 class="text-wrapper-9">Training masterclass...</h3>
+            </article>
+          </div>
+
+          <div class="label-icon-right-2">
+            <a href="#" class="text-wrapper-2">View all news</a>
+            <span class="icon-right-2">→</span>
+          </div>
+        </section>
+
+        <!-- Advertisement 2 -->
+        <aside class="display-col-droite-2" aria-label="Advertisement">
+          <div class="image placeholder-ad img-placeholder">Advertisement 300x250</div>
+          <p class="ADVERTISEMENT"><span class="text-wrapper">A</span> <span class="text-wrapper">dvertisement</span>
+          </p>
+        </aside>
+
+        <!-- Magazine Section -->
+        <section class="magasine">
+          <div class="overlap-group">
+            <div class="img placeholder-image img-placeholder">Magazine Cover</div>
+            <button class="CTA" type="button">
+              <span class="text-wrapper-8">Read now</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- Live Results Section -->
+        <section class="live-results">
+          <h2 class="live-results-2">
+            <span class="span">Live</span>
+            <span class="text-wrapper-6"> </span>
+            <span class="text-wrapper-7">Results</span>
+          </h2>
+
+          <div class="tab-2">
+            <button class="past" type="button">
+              <span class="text-wrapper-5">Past</span>
+            </button>
+            <button class="live" type="button" aria-current="true">
+              <span class="text-wrapper-4">Live</span>
+            </button>
+            <button class="upcoming" type="button">
+              <span class="text-wrapper-3">Upcoming</span>
+            </button>
+          </div>
+
+          <div class="tab">
+            <article class="result">
+              <p class="p">FN_19 • CSI3* - Grand Prix</p>
+              <p class="element">Thursday, 02.08.2025 - 17:00</p>
+              <div class="picto">
+                <!-- Icons would go here -->
+              </div>
+            </article>
+
+            <article class="result-2">
+              <p class="p">EN_17 • Junior Team Competition</p>
+              <p class="element">Wednesday, 30.07.2025 - 10:00</p>
+              <div class="picto">
+                <!-- Icons would go here -->
+              </div>
+            </article>
+
+            <article class="result-3">
+              <p class="p">DN_22 • CDI4* - Freestyle</p>
+              <p class="element">Saturday, 04.08.2025 - 14:30</p>
+              <div class="picto">
+                <!-- Icons would go here -->
+              </div>
+            </article>
+
+            <article class="result-4">
+              <p class="p">JN_15 • Young Riders Championship</p>
+              <p class="element">Sunday, 05.08.2025 - 09:00</p>
+              <div class="picto">
+                <!-- Icons would go here -->
+              </div>
+            </article>
+
+            <div class="label-icon-right">
+              <a href="#" class="text-wrapper-2">View all results</a>
+              <span class="icon-right">→</span>
+            </div>
+          </div>
+        </section>
+      </aside>
     </div>
+  </div>
 
-    <script>
-      // Script pour adapter l'échelle du site à la largeur de la fenêtre
-      function scaleContent() {
-        const wrapper = document.getElementById('scaleWrapper');
-        const windowWidth = window.innerWidth;
-        const contentWidth = 1920; // Largeur originale du design
-        
-        if (windowWidth < contentWidth) {
-          const scale = windowWidth / contentWidth;
-          wrapper.style.transform = `scale(${scale})`;
-          wrapper.style.transformOrigin = 'top left';
-          
-          // Ajuste la hauteur du body pour éviter l'espace vide
-          const originalHeight = wrapper.offsetHeight;
-          document.body.style.height = (originalHeight * scale) + 'px';
-        } else {
-          wrapper.style.transform = 'scale(1)';
-          document.body.style.height = 'auto';
-        }
+  <script>
+    // Script pour adapter l'échelle du site à la largeur de la fenêtre
+    function scaleContent() {
+      const wrapper = document.getElementById('scaleWrapper');
+      const windowWidth = window.innerWidth;
+      const contentWidth = 1920; // Largeur originale du design
+
+      if (windowWidth < contentWidth) {
+        const scale = windowWidth / contentWidth;
+        wrapper.style.transform = `scale(${scale})`;
+        wrapper.style.transformOrigin = 'top left';
+
+        // Ajuste la hauteur du body pour éviter l'espace vide
+        const originalHeight = wrapper.offsetHeight;
+        document.body.style.height = (originalHeight * scale) + 'px';
+      } else {
+        wrapper.style.transform = 'scale(1)';
+        document.body.style.height = 'auto';
       }
+    }
 
-      // Appliquer l'échelle au chargement et au redimensionnement
-      window.addEventListener('load', scaleContent);
-      window.addEventListener('resize', scaleContent);
-    </script>
-  </body>
+    // Appliquer l'échelle au chargement et au redimensionnement
+    window.addEventListener('load', scaleContent);
+    window.addEventListener('resize', scaleContent);
+  </script>
+</body>
+
 </html>
