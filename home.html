@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Sports News Website</title>
+    <style>
+      /* Wrapper pour la mise à l'échelle */
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background: #ffffff;
+      }
+
+      .scale-wrapper {
+        transform-origin: top left;
+        width: 1920px;
+        position: relative;
+      }
+
+      /* CSS Original avec positions absolues conservées */
+      .HEADER {
+        position: relative;
+        width: 1920px;
+        height: 80px;
+        background-color: #0c004f;
+        overflow: hidden;
+      }
+
+      .HEADER .overlap {
+        position: absolute;
+        width: 392px;
+        height: 104px;
+        top: -12px;
+        left: 1528px;
+      }
+
+      .HEADER .BG {
+        position: absolute;
+        width: 316px;
+        height: 80px;
+        top: 12px;
+        left: 76px;
+        background-color: #2f2469;
+      }
+
+      .HEADER .avatar {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 37px;
+        left: 322px;
+      }
+
+      .HEADER .overlap-group {
+        position: relative;
+        height: 30px;
+      }
+
+      .HEADER .vector {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        top: 9px;
+        left: 9px;
+      }
+
+      .HEADER .img {
+        position: absolute;
+        width: 30px;
+        height: 25px;
+        top: 0;
+        left: 0;
+      }
+
+      .HEADER .vector-2 {
+        position: absolute;
+        width: 19px;
+        height: 7px;
+        top: 23px;
+        left: 5px;
+      }
+
+      .HEADER .subscribe-now {
+        position: absolute;
+        height: 50px;
+        top: 26px;
+        left: 144px;
+        font-family: "Montserrat-Medium", Helvetica;
+        font-weight: 500;
+        color: #ffffff;
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: 24px;
+      }
+
+      .HEADER .text-wrapper {
+        font-family: "Montserrat-Medium", Helvetica;
+        font-weight: 500;
+        color: #ffffff;
+        font-size: 18px;
+        letter-spacing: 0;
+        line-height: 24px;
+      }
+
+      .HEADER .span {
+        font-size: 14px;
+      }
+
+      .HEADER .loupe {
+        position: absolute;
+        width: 104px;
+        height: 104px;
+        top: 0;
+        left: 0;
+        background-color: #4a3f84;
+        border-radius: 52px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .HEADER .vector-wrapper {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        top: 37px;
+        left: 37px;
+        transform: rotate(180deg);
+      }
+
+      .HEADER .vector-3 {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 0;
+        left: 0;
+        transform: rotate(-180deg);
+      }
+
+      .HEADER .RS {
+        position: absolute;
+        width: 100px;
+        height: 30px;
+        top: 25px;
+        left: 1388px;
+      }
+
+      .HEADER .div {
+        position: absolute;
+        width: 580px;
+        height: 104px;
+        top: -12px;
+        left: 127px;
+      }
+
+      .HEADER .nav {
+        position: absolute;
+        width: 580px;
+        height: 104px;
+        top: 0;
+        left: 0;
+      }
+
+      .HEADER .text-wrapper-2 {
+        position: absolute;
+        height: 22px;
+        top: 40px;
+        left: 0;
+        font-family: "Montserrat-Medium", Helvetica;
+        font-weight: 500;
+        color: #ffffff;
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      .HEADER .text-wrapper-3 {
+        position: absolute;
+        height: 22px;
+        top: 40px;
+        left: 120px;
+        font-family: "Montserrat-Medium", Helvetica;
+        font-weight: 500;
+        color: #ffffff;
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      .HEADER .text-wrapper-4 {
+        position: absolute;
+        height: 22px;
+        top: 40px;
+        left: 263px;
+        font-family: "Montserrat-Medium", Helvetica;
+        font-weight: 500;
+        color: #ffffff;
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      .HEADER .text-wrapper-5 {
+        position: absolute;
+        height: 22px;
+        top: 40px;
+        left: 362px;
+        font-family: "Montserrat-Medium", Helvetica;
+        font-weight: 500;
+        color: #ffffff;
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      .HEADER .forum {
+        position: absolute;
+        width: 104px;
+        height: 104px;
+        top: 0;
+        left: 438px;
+        background-color: #4a3f84;
+        border-radius: 52px;
+        overflow: hidden;
+      }
+
+      .HEADER .text-wrapper-6 {
+        position: absolute;
+        height: 24px;
+        top: 39px;
+        left: 21px;
+        font-family: "Harriet Text-Medium", Helvetica;
+        font-weight: 500;
+        color: #ffffff;
+        font-size: 20px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+      }
+
+      .HEADER .symboles-chevrons {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 41px;
+        left: 63px;
+      }
+
+      .HEADER .icon {
+        position: absolute;
+        width: 14px;
+        height: 10px;
+        top: 8px;
+        left: 5px;
+      }
+
+      .HEADER .icon-wrapper {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 41px;
+        left: 204px;
+      }
+
+      .HEADER .favicon {
+        position: absolute;
+        width: 47px;
+        height: 42px;
+        top: 19px;
+        left: 40px;
+        aspect-ratio: 1.1;
+      }
+
+      .HEADER .overlap-2 {
+        position: relative;
+        height: 42px;
+      }
+
+      .HEADER .vector-4 {
+        position: absolute;
+        width: 28px;
+        height: 30px;
+        top: 0;
+        left: 0;
+      }
+
+      .HEADER .vector-5 {
+        position: absolute;
+        width: 31px;
+        height: 27px;
+        top: 15px;
+        left: 16px;
+      }
+
+      /* Main content styles */
+      .cl-gauche {
+        position: relative;
+        width: 1920px;
+        height: 9088px;
+      }
+
+      .cl-gauche .MEA {
+        position: absolute;
+        width: 1442px;
+        height: 1340px;
+        top: 7808px;
+        left: 240px;
+      }
+
+      .cl-gauche .jumping {
+        position: absolute;
+        width: 1442px;
+        height: 428px;
+        top: 912px;
+        left: 0;
+      }
+
+      .cl-gauche .texte {
+        position: absolute;
+        width: 948px;
+        height: 321px;
+        top: 85px;
+        left: 493px;
+      }
+
+      .cl-gauche .text-wrapper {
+        position: absolute;
+        width: 453px;
+        top: -1px;
+        left: 0;
+        font-family: "Harriet Text-Bold", Helvetica;
+        font-weight: 700;
+        color: #0c004f;
+        font-size: 22px;
+        letter-spacing: 0;
+        line-height: 30px;
+      }
+
+      .cl-gauche .div {
+        width: 453px;
+        top: -1px;
+        left: 494px;
+        font-size: 22px;
+        line-height: 30px;
+        position: absolute;
+        font-family: "Harriet Text-Bold", Helvetica;
+        font-weight: 700;
+        color: #0c004f;
+        letter-spacing: 0;
+      }
+
+      .cl-gauche .p {
+        width: 453px;
+        top: 251px;
+        left: 0;
+        font-size: 22px;
+        line-height: 30px;
+        position: absolute;
+        font-family: "Harriet Text-Bold", Helvetica;
+        font-weight: 700;
+        color: #0c004f;
+        letter-spacing: 0;
+      }
+
+      .cl-gauche .text-wrapper-2 {
+        width: 453px;
+        top: 221px;
+        left: 494px;
+        font-size: 22px;
+        line-height: 30px;
+        position: absolute;
+        font-family: "Harriet Text-Bold", Helvetica;
+        font-weight: 700;
+        color: #0c004f;
+        letter-spacing: 0;
+      }
+
+      .cl-gauche .text-wrapper-3 {
+        width: 453px;
+        top: 95px;
+        left: 0;
+        font-size: 22px;
+        line-height: 30px;
+        position: absolute;
+        font-family: "Harriet Text-Bold", Helvetica;
+        font-weight: 700;
+        color: #0c004f;
+        letter-spacing: 0;
+      }
+
+      .cl-gauche .text-wrapper-4 {
+        width: 453px;
+        top: 95px;
+        left: 494px;
+        font-size: 22px;
+        line-height: 30px;
+        position: absolute;
+        font-family: "Harriet Text-Bold", Helvetica;
+        font-weight: 700;
+        color: #0c004f;
+        letter-spacing: 0;
+      }
+
+      .cl-gauche .line {
+        position: absolute;
+        width: 453px;
+        height: 1px;
+        top: 77px;
+        left: 1px;
+        object-fit: cover;
+      }
+
+      .cl-gauche .img {
+        top: 77px;
+        left: 494px;
+        position: absolute;
+        width: 453px;
+        height: 1px;
+        object-fit: cover;
+      }
+
+      .cl-gauche .line-2 {
+        top: 233px;
+        left: 1px;
+        position: absolute;
+        width: 453px;
+        height: 1px;
+        object-fit: cover;
+      }
+
+      .cl-gauche .line-3 {
+        top: 203px;
+        left: 494px;
+        position: absolute;
+        width: 453px;
+        height: 1px;
+        object-fit: cover;
+      }
+
+      .cl-gauche .image {
+        position: absolute;
+        width: 454px;
+        height: 256px;
+        top: 90px;
+        left: 0;
+        aspect-ratio: 1.77;
+        object-fit: cover;
+      }
+
+      .cl-gauche .text-wrapper-5 {
+        width: 454px;
+        top: 363px;
+        left: 0;
+        font-size: 24px;
+        line-height: normal;
+        position: absolute;
+        font-family: "Harriet Text-Bold", Helvetica;
+        font-weight: 700;
+        color: #0c004f;
+        letter-spacing: 0;
+      }
+
+      .cl-gauche .BDX {
+        position: absolute;
+        width: 1440px;
+        height: 50px;
+        top: 0;
+        left: 0;
+        background-color: #0c004f;
+        border-radius: 0px 75px 75px 0px;
+      }
+
+      .cl-gauche .tag {
+        position: relative;
+        width: 180px;
+        height: 50px;
+        background-color: #4a3f84;
+        border-radius: 0px 75px 75px 0px;
+      }
+
+      .cl-gauche .text-wrapper-6 {
+        position: absolute;
+        height: 24px;
+        top: 11px;
+        left: 44px;
+        font-family: "Montserrat-SemiBold", Helvetica;
+        font-weight: 600;
+        color: #ffffff;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+      }
+
+      .cl-gauche .jumping-2 {
+        position: absolute;
+        width: 1442px;
+        height: 428px;
+        top: 456px;
+        left: 0;
+      }
+
+      .cl-gauche .jumping-3 {
+        position: absolute;
+        width: 1442px;
+        height: 428px;
+        top: 0;
+        left: 0;
+      }
+
+      .cl-gauche .display-intro {
+        width: 1920px;
+        height: 280px;
+        top: 7468px;
+        left: 0;
+        position: absolute;
+        background-color: #f9f9f9;
+      }
+
+      .cl-gauche .image-2 {
+        width: 1000px;
+        height: 200px;
+        top: 40px;
+        left: 460px;
+        aspect-ratio: 5;
+        position: absolute;
+        object-fit: cover;
+      }
+
+      .cl-gauche .ADVERTISEMENT {
+        position: absolute;
+        top: 251px;
+        left: 914px;
+        font-family: "Montserrat-SemiBold", Helvetica;
+        font-weight: 600;
+        color: #848484;
+        font-size: 12px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      .cl-gauche .span {
+        font-family: "Montserrat-SemiBold", Helvetica;
+        font-weight: 600;
+        color: #848484;
+        font-size: 12px;
+        letter-spacing: 0;
+      }
+
+      .cl-gauche .MEA-2 {
+        height: 1340px;
+        top: 6080px;
+        position: absolute;
+        width: 1442px;
+        left: 240px;
+      }
+
+      .cl-gauche .display-intro-2 {
+        position: absolute;
+        width: 1920px;
+        height: 280px;
+        top: 5740px;
+        left: 0;
+        background-color: #f9f9f9;
+      }
+
+      .cl-gauche .MEA-3 {
+        height: 428px;
+        top: 5264px;
+        position: absolute;
+        width: 1442px;
+        left: 240px;
+      }
+
+      .cl-gauche .forum {
+        position: absolute;
+        width: 1440px;
+        height: 685px;
+        top: 4519px;
+        left: 240px;
+        background-color: #f0f0f0;
+      }
+
+      .cl-gauche .text-wrapper-7 {
+        position: absolute;
+        width: 1040px;
+        top: 322px;
+        left: 200px;
+        font-family: "Harriet Text-Bold", Helvetica;
+        font-weight: 700;
+        color: #0c004f;
+        font-size: 32px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+      }
+
+      .cl-gauche .element-articles-sm {
+        height: 639px;
+        top: 3789px;
+        position: absolute;
+        width: 1040px;
+        left: 240px;
+      }
+
+      .cl-gauche .article-sm {
+        position: absolute;
+        width: 1040px;
+        height: 141px;
+        top: 498px;
+        left: 0;
+      }
+
+      .cl-gauche .image-3 {
+        width: 250px;
+        height: 141px;
+        top: 0;
+        left: 0;
+        aspect-ratio: 1.77;
+        position: absolute;
+        object-fit: cover;
+      }
+
+      .cl-gauche .overlap-group {
+        top: 2px;
+        position: absolute;
+        width: 771px;
+        height: 97px;
+        left: 269px;
+      }
+
+      .cl-gauche .text-wrapper-8 {
+        position: absolute;
+        width: 771px;
+        top: 0;
+        left: 0;
+        font-family: "Harriet Text-Bold", Helvetica;
+        font-weight: 700;
+        color: #0c004f;
+        font-size: 24px;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      .cl-gauche .div-wrapper {
+        position: absolute;
+        width: 68px;
+        height: 24px;
+        top: 73px;
+        left: 1px;
+        background-color: #4a3f84;
+        border-radius: 12px;
+      }
+
+      .cl-gauche .text-wrapper-9 {
+        position: absolute;
+        height: 15px;
+        top: 3px;
+        left: 11px;
+        font-family: "Montserrat-SemiBold", Helvetica;
+        font-weight: 600;
+        color: #ffffff;
+        font-size: 12px;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      .cl-gauche .text-wrapper-10 {
+        position: absolute;
+        top: 74px;
+        left: 77px;
+        font-family: "Montserrat-Medium", Helvetica;
+        font-weight: 500;
+        color: #4a3f84;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      .cl-gauche .article-sm-2 {
+        top: 332px;
+        position: absolute;
+        width: 1040px;
+        height: 141px;
+        left: 0;
+      }
+
+      .cl-gauche .text-wrapper-11 {
+        width: 771px;
+        top: 2px;
+        left: 269px;
+        font-size: 24px;
+        line-height: normal;
+        position: absolute;
+        font-family: "Harriet Text-Bold", Helvetica;
+        font-weight: 700;
+        color: #0c004f;
+        letter-spacing: 0;
+      }
+
+      .cl-gauche .tag-2 {
+        position: absolute;
+        width: 68px;
+        height: 24px;
+        top: 104px;
+        left: 270px;
+        background-color: #4a3f84;
+        border-radius: 12px;
+      }
+
+      .cl-gauche .text-wrapper-12 {
+        position: absolute;
+        top: 105px;
+        left: 346px;
+        font-family: "Montserrat-Medium", Helvetica;
+        font-weight: 500;
+        color: #4a3f84;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      .cl-gauche .article-sm-3 {
+        top: 166px;
+        position: absolute;
+        width: 1040px;
+        height: 141px;
+        left: 0;
+      }
+
+      .cl-gauche .overlap {
+        top: 3px;
+        position: absolute;
+        width: 771px;
+        height: 97px;
+        left: 269px;
+      }
+
+      .cl-gauche .article-sm-4 {
+        top: 0;
+        position: absolute;
+        width: 1040px;
+        height: 141px;
+        left: 0;
+      }
+
+      .cl-gauche .video {
+        position: absolute;
+        width: 1920px;
+        height: 804px;
+        top: 2925px;
+        left: 0;
+        background-color: #000000;
+      }
+
+      .cl-gauche .BDX-2 {
+        height: 134px;
+        top: 630px;
+        left: 240px;
+        aspect-ratio: 10.76;
+        object-fit: cover;
+        position: absolute;
+        width: 1440px;
+      }
+
+      .cl-gauche .live {
+        position: absolute;
+        width: 650px;
+        height: 422px;
+        top: 168px;
+        left: 1030px;
+        background-color: #212121;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      .cl-gauche .live-2 {
+        top: 97px;
+        position: absolute;
+        width: 494px;
+        height: 51px;
+        left: 37px;
+      }
+
+      .cl-gauche .frame {
+        position: absolute;
+        width: 80px;
+        height: 30px;
+        top: 0;
+        left: 0;
+        background-color: #5f0361;
+        border-radius: 23px;
+        overflow: hidden;
+      }
+
+      .cl-gauche .image-4 {
+        width: 54px;
+        height: 20px;
+        top: 5px;
+        left: 13px;
+        aspect-ratio: 2.68;
+        position: absolute;
+        object-fit: cover;
+      }
+
+      .cl-gauche .preuve-EN-junior {
+        position: absolute;
+        top: 2px;
+        left: 98px;
+        font-family: "Montserrat-Medium", Helvetica;
+        font-weight: 500;
+        color: transparent;
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: 24px;
+      }
+
+      .cl-gauche .text-wrapper-13 {
+        color: #ffffff;
+      }
+
+      .cl-gauche .text-wrapper-14 {
+        color: #a6a6a6;
+      }
+
+      .cl-gauche .live-3 {
+        top: 177px;
+        position: absolute;
+        width: 494px;
+        height: 51px;
+        left: 37px;
+      }
+
+      .cl-gauche .live-4 {
+        top: 257px;
+        position: absolute;
+        width: 494px;
+        height: 51px;
+        left: 37px;
+      }
+
+      .cl-gauche .live-5 {
+        top: 337px;
+        position: absolute;
+        width: 494px;
+        height: 51px;
+        left: 37px;
+      }
+
+      .cl-gauche .frame-2 {
+        position: absolute;
+        width: 15px;
+        height: 205px;
+        top: 97px;
+        left: 605px;
+        background-color: #313131;
+        border-radius: 8px;
+      }
+
+      .cl-gauche .now-live {
+        position: absolute;
+        top: 34px;
+        left: 35px;
+        font-family: "Montserrat-Medium", Helvetica;
+        font-weight: 400;
+        color: transparent;
+        font-size: 28px;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      .cl-gauche .text-wrapper-15 {
+        font-weight: 500;
+        color: #ffffff;
+      }
+
+      .cl-gauche .text-wrapper-16 {
+        font-family: "Montserrat-Bold", Helvetica;
+        font-weight: 700;
+        color: #ffffff;
+      }
+
+      .cl-gauche .text-wrapper-17 {
+        font-family: "Montserrat-Bold", Helvetica;
+        font-weight: 700;
+        color: #ff0004;
+      }
+
+      .cl-gauche .video-2 {
+        position: absolute;
+        width: 750px;
+        height: 422px;
+        top: 168px;
+        left: 240px;
+      }
+
+      .cl-gauche .logo {
+        position: absolute;
+        width: 234px;
+        height: 94px;
+        top: 49px;
+        left: 240px;
+        background-image: url(./img/logo.png);
+        background-size: cover;
+        background-position: 50% 50%;
+      }
+
+      .cl-gauche .mask {
+        position: relative;
+        width: 97px;
+        height: 20px;
+        top: 74px;
+        left: 77px;
+        background-color: #000000;
+      }
+
+      .cl-gauche .element-articles-sm-2 {
+        position: absolute;
+        width: 1040px;
+        height: 639px;
+        top: 2118px;
+        left: 240px;
+      }
+
+      .cl-gauche .display-hor {
+        width: 1040px;
+        height: 182px;
+        top: 1876px;
+        left: 240px;
+        position: absolute;
+        background-color: #f9f9f9;
+      }
+
+      .cl-gauche .ADVERTISEMENT-2 {
+        position: absolute;
+        top: 159px;
+        left: 474px;
+        font-family: "Montserrat-SemiBold", Helvetica;
+        font-weight: 600;
+        color: #848484;
+        font-size: 12px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      .cl-gauche .banniere {
+        position: absolute;
+        width: 980px;
+        height: 122px;
+        top: 30px;
+        left: 30px;
+        background-image: url(./img/image-14.png);
+        background-size: cover;
+        background-position: 50% 50%;
+      }
+
+      .cl-gauche .blc {
+        width: 1px;
+        height: 122px;
+        background-color: #ffffff;
+      }
+
+      .cl-gauche .element-articles-med {
+        height: 840px;
+        top: 978px;
+        position: absolute;
+        width: 1040px;
+        left: 240px;
+      }
+
+      .cl-gauche .article-med {
+        position: absolute;
+        width: 500px;
+        height: 400px;
+        top: 0;
+        left: 540px;
+      }
+
+      .cl-gauche .overlap-group-2 {
+        top: 303px;
+        position: absolute;
+        width: 500px;
+        height: 97px;
+        left: 0;
+      }
+
+      .cl-gauche .tag-3 {
+        position: absolute;
+        width: 68px;
+        height: 24px;
+        top: 73px;
+        left: 0;
+        background-color: #4a3f84;
+        border-radius: 12px;
+      }
+
+      .cl-gauche .text-wrapper-18 {
+        position: absolute;
+        width: 500px;
+        top: 0;
+        left: 0;
+        font-family: "Harriet Text-Bold", Helvetica;
+        font-weight: 700;
+        color: #0c004f;
+        font-size: 24px;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      .cl-gauche .by-lindsay-berreth-l {
+        position: absolute;
+        top: 74px;
+        left: 76px;
+        font-family: "Montserrat-Medium", Helvetica;
+        font-weight: 500;
+        color: #4a3f84;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      .cl-gauche .image-5 {
+        width: 500px;
+        height: 282px;
+        top: 0;
+        left: 0;
+        aspect-ratio: 1.77;
+        position: absolute;
+        object-fit: cover;
+      }
+
+      .cl-gauche .article-med-2 {
+        height: 400px;
+        top: 440px;
+        left: 0;
+        position: absolute;
+        width: 500px;
+      }
+
+      .cl-gauche .overlap-2 {
+        top: 301px;
+        position: absolute;
+        width: 500px;
+        height: 97px;
+        left: 0;
+      }
+
+      .cl-gauche .article-med-3 {
+        height: 398px;
+        top: 2px;
+        left: 0;
+        position: absolute;
+        width: 500px;
+      }
+
+      .cl-gauche .tag-4 {
+        position: absolute;
+        width: 76px;
+        height: 24px;
+        top: 73px;
+        left: 0;
+        background-color: #4a3f84;
+        border-radius: 12px;
+      }
+
+      .cl-gauche .by-kimberly-loushin {
+        position: absolute;
+        top: 74px;
+        left: 84px;
+        font-family: "Montserrat-Medium", Helvetica;
+        font-weight: 500;
+        color: #4a3f84;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      .cl-gauche .article-med-4 {
+        height: 398px;
+        top: 440px;
+        left: 540px;
+        position: absolute;
+        width: 500px;
+      }
+
+      .cl-gauche .display-hor-2 {
+        position: absolute;
+        width: 1040px;
+        height: 182px;
+        top: 738px;
+        left: 240px;
+        background-color: #f9f9f9;
+      }
+
+      .cl-gauche .blc-wrapper {
+        position: absolute;
+        width: 980px;
+        height: 122px;
+        top: 30px;
+        left: 30px;
+        background-image: url(./img/image.png);
+        background-size: cover;
+        background-position: 50% 50%;
+      }
+
+      .cl-gauche .article-GR {
+        position: absolute;
+        width: 1040px;
+        height: 678px;
+        top: 0;
+        left: 240px;
+      }
+
+      .cl-gauche .tag-5 {
+        position: absolute;
+        width: 76px;
+        height: 24px;
+        top: 654px;
+        left: 0;
+        background-color: #4a3f84;
+        border-radius: 12px;
+      }
+
+      .cl-gauche .opinion-we-can {
+        position: absolute;
+        width: 1040px;
+        top: 603px;
+        left: 0;
+        font-family: "Harriet Text-Bold", Helvetica;
+        font-weight: 700;
+        color: #0c004f;
+        font-size: 32px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+      }
+
+      .cl-gauche .text-wrapper-19 {
+        font-family: "Harriet Text-Bold", Helvetica;
+        font-weight: 700;
+        color: #0c004f;
+        font-size: 32px;
+        letter-spacing: 0;
+      }
+
+      .cl-gauche .image-6 {
+        width: 1040px;
+        height: 585px;
+        top: 0;
+        left: 0;
+        aspect-ratio: 1.78;
+        position: absolute;
+        object-fit: cover;
+      }
+
+      .cl-gauche .by-lindsay-berreth-l-2 {
+        position: absolute;
+        top: 655px;
+        left: 84px;
+        font-family: "Montserrat-Medium", Helvetica;
+        font-weight: 500;
+        color: #4a3f84;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: normal;
+      }
+
+      /* Additional semantic and accessibility improvements from original CSS */
+      .HEADER a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+
+      .HEADER a:hover,
+      .HEADER a:focus {
+        opacity: 0.8;
+        outline: 2px solid #ffffff;
+        outline-offset: 2px;
+      }
+
+      .HEADER button {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        color: inherit;
+        font: inherit;
+      }
+
+      .HEADER button:hover,
+      .HEADER button:focus {
+        opacity: 0.8;
+      }
+
+      .HEADER button:focus-visible {
+        outline: 2px solid #ffffff !important;
+        outline-offset: 2px !important;
+      }
+
+      .HEADER .loupe:hover,
+      .HEADER .loupe:focus {
+        background-color: #5a4f94;
+      }
+
+      .HEADER .forum:hover,
+      .HEADER .forum:focus {
+        background-color: #5a4f94;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scale-wrapper" id="scaleWrapper">
+      <!-- Votre HTML original reste exactement le même -->
+      <header class="HEADER" role="banner">
+        <div class="overlap">
+          <div class="BG" aria-hidden="true"></div>
+          <div class="avatar" aria-label="User avatar">
+            <div class="overlap-group">
+              <img class="vector" src="img/vector-4.svg" alt="" />
+              <img class="vector" src="img/vector-5.svg" alt="" />
+              <img class="img" src="img/vector-3.svg" alt="" />
+              <img class="vector-2" src="img/vector-6.svg" alt="" />
+            </div>
+          </div>
+          <div class="subscribe-now">
+            <span class="text-wrapper">Subscribe Now<br /></span>
+            <span class="span">Unlimited access</span>
+          </div>
+          <button class="loupe" type="button" aria-label="Search">
+            <div class="vector-wrapper">
+              <img class="vector-3" src="img/image.svg" alt="" />
+            </div>
+          </button>
+        </div>
+        <img class="RS" src="img/RS.svg" alt="RS Logo" />
+        <div class="div">
+          <nav class="nav" role="navigation" aria-label="Main navigation">
+            <a href="#sports" class="text-wrapper-2">Sports</a>
+            <a href="#features" class="text-wrapper-3">Features</a>
+            <a href="#videos" class="text-wrapper-4">Videos</a>
+            <a href="#live" class="text-wrapper-5">Live</a>
+            <button class="forum" type="button" aria-label="Forum">
+              <span class="text-wrapper-6">Forum</span>
+            </button>
+          </nav>
+          <button class="symboles-chevrons" type="button" aria-label="Expand sports menu">
+            <img class="icon" src="img/icon.svg" alt="" />
+          </button>
+          <button class="icon-wrapper" type="button" aria-label="Expand features menu">
+            <img class="icon" src="img/icon-2.svg" alt="" />
+          </button>
+        </div>
+        <div class="favicon">
+          <div class="overlap-2">
+            <img class="vector-4" src="img/vector.svg" alt="" />
+            <img class="vector-5" src="img/vector-2.svg" alt="" />
+          </div>
+        </div>
+      </header>
+      
+      <main class="cl-gauche" role="main">
+        <article class="article-GR">
+          <div class="tag-5"><span class="text-wrapper-9">Jumping</span></div>
+          <h1 class="opinion-we-can">
+            <span class="text-wrapper-19">Opinion: We </span>
+            <span class="text-wrapper-19">can remedy the scourge of overuse in horse showing</span>
+          </h1>
+          <img class="image-6" src="img/image-5.png" alt="Featured article image" />
+          <p class="by-lindsay-berreth-l-2">
+            By Lindsay Berreth&nbsp;&nbsp;l&nbsp;&nbsp;<time datetime="2025-08-20">20.08.25</time>
+          </p>
+        </article>
+
+        <aside class="display-hor-2" aria-label="Advertisement">
+          <p class="ADVERTISEMENT-2"><span class="span">A</span> <span class="span">dvertisement</span></p>
+          <div class="blc-wrapper"><div class="blc" aria-hidden="true"></div></div>
+        </aside>
+
+        <section class="element-articles-med" aria-label="Medium Articles">
+          <article class="article-med">
+            <div class="overlap-group-2">
+              <div class="tag-3"><span class="text-wrapper-9">Culture</span></div>
+              <h3 class="text-wrapper-18">Mass Staff Departure Concerns LAEC Community</h3>
+              <p class="by-lindsay-berreth-l">
+                By Lindsay Berreth&nbsp;&nbsp;l&nbsp;&nbsp;<time datetime="2025-08-20">20.08.25</time>
+              </p>
+            </div>
+            <img class="image-5" src="img/image-2-2.png" alt="Article image" />
+          </article>
+          <article class="article-med-2">
+            <div class="overlap-2">
+              <div class="tag-3"><span class="text-wrapper-9">Culture</span></div>
+              <h3 class="text-wrapper-18">Mass Staff Departure Concerns LAEC Community</h3>
+              <p class="by-lindsay-berreth-l">
+                By Lindsay Berreth&nbsp;&nbsp;l&nbsp;&nbsp;<time datetime="2025-08-20">20.08.25</time>
+              </p>
+            </div>
+            <img class="image-5" src="img/image-2-3.png" alt="Article image" />
+          </article>
+          <article class="article-med-3">
+            <div class="overlap-2">
+              <div class="tag-4"><span class="text-wrapper-9">Jumping</span></div>
+              <h3 class="text-wrapper-18">In A World Of Bays, GFS Mikado Steals The Spotlight</h3>
+              <p class="by-kimberly-loushin">
+                By Kimberly Loushin&nbsp;&nbsp;l&nbsp;&nbsp;<time datetime="2025-08-20">20.08.25</time>
+              </p>
+            </div>
+            <img class="image-5" src="img/image-1.png" alt="Article image" />
+          </article>
+          <article class="article-med-4">
+            <div class="overlap-2">
+              <div class="tag-4"><span class="text-wrapper-9">Jumping</span></div>
+              <h3 class="text-wrapper-18">In A World Of Bays, GFS Mikado Steals The Spotlight</h3>
+              <p class="by-kimberly-loushin">
+                By Kimberly Loushin&nbsp;&nbsp;l&nbsp;&nbsp;<time datetime="2025-08-20">20.08.25</time>
+              </p>
+            </div>
+            <img class="image-5" src="img/image-1-2.png" alt="Article image" />
+          </article>
+        </section>
+
+        <aside class="display-hor" aria-label="Advertisement">
+          <p class="ADVERTISEMENT-2"><span class="span">A</span> <span class="span">dvertisement</span></p>
+          <div class="banniere"><div class="blc" aria-hidden="true"></div></div>
+        </aside>
+
+        <section class="element-articles-sm-2" aria-label="Additional Small Articles">
+          <article class="article-sm">
+            <img class="image-3" src="img/image-3-5.png" alt="Article thumbnail" />
+            <div class="overlap-group">
+              <h3 class="text-wrapper-8">
+                Hymetii praeclarae duplexque isdem diebus acciderat. Eodem tempore etiam Hymetii praeclarae.
+              </h3>
+              <div class="div-wrapper"><span class="text-wrapper-9">Culture</span></div>
+              <time class="text-wrapper-10" datetime="2025-08-20">20.08.25</time>
+            </div>
+          </article>
+          <article class="article-sm-2">
+            <img class="image-3" src="img/image-3-3.png" alt="Article thumbnail" />
+            <h3 class="text-wrapper-11">
+              Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat. Eodem tempore etiam Hymetii
+              praeclarae duplexque isdem diebus acciderat.
+            </h3>
+            <div class="tag-2"><span class="text-wrapper-9">Culture</span></div>
+            <time class="text-wrapper-12" datetime="2025-08-20">20.08.25</time>
+          </article>
+          <article class="article-sm-3">
+            <img class="image-3" src="img/image-3.png" alt="Article thumbnail" />
+            <div class="overlap">
+              <h3 class="text-wrapper-8">
+                Hymetii praeclarae duplexque isdem diebus acciderat. Eodem tempore etiam Hymetii praeclarae.
+              </h3>
+              <div class="div-wrapper"><span class="text-wrapper-9">Culture</span></div>
+              <time class="text-wrapper-10" datetime="2025-08-20">20.08.25</time>
+            </div>
+          </article>
+          <article class="article-sm-4">
+            <img class="image-3" src="img/image-3-4.png" alt="Article thumbnail" />
+            <h3 class="text-wrapper-11">
+              Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat. Eodem tempore etiam Hymetii
+              praeclarae duplexque isdem diebus acciderat.
+            </h3>
+            <div class="tag-2"><span class="text-wrapper-9">Culture</span></div>
+            <time class="text-wrapper-12" datetime="2025-08-20">20.08.25</time>
+          </article>
+        </section>
+
+        <section class="video" aria-label="Live Video Section">
+          <img class="BDX-2" src="img/BDX.png" alt="BDX logo" />
+          <div class="live">
+            <article class="live-2">
+              <div class="frame"><img class="image-4" src="img/image-8-3.png" alt="Live event thumbnail" /></div>
+              <div class="preuve-EN-junior">
+                <h3 class="text-wrapper-13">Épreuve EN_17 • Junior Team Compétition - Day 1</h3>
+                <time class="text-wrapper-14" datetime="2025-07-30T10:00">mercredi, 30.07.2025 - 10:00</time>
+              </div>
+            </article>
+            <article class="live-3">
+              <div class="frame"><img class="image-4" src="img/image-8-4.png" alt="Live event thumbnail" /></div>
+              <div class="preuve-EN-junior">
+                <h3 class="text-wrapper-13">Épreuve EN_17 • Junior Team Compétition - Day 1</h3>
+                <time class="text-wrapper-14" datetime="2025-07-30T10:00">mercredi, 30.07.2025 - 10:00</time>
+              </div>
+            </article>
+            <article class="live-4">
+              <div class="frame"><img class="image-4" src="img/image-8.png" alt="Live event thumbnail" /></div>
+              <div class="preuve-EN-junior">
+                <h3 class="text-wrapper-13">Épreuve EN_17 • Junior Team Compétition - Day 1</h3>
+                <time class="text-wrapper-14" datetime="2025-07-30T10:00">mercredi, 30.07.2025 - 10:00</time>
+              </div>
+            </article>
+            <article class="live-5">
+              <div class="frame"><img class="image-4" src="img/image-8-2.png" alt="Live event thumbnail" /></div>
+              <div class="preuve-EN-junior">
+                <h3 class="text-wrapper-13">Épreuve EN_17 • Junior Team Compétition - Day 1</h3>
+                <time class="text-wrapper-14" datetime="2025-07-30T10:00">mercredi, 30.07.2025 - 10:00</time>
+              </div>
+            </article>
+            <div class="frame-2" aria-hidden="true"></div>
+            <p class="now-live">
+              <span class="text-wrapper-15">Now</span>
+              <span class="text-wrapper-16">&nbsp;</span>
+              <span class="text-wrapper-17">live</span>
+            </p>
+          </div>
+          <video class="video-2" poster="img/video.svg" controls aria-label="Main video player">
+            <source src="#" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="logo" role="img" aria-label="Company logo"><div class="mask"></div></div>
+        </section>
+
+        <section class="element-articles-sm" aria-label="Small Articles">
+          <article class="article-sm">
+            <img class="image-3" src="img/image-3-6.png" alt="Article thumbnail" />
+            <div class="overlap-group">
+              <h3 class="text-wrapper-8">
+                Hymetii praeclarae duplexque isdem diebus acciderat. Eodem tempore etiam Hymetii praeclarae.
+              </h3>
+              <div class="div-wrapper"><span class="text-wrapper-9">Culture</span></div>
+              <time class="text-wrapper-10" datetime="2025-08-20">20.08.25</time>
+            </div>
+          </article>
+          <article class="article-sm-2">
+            <img class="image-3" src="img/image-3-2.png" alt="Article thumbnail" />
+            <h3 class="text-wrapper-11">
+              Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat. Eodem tempore etiam Hymetii
+              praeclarae duplexque isdem diebus acciderat.
+            </h3>
+            <div class="tag-2"><span class="text-wrapper-9">Culture</span></div>
+            <time class="text-wrapper-12" datetime="2025-08-20">20.08.25</time>
+          </article>
+          <article class="article-sm-3">
+            <img class="image-3" src="img/image-3-7.png" alt="Article thumbnail" />
+            <div class="overlap">
+              <h3 class="text-wrapper-8">
+                Hymetii praeclarae duplexque isdem diebus acciderat. Eodem tempore etiam Hymetii praeclarae.
+              </h3>
+              <div class="div-wrapper"><span class="text-wrapper-9">Culture</span></div>
+              <time class="text-wrapper-10" datetime="2025-08-20">20.08.25</time>
+            </div>
+          </article>
+          <article class="article-sm-4">
+            <img class="image-3" src="img/image-3-8.png" alt="Article thumbnail" />
+            <h3 class="text-wrapper-11">
+              Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat. Eodem tempore etiam Hymetii
+              praeclarae duplexque isdem diebus acciderat.
+            </h3>
+            <div class="tag-2"><span class="text-wrapper-9">Culture</span></div>
+            <time class="text-wrapper-12" datetime="2025-08-20">20.08.25</time>
+          </article>
+        </section>
+
+        <section class="forum" aria-label="Forum Widget">
+          <h2 class="text-wrapper-7">Widget Forum</h2>
+        </section>
+
+        <article class="MEA-3">
+          <div class="texte">
+            <p class="text-wrapper">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+            <p class="div">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+            <p class="p">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+            <p class="text-wrapper-2">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+            <p class="text-wrapper-3">
+              Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore etiam Hymetii
+              praeclarae duplexque isdem diebus acciderat
+            </p>
+            <p class="text-wrapper-4">
+              Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore
+            </p>
+            <img class="line" src="img/line-27.svg" alt="" role="presentation" />
+            <img class="img" src="img/line-6.svg" alt="" role="presentation" />
+            <img class="line-2" src="img/line-5.svg" alt="" role="presentation" />
+            <img class="line-3" src="img/line-12.svg" alt="" role="presentation" />
+          </div>
+          <img class="image" src="img/image-9.png" alt="Jumping competition scene" />
+          <h2 class="text-wrapper-5">Eodem tempore etiam Hymeti isdem praeclarae duplexque</h2>
+          <header class="BDX">
+            <div class="tag"><span class="text-wrapper-6">Jumping</span></div>
+          </header>
+        </article>
+
+        <aside class="display-intro-2" aria-label="Advertisement">
+          <img class="image-2" src="img/image-2.png" alt="Advertisement banner" />
+          <p class="ADVERTISEMENT"><span class="span">A</span> <span class="span">dvertisement</span></p>
+        </aside>
+
+        <section class="MEA-2" aria-label="Additional Featured Articles">
+          <article class="jumping">
+            <div class="texte">
+              <p class="text-wrapper">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="div">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="p">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="text-wrapper-2">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="text-wrapper-3">
+                Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore etiam Hymetii
+                praeclarae duplexque isdem diebus acciderat
+              </p>
+              <p class="text-wrapper-4">
+                Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore
+              </p>
+              <img class="line" src="img/line-8.svg" alt="" role="presentation" />
+              <img class="img" src="img/line-9.svg" alt="" role="presentation" />
+              <img class="line-2" src="img/line-7.svg" alt="" role="presentation" />
+              <img class="line-3" src="img/line-21.svg" alt="" role="presentation" />
+            </div>
+            <img class="image" src="img/image-4.png" alt="Jumping competition scene" />
+            <h2 class="text-wrapper-5">Eodem tempore etiam Hymeti isdem praeclarae duplexque</h2>
+            <header class="BDX">
+              <div class="tag"><span class="text-wrapper-6">Jumping</span></div>
+            </header>
+          </article>
+          <article class="jumping-2">
+            <div class="texte">
+              <p class="text-wrapper">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="div">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="p">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="text-wrapper-2">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="text-wrapper-3">
+                Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore etiam Hymetii
+                praeclarae duplexque isdem diebus acciderat
+              </p>
+              <p class="text-wrapper-4">
+                Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore
+              </p>
+              <img class="line" src="img/line-10.svg" alt="" role="presentation" />
+              <img class="img" src="img/line-15.svg" alt="" role="presentation" />
+              <img class="line-2" src="img/line-3.svg" alt="" role="presentation" />
+              <img class="line-3" src="img/line-16.svg" alt="" role="presentation" />
+            </div>
+            <img class="image" src="img/image-12.png" alt="Jumping competition scene" />
+            <h2 class="text-wrapper-5">Eodem tempore etiam Hymeti isdem praeclarae duplexque</h2>
+            <header class="BDX">
+              <div class="tag"><span class="text-wrapper-6">Jumping</span></div>
+            </header>
+          </article>
+          <article class="jumping-3">
+            <div class="texte">
+              <p class="text-wrapper">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="div">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="p">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="text-wrapper-2">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="text-wrapper-3">
+                Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore etiam Hymetii
+                praeclarae duplexque isdem diebus acciderat
+              </p>
+              <p class="text-wrapper-4">
+                Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore
+              </p>
+              <img class="line" src="img/line-14.svg" alt="" role="presentation" />
+              <img class="img" src="img/line-11.svg" alt="" role="presentation" />
+              <img class="line-2" src="img/line-22.svg" alt="" role="presentation" />
+              <img class="line-3" src="img/line-26.svg" alt="" role="presentation" />
+            </div>
+            <img class="image" src="img/image-7.png" alt="Jumping competition scene" />
+            <h2 class="text-wrapper-5">Eodem tempore etiam Hymeti isdem praeclarae duplexque</h2>
+            <header class="BDX">
+              <div class="tag"><span class="text-wrapper-6">Jumping</span></div>
+            </header>
+          </article>
+        </section>
+
+        <aside class="display-intro" aria-label="Advertisement">
+          <img class="image-2" src="img/image-10.png" alt="Advertisement banner" />
+          <p class="ADVERTISEMENT"><span class="span">A</span> <span class="span">dvertisement</span></p>
+        </aside>
+
+        <section class="MEA" aria-label="Featured Articles Section">
+          <article class="jumping">
+            <div class="texte">
+              <p class="text-wrapper">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="div">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="p">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="text-wrapper-2">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="text-wrapper-3">
+                Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore etiam Hymetii
+                praeclarae duplexque isdem diebus acciderat
+              </p>
+              <p class="text-wrapper-4">
+                Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore
+              </p>
+              <img class="line" src="img/line-18.svg" alt="" role="presentation" />
+              <img class="img" src="img/line.svg" alt="" role="presentation" />
+              <img class="line-2" src="img/line-13.svg" alt="" role="presentation" />
+              <img class="line-3" src="img/line-24.svg" alt="" role="presentation" />
+            </div>
+            <img class="image" src="img/image-13.png" alt="Jumping competition scene" />
+            <h2 class="text-wrapper-5">Eodem tempore etiam Hymeti isdem praeclarae duplexque</h2>
+            <header class="BDX">
+              <div class="tag"><span class="text-wrapper-6">Jumping</span></div>
+            </header>
+          </article>
+          <article class="jumping-2">
+            <div class="texte">
+              <p class="text-wrapper">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="div">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="p">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="text-wrapper-2">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="text-wrapper-3">
+                Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore etiam Hymetii
+                praeclarae duplexque isdem diebus acciderat
+              </p>
+              <p class="text-wrapper-4">
+                Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore
+              </p>
+              <img class="line" src="img/image.svg" alt="" role="presentation" />
+              <img class="img" src="img/line-17.svg" alt="" role="presentation" />
+              <img class="line-2" src="img/line-20.svg" alt="" role="presentation" />
+              <img class="line-3" src="img/line-19.svg" alt="" role="presentation" />
+            </div>
+            <img class="image" src="img/image-11.png" alt="Jumping competition scene" />
+            <h2 class="text-wrapper-5">Eodem tempore etiam Hymeti isdem praeclarae duplexque</h2>
+            <header class="BDX">
+              <div class="tag"><span class="text-wrapper-6">Jumping</span></div>
+            </header>
+          </article>
+          <article class="jumping-3">
+            <div class="texte">
+              <p class="text-wrapper">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="div">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="p">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="text-wrapper-2">Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat</p>
+              <p class="text-wrapper-3">
+                Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore etiam Hymetii
+                praeclarae duplexque isdem diebus acciderat
+              </p>
+              <p class="text-wrapper-4">
+                Eodem tempore etiam Hymetii praeclarae duplexque isdem diebus acciderat Eodem tempore
+              </p>
+              <img class="line" src="img/line-4.svg" alt="" role="presentation" />
+              <img class="img" src="img/line-23.svg" alt="" role="presentation" />
+              <img class="line-2" src="img/line-25.svg" alt="" role="presentation" />
+              <img class="line-3" src="img/line-2.svg" alt="" role="presentation" />
+            </div>
+            <img class="image" src="img/image-6.png" alt="Jumping competition scene" />
+            <h2 class="text-wrapper-5">Eodem tempore etiam Hymeti isdem praeclarae duplexque</h2>
+            <header class="BDX">
+              <div class="tag"><span class="text-wrapper-6">Jumping</span></div>
+            </header>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      // Script pour adapter l'échelle du site à la largeur de la fenêtre
+      function scaleContent() {
+        const wrapper = document.getElementById('scaleWrapper');
+        const windowWidth = window.innerWidth;
+        const contentWidth = 1920; // Largeur originale du design
+        
+        if (windowWidth < contentWidth) {
+          const scale = windowWidth / contentWidth;
+          wrapper.style.transform = `scale(${scale})`;
+          wrapper.style.transformOrigin = 'top left';
+          
+          // Ajuste la hauteur du body pour éviter l'espace vide
+          const originalHeight = wrapper.offsetHeight;
+          document.body.style.height = (originalHeight * scale) + 'px';
+        } else {
+          wrapper.style.transform = 'scale(1)';
+          document.body.style.height = 'auto';
+        }
+      }
+
+      // Appliquer l'échelle au chargement et au redimensionnement
+      window.addEventListener('load', scaleContent);
+      window.addEventListener('resize', scaleContent);
+    </script>
+  </body>
+</html>
