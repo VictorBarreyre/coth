@@ -476,6 +476,21 @@
   background: #F0F0F0;
 }
 
+/* Live Results Customization for Category Page */
+.live-results .result,
+.live-results .result-2,
+.live-results .result-3,
+.live-results .result-4 {
+  height: auto;
+}
+
+.live-results .result .picto,
+.live-results .result-2 .picto,
+.live-results .result-3 .picto,
+.live-results .result-4 .picto {
+  gap: 40px;
+}
+
 /* Article Styles */
 .article-block {
   display: flex;
