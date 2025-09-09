@@ -437,12 +437,18 @@
   position: relative;
   width: 1920px;
   display: flex;
-  margin: 60px auto 0 auto;
+  padding: 0 240px;
+  margin-top: 60px;
+  gap: 40px;
 }
 
 .main-column {
   position: relative;
   width: 1320px;
+}
+
+.main-column-categ {
+  position: relative;
 }
 
 .main-articles {
