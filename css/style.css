@@ -7,7 +7,7 @@
 /* Harriet Text Family */
 @font-face {
   font-family: 'Harriet Text-Bold';
-  src: url('fonts/HARRIETTEXTBOLD.OTF') format('opentype');
+  src: url('../fonts/HARRIETTEXTBOLD.OTF') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -15,7 +15,7 @@
 
 @font-face {
   font-family: 'Harriet Text-Medium';
-  src: url('fonts/HARRIETTEXTMEDIUM.OTF') format('opentype');
+  src: url('../fonts/HARRIETTEXTMEDIUM.OTF') format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -23,7 +23,7 @@
 
 @font-face {
   font-family: 'Harriet Text-Regular';
-  src: url('fonts/HARRIETTEXTREGULAR.OTF') format('opentype');
+  src: url('../fonts/HARRIETTEXTREGULAR.OTF') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -31,7 +31,7 @@
 
 @font-face {
   font-family: 'Harriet Text-Light';
-  src: url('fonts/HARRIETTEXTLIGHT.OTF') format('opentype');
+  src: url('../fonts/HARRIETTEXTLIGHT.OTF') format('opentype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -40,7 +40,7 @@
 /* Harriet Text Italic Variants */
 @font-face {
   font-family: 'Harriet Text-Bold';
-  src: url('fonts/HARRIETTEXTBOLDITALIC.OTF') format('opentype');
+  src: url('../fonts/HARRIETTEXTBOLDITALIC.OTF') format('opentype');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
@@ -48,7 +48,7 @@
 
 @font-face {
   font-family: 'Harriet Text-Medium';
-  src: url('fonts/HARRIETTEXTMEDIUMITALIC.OTF') format('opentype');
+  src: url('../fonts/HARRIETTEXTMEDIUMITALIC.OTF') format('opentype');
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -56,7 +56,7 @@
 
 @font-face {
   font-family: 'Harriet Text-Light';
-  src: url('fonts/HARRIETTEXTLIGHTITALIC.OTF') format('opentype');
+  src: url('../fonts/HARRIETTEXTLIGHTITALIC.OTF') format('opentype');
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -64,7 +64,7 @@
 
 @font-face {
   font-family: 'Harriet Text-Italic';
-  src: url('fonts/HARRIETTEXTITALIC.OTF') format('opentype');
+  src: url('../fonts/HARRIETTEXTITALIC.OTF') format('opentype');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -453,6 +453,8 @@ body {
   flex-direction: column;
   gap: 40px;
   padding-top: 0;
+  z-index: 10;
+  position: relative;
 }
 
 
@@ -466,7 +468,7 @@ body {
   position: absolute;
   width: 1442px;
   height: 1340px;
-  top: 7808px;
+  top: 7960px;
   left: 240px;
 }
 
@@ -674,7 +676,7 @@ body {
 .cl-gauche .display-intro {
   width: 1920px;
   height: 280px;
-  top: 7468px;
+  top: 7620px;
   left: 0;
   position: absolute;
   background-color: #f9f9f9;
@@ -713,7 +715,7 @@ body {
 
 .cl-gauche .MEA-2 {
   height: 1340px;
-  top: 6080px;
+  top: 6220px;
   position: absolute;
   width: 1442px;
   left: 240px;
@@ -723,14 +725,14 @@ body {
   position: absolute;
   width: 1920px;
   height: 280px;
-  top: 5740px;
+  top: 5880px;
   left: 0;
   background-color: #f9f9f9;
 }
 
 .cl-gauche .MEA-3 {
   height: 428px;
-  top: 5264px;
+  top: 5400px;
   position: absolute;
   width: 1442px;
   left: 240px;
@@ -740,7 +742,7 @@ body {
   position: absolute;
   width: 1440px;
   height: 685px;
-  top: 4519px;
+  top: 4650px;
   left: 240px;
   background-color: #f0f0f0;
 }
@@ -762,7 +764,7 @@ body {
 
 .cl-gauche .element-articles-sm {
   height: 639px;
-  top: 3789px;
+  top: 3900px;
   position: absolute;
   width: 1040px;
   left: 240px;
@@ -914,8 +916,8 @@ body {
   width: 1920px;
   height: 804px;
   top: 2925px;
-  left: 0;
   background-color: #000000;
+  z-index: 5;
 }
 
 .cl-gauche .BDX-2 {
@@ -1066,7 +1068,7 @@ body {
   height: 94px;
   top: 49px;
   left: 240px;
-  background-image: url(./img/logo.png);
+  /* background-image: url(./img/logo.png); */
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -1116,13 +1118,13 @@ body {
   height: 122px;
   top: 30px;
   left: 30px;
-  background-image: url(./img/image-14.png);
+  /* background-image: url(./img/image-14.png); */
   background-size: cover;
   background-position: 50% 50%;
 }
 
 .cl-gauche .blc {
-  width: 1px;
+  width: 980px;
   height: 122px;
   background-color: #ffffff;
 }
@@ -1265,7 +1267,7 @@ body {
   height: 122px;
   top: 30px;
   left: 30px;
-  background-image: url(./img/image.png);
+  /* background-image: url(./img/image.png); */
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -1398,7 +1400,7 @@ body {
 .news-letter .text-wrapper-14 {
   position: absolute;
   left: 28px;
-  top: 24px;
+  top: 18px;
   color: white;
   font-size: 32px;
   font-family: 'Harriet Text-Regular';
@@ -1514,6 +1516,91 @@ body {
   object-fit: cover;
 }
 
+.display-col-droite-2 {
+  width: 360px;
+  height: 310px;
+  position: relative;
+  background: #F9F9F9;
+  overflow: hidden;
+}
+
+/* Texte "ADVERTISEMENT" */
+.display-col-droite-2 .ADVERTISEMENT {
+  position: absolute;
+  left: 144px;
+  top: 285px;
+  text-align: center;
+  margin: 0;
+}
+
+.display-col-droite-2 .ADVERTISEMENT .text-wrapper {
+  color: #848484;
+  font-size: 12px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 300;
+  word-wrap: break-word;
+}
+
+/* Image publicitaire */
+.display-col-droite-2 .image {
+  width: 300px;
+  height: 250px;
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* Publicités supplémentaires après section video */
+.display-col-droite-4 {
+  width: 360px;
+  height: 310px;
+  position: relative;
+  background: #F9F9F9;
+  overflow: hidden;
+  margin-top: 850px;
+}
+
+.display-col-droite-5 {
+  width: 360px;
+  height: 310px;
+  position: relative;
+  background: #F9F9F9;
+  overflow: hidden;
+}
+
+/* Texte "ADVERTISEMENT" pour les pubs 4 et 5 */
+.display-col-droite-4 .ADVERTISEMENT,
+.display-col-droite-5 .ADVERTISEMENT {
+  position: absolute;
+  left: 144px;
+  top: 285px;
+  text-align: center;
+  margin: 0;
+}
+
+.display-col-droite-4 .ADVERTISEMENT .text-wrapper,
+.display-col-droite-5 .ADVERTISEMENT .text-wrapper {
+  color: #848484;
+  font-size: 12px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 300;
+  word-wrap: break-word;
+}
+
+/* Images publicitaires pour les pubs 4 et 5 */
+.display-col-droite-4 .image,
+.display-col-droite-5 .image {
+  width: 300px;
+  height: 250px;
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
 .top-headlines {
   width: 360px;
   position: relative;
@@ -1565,7 +1652,6 @@ body {
 .top-headlines .news-6 {
   width: 100%;
   padding: 12px 10px;
-  border-bottom: 1px solid #D1CCEC;
   position: relative;
   background: #ffffff;
   min-height: 58px;
@@ -1609,7 +1695,6 @@ body {
 
 /* Métadonnées avec numéros */
 .top-headlines .div-2 {
-  margin: 0 0 6px 0;
   font-size: 18px;
   font-family: "Montserrat", Helvetica;
   display: flex;
@@ -1674,7 +1759,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
+  gap: 8px;
   padding: 15px 0;
   margin-top: 10px;
   text-decoration: none;
@@ -1686,12 +1771,14 @@ body {
   font-family: "Montserrat", Helvetica;
   font-weight: 600;
   line-height: 22px;
+  text-decoration: none;
 }
 
 .top-headlines .icon-right-2 {
-  color: #5E549A;
-  font-size: 16px;
-  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  transform: rotate(-90deg);
+  filter: brightness(0) saturate(100%) invert(28%) sepia(26%) saturate(1467%) hue-rotate(226deg) brightness(92%) contrast(88%);
 }
 
 /* Ajout des numéros via CSS counter */
@@ -1738,7 +1825,227 @@ body {
   color: #4A4085;
 }
 
-.top-headlines .label-icon-right-2:hover .icon-right-2 {
-  transform: translateX(2px);
-  transition: transform 0.2s ease;
+/* Magazine Section */
+.magasine {
+  width: 360px;
+  height: 469px;
+  flex-shrink: 0;
+  aspect-ratio: 109/142;
+  border: 1px solid #E1E1E1;
+  background: url(<path-to-image>);
+  position: relative;
 }
+
+/* CTA Subscribe */
+.magasine .CTA {
+  display: flex;
+  width: 360px;
+  padding: 16px 0 15px 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 5px 5px;
+  background: #0C004F;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.magasine .CTA .text-wrapper-8 {
+  color: #ffffff;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Live Results Section */
+.live-results {
+  display: inline-flex;
+  height: 620px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-shrink: 0;
+  width: 360px;
+}
+
+.live-results .live-results-2 {
+  margin-bottom: 18px;
+  font-size: 28px;
+  font-style: normal;
+  line-height: normal;
+}
+
+/* Mot "Live" en rouge */
+.live-results .span {
+  color: #FF0004;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 700;
+}
+
+/* Mot "Results" en bleu */
+.live-results .text-wrapper-7 {
+  color: #0C004F;
+  font-family: "Harriet Text", serif;
+  font-weight: 500;
+}
+
+/* Container des tabs et résultats */
+.live-results .tab {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tabs navigation */
+.live-results .tab-2 {
+  width: 360px;
+  height: 42px;
+  display: flex;
+}
+
+.live-results .past {
+  width: 120px;
+  height: 42px;
+  background: #0C004F;
+  border: none;
+  border-top-left-radius: 20px;
+  cursor: pointer;
+}
+
+.live-results .past .text-wrapper-5 {
+  color: rgba(255, 255, 255, 0.40);
+  font-size: 14px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 700;
+  text-align: center;
+}
+
+.live-results .live {
+  width: 120px;
+  height: 42px;
+  background: #FF0004;
+  border: none;
+  cursor: pointer;
+}
+
+.live-results .live .text-wrapper-4 {
+  color: white;
+  font-size: 14px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 700;
+  text-align: center;
+}
+
+.live-results .upcoming {
+  width: 120px;
+  height: 42px;
+  background: #0C004F;
+  border: none;
+  border-top-right-radius: 20px;
+  cursor: pointer;
+}
+
+.live-results .upcoming .text-wrapper-3 {
+  color: rgba(255, 255, 255, 0.40);
+  font-size: 14px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Résultats individuels */
+.live-results .result,
+.live-results .result-2,
+.live-results .result-3,
+.live-results .result-4 {
+  width: 360px;
+  height: 120px;
+  padding: 14px 19px 20px 19px;
+  box-sizing: border-box;
+}
+
+.live-results .result {
+  background: #4A4085;
+}
+
+.live-results .result-2 {
+  background: #5E549A;
+}
+
+.live-results .result-3 {
+  background: #4A4085;
+}
+
+.live-results .result-4 {
+  background: #5E549A;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.live-results .result .p,
+.live-results .result-2 .p,
+.live-results .result-3 .p,
+.live-results .result-4 .p {
+  color: white;
+  font-size: 14px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 700;
+  line-height: 22.30px;
+  margin: 0 0 11px 0;
+}
+
+.live-results .result .element,
+.live-results .result-2 .element,
+.live-results .result-3 .element,
+.live-results .result-4 .element {
+  color: white;
+  font-size: 14px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+  line-height: 22.06px;
+  margin: 0 0 20px 0;
+}
+
+.live-results .result .picto,
+.live-results .result-2 .picto,
+.live-results .result-3 .picto,
+.live-results .result-4 .picto {
+  width: 204px;
+  height: 25px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Lien "More News" dans Live Results */
+.live-results .label-icon-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  text-decoration: none;
+  margin-top: 24px;
+}
+
+.live-results .text-wrapper-2 {
+  color: black;
+  font-size: 16px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 600;
+  line-height: 22px;
+  text-decoration: none;
+}
+
+.live-results .icon-right {
+  width: 20px;
+  height: 20px;
+  transform: rotate(-90deg);
+  filter: brightness(0) saturate(100%) invert(28%) sepia(26%) saturate(1467%) hue-rotate(226deg) brightness(92%) contrast(88%);
+}
+
+.live-results .label-icon-right:hover .text-wrapper-2 {
+  color: #4A4085;
+}
+
