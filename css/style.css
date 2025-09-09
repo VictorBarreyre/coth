@@ -70,19 +70,35 @@
   font-display: swap;
 }
 
-/* Pour Montserrat, utilisez Google Fonts ou ajoutez vos propres fichiers */
+/* CSS Reset et configuration moderne */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Wrapper pour la mise à l'échelle */
+html {
+  font-size: 16px;
+}
+
+/* Variables CSS pour les couleurs principales */
+:root {
+  --primary-blue: #0c004f;
+  --secondary-purple: #4a3f84;
+  --light-purple: #2f2469;
+  --white: #ffffff;
+  --light-gray: #f9f9f9;
+  --text-gray: #848484;
+}
+
+/* Body modernisé */
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background: #ffffff;
+  background: var(--white);
+  font-family: "Harriet Text-Regular", serif;
+  line-height: 1.6;
 }
 
 .scale-wrapper {
@@ -91,7 +107,7 @@ body {
   position: relative;
 }
 
-/* CSS Original avec positions absolues conservées */
+/* Header avec positions exactes comme l'original */
 .HEADER {
   position: relative;
   width: 1920px;
