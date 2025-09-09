@@ -435,15 +435,18 @@
 /* Main Content Layout */
 .category-content {
   position: relative;
-  width: 1680px;
+  width: 1920px;
   display: flex;
   margin: 60px auto 0 auto;
-  left: 50%;
-  transform: translateX(-50%);
+}
+
+.main-column {
+  position: relative;
+  width: 1320px;
 }
 
 .main-articles {
-  width: 1040px;
+  width: 100%;
 }
 
 .cl-droite {
