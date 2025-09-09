@@ -159,7 +159,7 @@ body {
   height: 50px;
   top: 26px;
   left: 144px;
-  font-family: "Montserrat-Medium", Helvetica;
+  font-family: "Montserrat", Helvetica;
   font-weight: 500;
   color: #ffffff;
   font-size: 18px;
@@ -169,7 +169,7 @@ body {
 }
 
 .HEADER .text-wrapper {
-  font-family: "Montserrat-Medium", Helvetica;
+  font-family: "Montserrat", Helvetica;
   font-weight: 500;
   color: #ffffff;
   font-size: 18px;
@@ -238,7 +238,7 @@ body {
   height: 22px;
   top: 40px;
   left: 0;
-  font-family: "Montserrat-Medium", Helvetica;
+  font-family: "Montserrat", Helvetica;
   font-weight: 500;
   color: #ffffff;
   font-size: 18px;
@@ -252,7 +252,7 @@ body {
   height: 22px;
   top: 40px;
   left: 120px;
-  font-family: "Montserrat-Medium", Helvetica;
+  font-family: "Montserrat", Helvetica;
   font-weight: 500;
   color: #ffffff;
   font-size: 18px;
@@ -266,7 +266,7 @@ body {
   height: 22px;
   top: 40px;
   left: 263px;
-  font-family: "Montserrat-Medium", Helvetica;
+  font-family: "Montserrat", Helvetica;
   font-weight: 500;
   color: #ffffff;
   font-size: 18px;
@@ -280,7 +280,7 @@ body {
   height: 22px;
   top: 40px;
   left: 362px;
-  font-family: "Montserrat-Medium", Helvetica;
+  font-family: "Montserrat", Helvetica;
   font-weight: 500;
   color: #ffffff;
   font-size: 18px;
@@ -630,7 +630,7 @@ body {
   height: 24px;
   top: 11px;
   left: 44px;
-  font-family: "Montserrat-SemiBold", Helvetica;
+  font-family: "Montserrat", Helvetica;
   font-weight: 600;
   color: #ffffff;
   font-size: 20px;
@@ -678,7 +678,7 @@ body {
   position: absolute;
   top: 251px;
   left: 914px;
-  font-family: "Montserrat-SemiBold", Helvetica;
+  font-family: "Montserrat", Helvetica;
   font-weight: 600;
   color: #848484;
   font-size: 12px;
@@ -688,7 +688,7 @@ body {
 }
 
 .cl-gauche .span {
-  font-family: "Montserrat-SemiBold", Helvetica;
+  font-family: "Montserrat", Helvetica;
   font-weight: 600;
   color: #848484;
   font-size: 12px;
@@ -806,7 +806,7 @@ body {
   height: 15px;
   top: 0.29rem;
   left: 11px;
-  font-family: "Montserrat-SemiBold", Helvetica;
+  font-family: "Montserrat", Helvetica;
   font-weight: 600;
   color: #ffffff;
   font-size: 12px;
@@ -818,7 +818,7 @@ body {
   position: absolute;
   top: 74px;
   left: 77px;
-  font-family: "Montserrat-Medium", Helvetica;
+  font-family: "Montserrat", Helvetica;
   font-weight: 500;
   color: #4a3f84;
   font-size: 14px;
@@ -861,7 +861,7 @@ body {
   position: absolute;
   top: 105px;
   left: 346px;
-  font-family: "Montserrat-Medium", Helvetica;
+  font-family: "Montserrat", Helvetica;
   font-weight: 500;
   color: #4a3f84;
   font-size: 14px;
@@ -956,7 +956,7 @@ body {
   position: absolute;
   top: 2px;
   left: 98px;
-  font-family: "Montserrat-Medium", Helvetica;
+  font-family: "Montserrat", Helvetica;
   font-weight: 500;
   color: transparent;
   font-size: 16px;
@@ -1011,7 +1011,7 @@ body {
   position: absolute;
   top: 34px;
   left: 35px;
-  font-family: "Montserrat-Medium", Helvetica;
+  font-family: "Montserrat", Helvetica;
   font-weight: 400;
   color: transparent;
   font-size: 28px;
@@ -1025,13 +1025,13 @@ body {
 }
 
 .cl-gauche .text-wrapper-16 {
-  font-family: "Montserrat-Bold", Helvetica;
+  font-family: "Montserrat", Helvetica;
   font-weight: 700;
   color: #ffffff;
 }
 
 .cl-gauche .text-wrapper-17 {
-  font-family: "Montserrat-Bold", Helvetica;
+  font-family: "Montserrat", Helvetica;
   font-weight: 700;
   color: #ff0004;
 }
@@ -1085,7 +1085,7 @@ body {
   position: absolute;
   top: 159px;
   left: 474px;
-  font-family: "Montserrat-SemiBold", Helvetica;
+  font-family: "Montserrat", Helvetica;
   font-weight: 600;
   color: #848484;
   font-size: 12px;
@@ -1162,7 +1162,7 @@ body {
   position: absolute;
   top: 74px;
   left: 76px;
-  font-family: "Montserrat-Medium", Helvetica;
+  font-family: "Montserrat", Helvetica;
   font-weight: 500;
   color: #4a3f84;
   font-size: 14px;
@@ -1218,7 +1218,7 @@ body {
   position: absolute;
   top: 74px;
   left: 84px;
-  font-family: "Montserrat-Medium", Helvetica;
+  font-family: "Montserrat", Helvetica;
   font-weight: 500;
   color: #4a3f84;
   font-size: 14px;
@@ -1308,7 +1308,7 @@ body {
   position: absolute;
   top: 655px;
   left: 84px;
-  font-family: "Montserrat-Medium", Helvetica;
+  font-family: "Montserrat", Helvetica;
   font-weight: 500;
   color: #4a3f84;
   font-size: 14px;
@@ -1474,7 +1474,7 @@ body {
 .display-col-droite-3 .ADVERTISEMENT {
   position: absolute;
   left: 144px;
-  top: 288px;
+  top: 285px;
   text-align: center;
   margin: 0;
 }
@@ -1483,8 +1483,7 @@ body {
   color: #848484;
   font-size: 12px;
   font-family: "Montserrat", Helvetica;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-weight: 300;
   word-wrap: break-word;
 }
 
