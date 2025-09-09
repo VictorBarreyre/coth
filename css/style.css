@@ -401,7 +401,8 @@ body {
 .display-intro {
   display: flex;
   width: 1920px;
-  padding: 40px 460px 40px 460px;
+  height: 280px;
+  padding: 40px 460px 10px 460px;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
@@ -414,6 +415,16 @@ body {
   height: 200px;
   aspect-ratio: 5/1;
   background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
+}
+
+.display-intro .ADVERTISEMENT {
+  font-family: "Montserrat", Helvetica;
+  font-weight: 300;
+  color: #848484;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
 }
 
 
@@ -450,7 +461,7 @@ body {
 .cl-droite {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 33px;
   padding-top: 0;
   z-index: 10;
   position: relative;
@@ -1103,7 +1114,7 @@ body {
   top: 159px;
   left: 474px;
   font-family: "Montserrat", Helvetica;
-  font-weight: 600;
+  font-weight: 300;
   color: #848484;
   font-size: 12px;
   text-align: center;
@@ -1491,7 +1502,7 @@ body {
 .display-col-droite-3 .ADVERTISEMENT {
   position: absolute;
   left: 144px;
-  top: 285px;
+  top: 282px;
   text-align: center;
   margin: 0;
 }
@@ -1527,7 +1538,7 @@ body {
 .display-col-droite-2 .ADVERTISEMENT {
   position: absolute;
   left: 144px;
-  top: 285px;
+  top: 282px;
   text-align: center;
   margin: 0;
 }
@@ -1574,7 +1585,7 @@ body {
 .display-col-droite-5 .ADVERTISEMENT {
   position: absolute;
   left: 144px;
-  top: 285px;
+  top: 280px;
   text-align: center;
   margin: 0;
 }
@@ -1861,7 +1872,7 @@ body {
 /* Live Results Section */
 .live-results {
   display: inline-flex;
-  height: 620px;
+  height: fit-content;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
