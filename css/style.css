@@ -2048,3 +2048,179 @@ body {
   color: #4A4085;
 }
 
+/* =========================================== 
+   NEWSLETTER BOTTOM SECTION
+   =========================================== */
+
+.newsletter-bottom {
+  width: 1440px;
+  height: 230px;
+  position: relative;
+  background: #0C004F;
+  overflow: hidden;
+  margin: 275px auto 0 auto;
+}
+
+.newsletter-shapes {
+  width: 463px;
+  height: 420px;
+  left: 486px;
+  top: -95px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.shape-1 {
+  width: 272.45px;
+  height: 301.46px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.shape-2 {
+  width: 303.57px;
+  height: 273.49px;
+  left: 159.43px;
+  top: 146.51px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.newsletter-icon {
+  width: 110px;
+  height: 102px;
+  left: 1202px;
+  top: 64px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.newsletter-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.newsletter-form {
+  width: 710px;
+  height: 55px;
+  left: 365px;
+  top: 88px;
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.newsletter-input-container {
+  width: 450px;
+  height: 49px;
+  position: relative;
+}
+
+.newsletter-border {
+  width: 450px;
+  height: 1px;
+  left: 0px;
+  top: 52px;
+  position: absolute;
+  background: white;
+}
+
+.newsletter-label {
+  width: 435px;
+  height: 22px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  color: white;
+  font-size: 16px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.newsletter-placeholder {
+  width: 435px;
+  height: 22px;
+  left: 0px;
+  top: 26px;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.70);
+  font-size: 16px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.newsletter-subscribe-btn {
+  width: 200px;
+  height: 53px;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  font-size: 18px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-subscribe-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.newsletter-circle {
+  width: 306px;
+  height: 306px;
+  left: -88px;
+  top: -38px;
+  position: absolute;
+  background: #4A4085;
+  border-radius: 50%;
+}
+
+.newsletter-text {
+  left: 40px;
+  top: 116px;
+  position: absolute;
+  color: white;
+  font-size: 16px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+.newsletter-title {
+  left: 38px;
+  top: 71px;
+  position: absolute;
+  color: white;
+  font-size: 32px;
+  font-family: "Harriet Text-Bold", serif;
+  font-weight: 700;
+}
+
+.newsletter-favicon {
+  width: 463px;
+  height: 420px;
+  left: 486px;
+  top: -95px;
+  position: absolute;
+  opacity: 0.1;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletter-favicon img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
