@@ -459,6 +459,23 @@
   width: 360px;
 }
 
+/* Remove margin-top for display-col-droite-4 in category page */
+.display-col-droite-4 {
+  margin-top: 0;
+}
+
+/* Widget Forum Section */
+.widget-forum {
+  display: flex;
+  width: 360px;
+  height: 521px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background: #F0F0F0;
+}
+
 /* Article Styles */
 .article-block {
   display: flex;
