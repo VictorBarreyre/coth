@@ -1702,14 +1702,14 @@ body {
 }
 
 .top-headlines .text-wrapper-10 {
-      color: #0C004F;
+  color: #0C004F;
 
   font-weight: 700;
   min-width: 15px;
 }
 
 .top-headlines .text-wrapper-11 {
-      color: #0C004F;
+  color: #0C004F;
 
   font-weight: 700;
   background: transparent;
@@ -2224,3 +2224,128 @@ body {
   object-fit: contain;
 }
 
+/* =========================================== 
+   FOOTER SECTION
+   =========================================== */
+
+.main-footer {
+  width: 1920px;
+  height: 262px;
+  position: relative;
+  background: #05001E;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 75px;
+}
+
+.footer-column {
+  width: 238px;
+  height: 196px;
+  position: absolute;
+  top: 51px;
+}
+
+.footer-column.customers {
+  left: 240px;
+}
+
+.footer-column.company {
+  left: 607px;
+}
+
+.footer-column.terms {
+  left: 857px;
+}
+
+.footer-title {
+  color: white;
+  font-size: 20px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 700;
+  line-height: 32px;
+  margin: 0 0 8px 0;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 4px;
+}
+
+.footer-links li:last-child {
+  margin-bottom: 0;
+}
+
+.footer-links a {
+  color: white;
+  font-size: 16px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+  line-height: 32px;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.7;
+}
+
+.footer-column.terms .footer-links a {
+  line-height: 26px;
+}
+
+.footer-logo {
+  width: 426px;
+  height: 83px;
+  left: 1251px;
+  top: 60px;
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo img {
+   width: 426px;
+  height: 83px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.footer-social {
+  width: 100px;
+  height: 30px;
+  left: 1575px;
+  top: 172px;
+  position: absolute;
+  display: flex;
+  gap: 20px;
+justify-content: end;
+}
+
+.social-link {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.social-link:hover {
+  opacity: 0.7;
+}
+
+.social-link img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
