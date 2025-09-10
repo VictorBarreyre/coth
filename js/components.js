@@ -34,6 +34,9 @@ document.addEventListener('DOMContentLoaded', async function() {
       if (typeof initializeDropdowns === 'function') {
         initializeDropdowns();
       }
+      if (typeof initializeLoginDropdown === 'function') {
+        initializeLoginDropdown();
+      }
       if (typeof initializeSearch === 'function') {
         initializeSearch();
       }

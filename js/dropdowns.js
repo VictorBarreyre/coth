@@ -1,5 +1,53 @@
 // Dropdown navigation system
 
+// Function to initialize login dropdown
+function initializeLoginDropdown() {
+  console.log('Initializing login dropdown...');
+  
+  const avatar = document.querySelector('.avatar');
+  const loginDropdown = document.querySelector('.login-dropdown');
+  
+  if (!avatar || !loginDropdown) {
+    console.log('Avatar or login dropdown not found');
+    return;
+  }
+  
+  let loginTimeout;
+  
+  avatar.addEventListener('mouseenter', () => {
+    clearTimeout(loginTimeout);
+    console.log('Avatar hover enter');
+    
+    loginDropdown.style.opacity = '1';
+    loginDropdown.style.visibility = 'visible';
+    loginDropdown.style.transform = 'translateY(0)';
+    loginDropdown.style.pointerEvents = 'all';
+  });
+  
+  avatar.addEventListener('mouseleave', () => {
+    console.log('Avatar hover leave');
+    loginTimeout = setTimeout(() => {
+      loginDropdown.style.opacity = '0';
+      loginDropdown.style.visibility = 'hidden';
+      loginDropdown.style.transform = 'translateY(-10px)';
+      loginDropdown.style.pointerEvents = 'none';
+    }, 200);
+  });
+  
+  loginDropdown.addEventListener('mouseenter', () => {
+    clearTimeout(loginTimeout);
+    console.log('Login dropdown hover enter');
+  });
+  
+  loginDropdown.addEventListener('mouseleave', () => {
+    console.log('Login dropdown hover leave');
+    loginDropdown.style.opacity = '0';
+    loginDropdown.style.visibility = 'hidden';
+    loginDropdown.style.transform = 'translateY(-10px)';
+    loginDropdown.style.pointerEvents = 'none';
+  });
+}
+
 // Function to initialize dropdown menus
 function initializeDropdowns() {
   console.log('Initializing dropdowns...');
