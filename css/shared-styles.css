@@ -1,0 +1,952 @@
+/* =========================================== 
+   SHARED STYLES - COMMON TO ALL PAGES
+   =========================================== */
+
+/* Font Declarations */
+@font-face {
+  font-family: 'Harriet Text-Bold';
+  src: url('../fonts/HARRIETTEXTBOLD.OTF') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Harriet Text-Medium';
+  src: url('../fonts/HARRIETTEXTMEDIUM.OTF') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Harriet Text-Regular';
+  src: url('../fonts/HARRIETTEXTREGULAR.OTF') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Harriet Text-Light';
+  src: url('../fonts/HARRIETTEXTLIGHT.OTF') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Harriet Text Italic Variants */
+@font-face {
+  font-family: 'Harriet Text-Bold';
+  src: url('../fonts/HARRIETTEXTBOLDITALIC.OTF') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Harriet Text-Medium';
+  src: url('../fonts/HARRIETTEXTMEDIUMITALIC.OTF') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Harriet Text-Light';
+  src: url('../fonts/HARRIETTEXTLIGHTITALIC.OTF') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Harriet Text-Italic';
+  src: url('../fonts/HARRIETTEXTITALIC.OTF') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* CSS Reset et configuration moderne */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* Variables CSS pour les couleurs principales */
+:root {
+  --primary-blue: #0c004f;
+  --secondary-purple: #4a3f84;
+  --light-purple: #2f2469;
+  --white: #ffffff;
+  --light-gray: #f9f9f9;
+  --text-gray: #848484;
+}
+
+/* Body modernisé */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: var(--white);
+  font-family: "Harriet Text-Regular", serif;
+  line-height: 1.6;
+}
+
+.scale-wrapper {
+  transform-origin: top left;
+  width: 1920px;
+  position: relative;
+}
+
+/* =========================================== 
+   HEADER STYLES - SHARED
+   =========================================== */
+
+.HEADER {
+  position: relative;
+  width: 1920px;
+  height: 80px;
+  background-color: #0c004f;
+  overflow: hidden;
+}
+
+.HEADER .overlap {
+  position: absolute;
+  width: 392px;
+  height: 104px;
+  top: -12px;
+  left: 1528px;
+}
+
+.HEADER .BG {
+  position: absolute;
+  width: 316px;
+  height: 80px;
+  top: 12px;
+  left: 76px;
+  background-color: #2f2469;
+}
+
+.HEADER .avatar {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 37px;
+  left: 322px;
+}
+
+.HEADER .overlap-group {
+  position: relative;
+  height: 30px;
+}
+
+.HEADER .vector {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 9px;
+  left: 9px;
+}
+
+.HEADER .img {
+  position: absolute;
+  width: 30px;
+  height: 25px;
+  top: 0;
+  left: 0;
+}
+
+.HEADER .vector-2 {
+  position: absolute;
+  width: 19px;
+  height: 7px;
+  top: 23px;
+  left: 5px;
+}
+
+.HEADER .subscribe-now {
+  position: absolute;
+  height: 50px;
+  top: 26px;
+  left: 144px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.HEADER .text-wrapper {
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.HEADER .span {
+  font-size: 14px;
+}
+
+.HEADER .loupe {
+  position: absolute;
+  width: 104px;
+  height: 104px;
+  top: 0;
+  left: 0;
+  background-color: #4a3f84;
+  border-radius: 52px;
+  border: none;
+  cursor: pointer;
+}
+
+.HEADER .vector-wrapper {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  left: 37px;
+}
+
+.HEADER .vector-3 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  transform: rotate(-180deg);
+}
+
+.HEADER .RS {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  top: 25px;
+  left: 1388px;
+}
+
+.HEADER .div {
+  position: absolute;
+  width: 580px;
+  height: 104px;
+  top: -12px;
+  left: 127px;
+}
+
+.HEADER .nav {
+  position: absolute;
+  width: 580px;
+  height: 104px;
+  top: 0;
+  left: 0;
+}
+
+.HEADER .text-wrapper-2 {
+  position: absolute;
+  height: 22px;
+  top: 40px;
+  left: 0;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.HEADER .text-wrapper-3 {
+  position: absolute;
+  height: 22px;
+  top: 40px;
+  left: 120px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.HEADER .text-wrapper-4 {
+  position: absolute;
+  height: 22px;
+  top: 40px;
+  left: 263px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.HEADER .text-wrapper-5 {
+  position: absolute;
+  height: 22px;
+  top: 40px;
+  left: 362px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.HEADER .forum {
+  position: absolute;
+  width: 104px;
+  height: 104px;
+  top: 0;
+  left: 438px;
+  background-color: #4a3f84;
+  border-radius: 52px;
+  overflow: hidden;
+}
+
+.HEADER .text-wrapper-6 {
+  position: absolute;
+  height: 24px;
+  top: 39px;
+  left: 21px;
+  font-family: "Harriet Text-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.HEADER .symboles-chevrons {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 41px;
+  left: 63px;
+}
+
+.HEADER .icon {
+  position: absolute;
+  width: 14px;
+  height: 10px;
+  top: 8px;
+  left: 5px;
+}
+
+.HEADER .icon-wrapper {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 41px;
+  left: 204px;
+}
+
+.HEADER .favicon {
+  position: absolute;
+  width: 47px;
+  height: 42px;
+  top: 19px;
+  left: 40px;
+  aspect-ratio: 1.1;
+}
+
+.HEADER .overlap-2 {
+  position: relative;
+  height: 42px;
+}
+
+.HEADER .vector-4 {
+  position: absolute;
+  width: 28px;
+  height: 30px;
+  top: 0;
+  left: 0;
+}
+
+.HEADER .vector-5 {
+  position: absolute;
+  width: 31px;
+  height: 27px;
+  top: 15px;
+  left: 16px;
+}
+
+/* Header Accessibility */
+.HEADER a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.HEADER a:hover,
+.HEADER a:focus {
+  opacity: 0.8;
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.HEADER button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+}
+
+.HEADER button:hover,
+.HEADER button:focus {
+  opacity: 0.8;
+}
+
+.HEADER button:focus-visible {
+  outline: 2px solid #ffffff !important;
+  outline-offset: 2px !important;
+}
+
+.HEADER .loupe:hover,
+.HEADER .loupe:focus {
+  background-color: #5a4f94;
+}
+
+.HEADER .forum:hover,
+.HEADER .forum:focus {
+  background-color: #5a4f94;
+}
+
+/* =========================================== 
+   LOGO SECTION - SHARED
+   =========================================== */
+
+.logo-section {
+  width: 600px;
+  height: 117px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.logo-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* =========================================== 
+   SHARED AD STYLES
+   =========================================== */
+
+/* Placeholder Styles */
+.img-placeholder {
+  background: #f0f0f0;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 12px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Full Width Ad */
+.full-width-ad {
+  align-self: stretch;
+  height: 280px;
+  position: relative;
+  background: #F9F9F9;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.full-width-ad .ad-content {
+  width: 1000px;
+  height: 200px;
+  margin: 40px;
+}
+
+.full-width-ad .ad-label {
+  position: absolute;
+  bottom: 10px;
+  color: #848484;
+  font-size: 12px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 600;
+}
+
+/* Sidebar Ad */
+.sidebar-ad {
+  width: 360px;
+  height: 310px;
+  position: relative;
+  background: #F9F9F9;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-ad .ad-content {
+  width: 300px;
+  height: 250px;
+  margin: 30px;
+}
+
+.sidebar-ad .ad-label {
+  position: absolute;
+  bottom: 10px;
+  color: #848484;
+  font-size: 12px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 600;
+}
+
+/* Ad Banner */
+.ad-banner {
+  align-self: stretch;
+  height: 182px;
+  position: relative;
+  background: #F9F9F9;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ad-banner .ad-content {
+  width: 980px;
+  height: 122px;
+  margin: 30px;
+}
+
+.ad-banner .ad-label {
+  position: absolute;
+  bottom: 10px;
+  color: #848484;
+  font-size: 12px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 600;
+}
+
+/* =========================================== 
+   FOOTER STYLES - SHARED
+   =========================================== */
+
+.main-footer {
+  width: 1920px;
+  height: 262px;
+  position: relative;
+  background: #05001E;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 75px;
+}
+
+.footer-column {
+  width: 238px;
+  height: 196px;
+  position: absolute;
+  top: 51px;
+}
+
+.footer-column.customers {
+  left: 240px;
+}
+
+.footer-column.company {
+  left: 607px;
+}
+
+.footer-column.terms {
+  left: 857px;
+}
+
+.footer-title {
+  color: white;
+  font-size: 20px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 700;
+  line-height: 32px;
+  margin: 0 0 8px 0;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 4px;
+}
+
+.footer-links li:last-child {
+  margin-bottom: 0;
+}
+
+.footer-links a {
+  color: white;
+  font-size: 16px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+  line-height: 32px;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.7;
+}
+
+.footer-column.terms .footer-links a {
+  line-height: 26px;
+}
+
+.footer-logo {
+  width: 426px;
+  height: 83px;
+  left: 1251px;
+  top: 60px;
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo img {
+  width: 426px;
+  height: 83px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.footer-social {
+  width: 100px;
+  height: 30px;
+  left: 1575px;
+  top: 172px;
+  position: absolute;
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+}
+
+.social-link {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.social-link:hover {
+  opacity: 0.7;
+}
+
+.social-link img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+/* =========================================== 
+   SIDEBAR NEWSLETTER COMPONENT - SHARED
+   =========================================== */
+
+.news-letter {
+  width: 360px;
+  height: 136px;
+  position: relative;
+  background: #0C004F;
+  overflow: hidden;
+}
+
+/* Cercle décoratif violet en arrière-plan */
+.news-letter .overlap-4 {
+  width: 258px;
+  height: 258px;
+  position: absolute;
+  left: -54px;
+  top: -61px;
+  background: #4A4085;
+  border-radius: 50%;
+}
+
+/* Titre "Sign up" */
+.news-letter .text-wrapper-14 {
+  position: absolute;
+  left: 28px;
+  top: 18px;
+  color: white;
+  font-size: 32px;
+  font-family: 'Harriet Text-Regular';
+  font-weight: 700;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+/* Sous-titre "for our weekly newsletter!" */
+.news-letter .for-our-weekly {
+  position: absolute;
+  left: 30px;
+  top: 69px;
+  color: white;
+  font-size: 16px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 700;
+  line-height: 21px;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+/* Container de l'icône mail */
+.news-letter .NL {
+  width: 50px;
+  height: 46px;
+  position: absolute;
+  left: 257px;
+  top: 45px;
+  overflow: hidden;
+}
+
+.news-letter .overlap-group-2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Partie extérieure de l'icône mail */
+.news-letter .vector {
+  width: 49.96px;
+  height: 45.98px;
+  position: absolute;
+  left: 0.02px;
+  top: 0px;
+}
+
+/* Bouton flèche */
+.news-letter .symboles-chevrons {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 329px;
+  top: 127px;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.news-letter .symboles-chevrons .icon {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.news-letter .symboles-chevrons .vector-3 {
+  width: 100%;
+  height: 100%;
+  filter: brightness(0) invert(1);
+}
+
+/* =========================================== 
+   NEWSLETTER BOTTOM SECTION - SHARED
+   =========================================== */
+
+.newsletter-bottom {
+  width: 1440px;
+  height: 230px;
+  position: relative;
+  background: #0C004F;
+  overflow: hidden;
+  margin: 5px auto 0 auto;
+}
+
+.newsletter-shapes {
+  width: 463px;
+  height: 420px;
+  left: 486px;
+  top: -95px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.shape-1 {
+  width: 272.45px;
+  height: 301.46px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.shape-2 {
+  width: 303.57px;
+  height: 273.49px;
+  left: 159.43px;
+  top: 146.51px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.newsletter-icon {
+  width: 110px;
+  height: 102px;
+  left: 1202px;
+  top: 64px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.newsletter-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.newsletter-form {
+  width: 710px;
+  height: 55px;
+  left: 365px;
+  top: 88px;
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.newsletter-input-container {
+  width: 450px;
+  height: 49px;
+  position: relative;
+}
+
+.newsletter-border {
+  width: 450px;
+  height: 1px;
+  left: 0px;
+  top: 52px;
+  position: absolute;
+  background: white;
+}
+
+.newsletter-label {
+  width: 435px;
+  height: 22px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  color: white;
+  font-size: 16px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.newsletter-placeholder {
+  width: 435px;
+  height: 22px;
+  left: 0px;
+  top: 26px;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.70);
+  font-size: 16px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.newsletter-subscribe-btn {
+  width: 200px;
+  height: 53px;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  font-size: 18px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-subscribe-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.newsletter-circle {
+  width: 306px;
+  height: 306px;
+  left: -88px;
+  top: -38px;
+  position: absolute;
+  background: #4A4085;
+  border-radius: 50%;
+}
+
+.newsletter-text {
+  left: 40px;
+  top: 116px;
+  position: absolute;
+  color: white;
+  font-size: 16px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+.newsletter-title {
+  left: 38px;
+  top: 71px;
+  position: absolute;
+  color: white;
+  font-size: 32px;
+  font-family: "Harriet Text-Bold", serif;
+  font-weight: 700;
+}
+
+.newsletter-favicon {
+  width: 463px;
+  height: 420px;
+  left: 486px;
+  top: -95px;
+  position: absolute;
+  opacity: 0.1;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletter-favicon img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}

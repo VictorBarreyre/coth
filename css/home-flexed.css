@@ -2,31 +2,6 @@
    HOME FLEXED LAYOUT STYLES
    =========================================== */
 
-/* Font Declarations */
-@font-face {
-  font-family: 'Harriet Text-Bold';
-  src: url('../fonts/HARRIETTEXTBOLD.OTF') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Harriet Text-Medium';
-  src: url('../fonts/HARRIETTEXTMEDIUM.OTF') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Harriet Text-Regular';
-  src: url('../fonts/HARRIETTEXTREGULAR.OTF') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* Main Container */
 .main-container {
   width: 100%;
@@ -39,7 +14,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 59px;
+  gap: 60px;
   padding-top: 4rem;
 }
 
@@ -331,32 +306,6 @@
   text-transform: uppercase;
 }
 
-/* Ad Banner */
-.ad-banner {
-  align-self: stretch;
-  height: 182px;
-  position: relative;
-  background: #F9F9F9;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.ad-banner .ad-content {
-  width: 980px;
-  height: 122px;
-  margin: 30px;
-}
-
-.ad-banner .ad-label {
-  position: absolute;
-  bottom: 10px;
-  color: #848484;
-  font-size: 12px;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 600;
-}
 
 /* Medium Articles Grid */
 .medium-articles-grid {
@@ -696,32 +645,6 @@
   background: #2F256A;
 }
 
-/* Sidebar Ad */
-.sidebar-ad {
-  width: 360px;
-  height: 310px;
-  position: relative;
-  background: #F9F9F9;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.sidebar-ad .ad-content {
-  width: 300px;
-  height: 250px;
-  margin: 30px;
-}
-
-.sidebar-ad .ad-label {
-  position: absolute;
-  bottom: 10px;
-  color: #848484;
-  font-size: 12px;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 600;
-}
 
 /* Top Headlines */
 .top-headlines {
@@ -927,41 +850,7 @@
   filter: brightness(0) invert(1);
 }
 
-/* Full Width Ad */
-.full-width-ad {
-  align-self: stretch;
-  height: 280px;
-  position: relative;
-  background: #F9F9F9;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.full-width-ad .ad-content {
-  width: 1000px;
-  height: 200px;
-  margin: 40px;
-}
-
-.full-width-ad .ad-label {
-  position: absolute;
-  bottom: 10px;
-  color: #848484;
-  font-size: 12px;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 600;
-}
-
-/* Logo Section */
-.logo-section {
-  width: 600px;
-  height: 117px;
-  position: relative;
-  overflow: hidden;
-  margin: 0 auto;
-}
 
 /* Live Video Section */
 .live-video-section {
@@ -1249,248 +1138,5 @@
   margin: 0;
 }
 
-/* Newsletter Section */
-.newsletter-section {
-  width: 1440px;
-  height: 230px;
-  position: relative;
-  background: #0C004F;
-  overflow: hidden;
-}
 
-.newsletter-shapes {
-  width: 463px;
-  height: 420px;
-  position: absolute;
-  left: 486px;
-  top: -95px;
-  overflow: hidden;
-}
 
-.shape-1 {
-  width: 272.45px;
-  height: 301.46px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  background: rgba(255, 255, 255, 0.10);
-}
-
-.shape-2 {
-  width: 303.57px;
-  height: 273.49px;
-  position: absolute;
-  left: 159.43px;
-  top: 146.51px;
-  background: rgba(255, 255, 255, 0.10);
-}
-
-.newsletter-circle {
-  width: 306px;
-  height: 306px;
-  position: absolute;
-  left: -88px;
-  top: -38px;
-  background: #4A4085;
-  border-radius: 50%;
-}
-
-.newsletter-section .newsletter-content {
-  position: absolute;
-  left: 38px;
-  top: 71px;
-}
-
-.newsletter-section .newsletter-title {
-  color: white;
-  font-size: 32px;
-  font-family: "Harriet Text-Bold", Helvetica;
-  letter-spacing: 0;
-  text-transform: lowercase;
-  font-weight: 700;
-  margin: 0;
-}
-
-.newsletter-section .newsletter-text {
-  color: white;
-  font-size: 16px;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 700;
-  line-height: 21px;
-  margin: 20px 0 0 0;
-}
-
-.newsletter-form {
-  width: 710px;
-  height: 55px;
-  position: absolute;
-  left: 365px;
-  top: 88px;
-  display: flex;
-  gap: 60px;
-}
-
-.form-input {
-  width: 450px;
-  height: 49px;
-  position: relative;
-}
-
-.input-border {
-  width: 450px;
-  height: 1px;
-  position: absolute;
-  left: 0px;
-  top: 52px;
-  background: white;
-}
-
-.input-label {
-  width: 435px;
-  height: 22px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  color: white;
-  font-size: 16px;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 500;
-  line-height: 22px;
-}
-
-.input-placeholder {
-  width: 435px;
-  height: 22px;
-  position: absolute;
-  left: 0px;
-  top: 26px;
-  color: rgba(255, 255, 255, 0.70);
-  font-size: 16px;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 500;
-  line-height: 22px;
-}
-
-.subscribe-button {
-  width: 200px;
-  height: 53px;
-  background: transparent;
-  border: 1px solid white;
-  border-radius: 5px;
-  color: white;
-  font-size: 18px;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.subscribe-button:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.newsletter-section .newsletter-icon {
-  width: 110px;
-  height: 102px;
-  position: absolute;
-  left: 1202px;
-  top: 64px;
-  overflow: hidden;
-}
-
-.newsletter-section .newsletter-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: brightness(0) invert(1);
-}
-
-/* Footer */
-.main-footer {
-  align-self: stretch;
-  height: 262px;
-  position: relative;
-  background: #05001E;
-  overflow: hidden;
-}
-
-.footer-content {
-  display: flex;
-  gap: 129px;
-  position: absolute;
-  left: 240px;
-  top: 51px;
-}
-
-.footer-column {
-  width: 238px;
-  height: 196px;
-}
-
-.footer-title {
-  color: white;
-  font-size: 20px;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 700;
-  line-height: 32px;
-  margin: 0 0 16px 0;
-}
-
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-links li {
-  color: white;
-  font-size: 16px;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 500;
-  line-height: 32px;
-  margin-bottom: 8px;
-}
-
-.footer-links li:last-child {
-  line-height: 26px;
-}
-
-.footer-logo {
-  width: 426px;
-  height: 83px;
-  position: absolute;
-  left: 1251px;
-  top: 60px;
-  overflow: hidden;
-}
-
-.footer-social {
-  width: 100px;
-  height: 30px;
-  position: absolute;
-  left: 1575px;
-  top: 172px;
-  display: flex;
-  gap: 20px;
-}
-
-.footer-social img {
-  width: 30px;
-  height: 30px;
-  filter: brightness(0) invert(1);
-}
-
-/* Placeholder Styles */
-.img-placeholder {
-  background: #f0f0f0;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 12px;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 500;
-  text-align: center;
-  box-sizing: border-box;
-}
