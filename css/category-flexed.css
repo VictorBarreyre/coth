@@ -485,22 +485,9 @@
   object-fit: cover;
 }
 
-/* Top Headlines Section - Structure from home-flexed.css */
-.top-headlines {
-  width: 360px;
-  height: 781px;
-  position: relative;
-}
+/* Top Headlines Section - Structure from shared-styles.css */
 
-.headlines-header {
-  width: 360px;
-  height: 70px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  border-top-right-radius: 75px;
-  border-bottom-right-radius: 75px;
-}
+/* Headlines header - handled in shared-styles.css */
 
 .headlines-header .section-title {
   width: 249px;
@@ -530,24 +517,19 @@
   font-weight: 500;
 }
 
-.headlines-list {
-  position: absolute;
-  top: 81px;
-  left: 0;
-  width: 360px;
-}
+/* Headlines list - handled in shared-styles.css */
 
 .headline-item {
   width: 360px;
-  height: 58px;
+  height: auto;
   padding: 10px;
   box-sizing: border-box;
-  border-top: 1px solid #D1CCEC;
+  border-bottom: 1px solid #D1CCEC;
 }
 
 .headline-item.highlighted {
   background: #FBFAFF;
-  height: 64px;
+  height: auto;
 }
 
 .headline-item:last-child {
@@ -558,37 +540,9 @@
   margin-bottom: 5px;
 }
 
-.headline-category {
-  color: #0C004F;
-  font-size: 12px;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 700;
-}
+/* Headline styles handled in shared-styles.css */
 
-.headline-time {
-  color: #0C004F;
-  font-size: 12px;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 500;
-}
-
-.headline-title {
-  color: #0C004F;
-  font-size: 16px;
-  font-family: "Harriet Text-Bold", Helvetica;
-  letter-spacing: 0;
-  text-transform: lowercase;
-  font-weight: 500;
-  margin: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.top-headlines .more-link {
-  left: 121.50px;
-  top: 759px;
-}
+/* More-link positioning handled in shared-styles.css */
 
 /* Header "Top Headlines" */
 .top-headlines .BDX {
@@ -675,55 +629,11 @@
   background: #D1CCEC;
 }
 
-/* Métadonnées avec numéros */
-.top-headlines .div-2 {
-  font-size: 18px;
-  font-family: "Montserrat", Helvetica;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+/* Metadata styles handled in shared-styles.css */
 
-.top-headlines .text-wrapper-10 {
-  color: #0C004F;
-  font-weight: 700;
-  min-width: 15px;
-}
+/* Separator and date styles handled in shared-styles.css */
 
-.top-headlines .text-wrapper-11 {
-  color: #0C004F;
-  font-weight: 700;
-  background: transparent;
-  border: none;
-  padding: 0;
-}
-
-/* Séparateur entre numéro/catégorie et date */
-.top-headlines .div-2::after {
-  content: "|";
-  color: #0C004F;
-  font-weight: 500;
-  margin: 0 4px;
-}
-
-/* Dates */
-.top-headlines .div-2 .date {
-  color: #0C004F;
-  font-weight: 500;
-}
-
-/* Titres des articles */
-.top-headlines .text-wrapper-9 {
-  font-family: 'Harriet Text-Regular !important';
-  font-size: 18px;
-  color: #0C004F;
-}
-
-.top-headlines .text-wrapper-12 {
-  font-family: 'Harriet Text-Regular !important';
-  font-size: 18px;
-  color: #0C004F;
-}
+/* Article title styles handled in shared-styles.css */
 
 .headlines-text {
   color: #FFF;
@@ -963,12 +873,6 @@
 }
 
 .more-link {
-  position: absolute;
-  left: 114px;
-  top: 598px;
-  display: inline-flex;
-  justify-content: flex-end;
-  align-items: flex-end;
   gap: 4px;
   color: black;
   font-size: 16px;

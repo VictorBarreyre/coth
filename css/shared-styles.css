@@ -674,6 +674,312 @@ body {
 }
 
 /* =========================================== 
+   SHARED SIDEBAR COMPONENTS
+   =========================================== */
+
+/* More Link - Used in Top Headlines and Live Results */
+.more-link {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 4px;
+  color: black;
+  font-size: 16px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 600;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.more-link img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) saturate(100%) invert(28%) sepia(26%) saturate(1467%) hue-rotate(226deg) brightness(92%) contrast(88%);
+  transform: rotate(-90deg);
+}
+
+/* Top Headlines More Link positioning */
+.top-headlines .more-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* Live Results More Link positioning */
+.live-results .more-link {
+  position: absolute;
+  left: 114px;
+  top: 598px;
+}
+
+/* Top Headlines Section - SHARED */
+.top-headlines {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.headlines-header {
+  width: 360px;
+  border-top-right-radius: 75px;
+  border-bottom-right-radius: 75px;
+  flex-shrink: 0;
+}
+
+.headlines-header .section-title {
+  width: 249px;
+  height: 70px;
+  background: #4A4085;
+  border-top-right-radius: 75px;
+  border-bottom-right-radius: 75px;
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  margin: 0;
+}
+
+.top-bold {
+  color: white;
+  font-size: 28px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 700;
+}
+
+.headlines-text {
+  color: white;
+  font-size: 28px;
+  font-family: "Harriet Text-Bold", Helvetica;
+  letter-spacing: 0;
+  text-transform: lowercase;
+  font-weight: 500;
+}
+
+.headlines-list {
+  width: 360px;
+  margin-top: 11px;
+  display: flex;
+  flex-direction: column;
+}
+
+.headline-item {
+  width: 360px;
+  height: auto;
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #D1CCEC;
+}
+
+.headline-item.highlighted {
+  background: #FBFAFF;
+  height: auto;
+}
+
+.headline-item:last-child {
+  border-bottom: 1px solid #D1CCEC;
+}
+
+.headline-meta {
+  margin-bottom: 5px;
+}
+
+.headline-category {
+  color: #0C004F;
+  font-size: 14px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 700;
+}
+
+.headline-time {
+  color: #0C004F;
+  font-size: 12px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+}
+
+.headline-title {
+  color: #0C004F;
+  font-size: 16px;
+  font-family: "Harriet Text-Bold", Helvetica;
+  letter-spacing: 0;
+  text-transform: lowercase;
+  font-weight: 500;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.headline-title::first-letter {
+  text-transform: uppercase;
+}
+
+/* Live Results Section - SHARED */
+.live-results {
+  width: 360px;
+  height: 620px;
+  position: relative;
+}
+
+.live-results .section-title {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  font-size: 28px;
+  margin: 0;
+}
+
+.live-red {
+  color: #FF0004;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 700;
+}
+
+.live-text {
+  color: #0C004F;
+  font-family: "Harriet Text-Bold", Helvetica;
+  letter-spacing: 0;
+  text-transform: lowercase;
+  font-weight: 500;
+}
+
+.results-tabs {
+  width: 360px;
+  height: 42px;
+  position: absolute;
+  left: 0px;
+  top: 52px;
+  display: flex;
+}
+
+.tab-button {
+  width: 120px;
+  height: 42px;
+  background: #0C004F;
+  border: none;
+  color: rgba(255, 255, 255, 0.40);
+  font-size: 14px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-button:first-child {
+  border-top-left-radius: 20px;
+}
+
+.tab-button:last-child {
+  border-top-right-radius: 20px;
+}
+
+.tab-button.active {
+  background: #FF0004;
+  color: white;
+}
+
+.results-list {
+  width: 360px;
+  position: absolute;
+  left: 0px;
+  top: 94px;
+  display: flex;
+  flex-direction: column;
+}
+
+.result-item {
+  width: 360px;
+  height: 120px;
+  background: #4A4085;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 10px 20px;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.result-item.alt {
+  background: #5E549A;
+}
+
+.result-item:last-child {
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.result-icons {
+  width: 204px;
+  height: 25px;
+  display: flex;
+  gap: 20px;
+}
+
+.result-icons img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.result-content h4 {
+  width: 319px;
+  height: 22px;
+  color: white;
+  font-size: 12px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 700;
+  line-height: 22.30px;
+  margin: 0 0 14px 0;
+}
+
+.result-date {
+  color: white;
+  font-size: 12px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+  line-height: 22.06px;
+  margin: 0;
+}
+
+/* Magazine Subscribe - SHARED */
+.magazine-subscribe {
+  width: 360px;
+  height: 552px;
+  position: relative;
+}
+
+.magazine-image {
+  width: 360px;
+  height: 469px;
+  border: 1px solid #E1E1E1;
+}
+
+.subscribe-btn {
+  width: 360px;
+  height: 53px;
+  position: absolute;
+  left: 0px;
+  top: 468px;
+  background: #0C004F;
+  border: none;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  color: white;
+  font-size: 18px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background: #2F256A;
+}
+
+/* =========================================== 
    SIDEBAR NEWSLETTER COMPONENT - SHARED
    =========================================== */
 
