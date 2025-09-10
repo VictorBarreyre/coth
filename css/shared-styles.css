@@ -756,6 +756,11 @@ body {
   letter-spacing: 0;
   text-transform: lowercase;
   font-weight: 500;
+  margin-left: 8px;
+}
+
+.headlines-text::first-letter {
+  text-transform: uppercase;
 }
 
 .headlines-list {
