@@ -421,8 +421,7 @@ body {
 .HEADER a:hover,
 .HEADER a:focus {
   opacity: 0.8;
-  outline: 2px solid #ffffff;
-  outline-offset: 2px;
+  outline: none;
 }
 
 .HEADER button {
