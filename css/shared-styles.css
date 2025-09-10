@@ -8,7 +8,8 @@
 .small-article a,
 .article-item a,
 .headline-item a,
-.related-article a {
+.related-article a,
+.favicon a {
   text-decoration: none !important;
   color: inherit;
   display: block;
@@ -19,7 +20,8 @@
 .small-article a:hover,
 .article-item a:hover,
 .headline-item a:hover,
-.related-article a:hover {
+.related-article a:hover,
+.favicon a:hover {
   text-decoration: none !important;
   opacity: 0.8;
   transition: opacity 0.3s ease;
