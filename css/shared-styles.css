@@ -2,6 +2,29 @@
    SHARED STYLES - COMMON TO ALL PAGES
    =========================================== */
 
+/* Article Links - Make them invisible */
+.featured-article a,
+.medium-article a,
+.small-article a,
+.article-item a,
+.headline-item a,
+.related-article a {
+  text-decoration: none !important;
+  color: inherit;
+  display: block;
+}
+
+.featured-article a:hover,
+.medium-article a:hover,
+.small-article a:hover,
+.article-item a:hover,
+.headline-item a:hover,
+.related-article a:hover {
+  text-decoration: none !important;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
 /* Font Declarations */
 @font-face {
   font-family: 'Harriet Text-Bold';

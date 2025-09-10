@@ -12,52 +12,8 @@
 
 <body>
   <div class="scale-wrapper" id="scaleWrapper">
-    <!-- Header -->
-    <header class="HEADER" role="banner">
-      <div class="overlap">
-        <div class="BG" aria-hidden="true"></div>
-        <div class="avatar" aria-label="User avatar">
-          <div class="overlap-group">
-            <img src="assets/header/Avatar.svg" alt="User Avatar" />
-          </div>
-        </div>
-        <div class="subscribe-now">
-          <span class="text-wrapper">Subscribe Now<br /></span>
-          <span class="span">to the Magazine</span>
-        </div>
-        <button class="loupe" type="button" aria-label="Search">
-          <div class="vector-wrapper">
-            <img src="assets/header/Loupe.svg" alt="Search Icon" />
-          </div>
-        </button>
-      </div>
-      <div style="position: absolute; width: 100px; height: 30px; top: 25px; left: 1388px; ; display: flex; gap: 20px;">
-        <img src="assets/header/IG.svg" alt="RS Logo" />
-        <img src="assets/header/FB.svg" alt="RS Logo" />
-      </div>
-      <div class="div">
-        <nav class="nav" role="navigation" aria-label="Main navigation">
-          <a href="#sports" class="text-wrapper-2">Jumping</a>
-          <a href="#features" class="text-wrapper-3">Features</a>
-          <a href="#videos" class="text-wrapper-4">Videos</a>
-          <a href="#live" class="text-wrapper-5">Live</a>
-          <button class="forum" type="button" aria-label="Forum">
-            <span class="text-wrapper-6">Forum</span>
-          </button>
-        </nav>
-        <button class="symboles-chevrons" type="button" aria-label="Expand sports menu">
-          <img src="assets/header/Chevronbas.svg" alt="Chevron Icon" />
-        </button>
-        <button class="icon-wrapper" type="button" aria-label="Expand features menu">
-          <img src="assets/header/Chevronbas.svg" alt="Chevron Icon" />
-        </button>
-      </div>
-      <div class="favicon">
-        <div class="overlap-2">
-          <img src="assets/header/Favicon.svg" alt="Logo" />
-        </div>
-      </div>
-    </header>
+    <!-- HEADER COMPONENT -->
+    <div data-include="components/header.html"></div>
 
     <!-- Main Container with Flexbox -->
     <div class="main-container">
@@ -213,22 +169,8 @@
 
         <!-- Sidebar -->
         <aside class="sidebar">
-          <!-- Newsletter -->
-          <section class="news-letter">
-            <div class="overlap-4"></div>
-            <h2 class="text-wrapper-14">Sign up</h2>
-            <p class="for-our-weekly">for our weekly <br /> newsletter!</p>
-            <div class="NL">
-              <div class="overlap-group-2">
-                <img class="vector" alt="" src="assets/home/NL.svg" />
-              </div>
-            </div>
-            <button class="symboles-chevrons" type="button" aria-label="Subscribe">
-              <div class="icon">
-                <img class="vector-3" alt="" src="assets/header/Chevronbas.svg" />
-              </div>
-            </button>
-          </section>
+          <!-- NEWSLETTER SIDEBAR COMPONENT -->
+          <div data-include="components/newsletter-sidebar.html"></div>
 
           <!-- Advertisement -->
           <div class="sidebar-ad">
@@ -444,104 +386,16 @@
      
       </section>
 
-      <!-- Newsletter Section -->
-      <section class="newsletter-bottom">
-       
-        <div class="newsletter-icon">
-          <img src="assets/home/NL.svg" alt="Newsletter Icon" />
-        </div>
-        <div class="newsletter-form">
-          <div class="newsletter-input-container">
-            <div class="newsletter-border"></div>
-            <div class="newsletter-label">Your email</div>
-            <div class="newsletter-placeholder">Input text</div>
-          </div>
-          <button class="newsletter-subscribe-btn" type="button">
-            Subscribe
-          </button>
-        </div>
-        <div class="newsletter-circle"></div>
-        <div class="newsletter-text">
-          for our weekly<br />newsletter!
-        </div>
-        <div class="newsletter-title">Sign up</div>
-        <div class="newsletter-favicon">
-          <img src="assets/header/Favicon.svg" alt="Favicon" />
-        </div>
-      </section>
+      <!-- NEWSLETTER BOTTOM COMPONENT -->
+      <div data-include="components/newsletter-bottom.html"></div>
 
-      <!-- Footer Section -->
-      <footer class="main-footer">
-        <div class="footer-column customers">
-          <h3 class="footer-title">For Customers</h3>
-          <ul class="footer-links">
-            <li><a href="#">Subscribe</a></li>
-            <li><a href="#">Advertise</a></li>
-            <li><a href="#">Subscription Management</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-column company">
-          <h3 class="footer-title">Company</h3>
-          <ul class="footer-links">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">FAOS</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-column terms">
-          <h3 class="footer-title">Terms of Use</h3>
-          <ul class="footer-links">
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Cookie Settings</a></li>
-            <li><a href="#">RSS Terms of Service</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-logo">
-          <img src="assets/home/logo.svg" alt="Company Logo" />
-        </div>
-
-        <div class="footer-social">
-          <a href="#" class="social-link">
-            <img src="assets/header/IG.svg" alt="Instagram" />
-          </a>
-          <a href="#" class="social-link">
-            <img src="assets/header/FB.svg" alt="Facebook" />
-          </a>
-        </div>
-      </footer>
+      <!-- FOOTER COMPONENT -->
+      <div data-include="components/footer.html"></div>
     </div>
   </div>
 
-  <script>
-    // Script pour adapter l'échelle du site à la largeur de la fenêtre
-    function scaleContent() {
-      const wrapper = document.getElementById('scaleWrapper');
-      const windowWidth = window.innerWidth;
-      const contentWidth = 1920; // Largeur originale du design
-
-      if (windowWidth < contentWidth) {
-        const scale = windowWidth / contentWidth;
-        wrapper.style.transform = `scale(${scale})`;
-        wrapper.style.transformOrigin = 'top left';
-
-        // Ajuste la hauteur du body pour éviter l'espace vide
-        const originalHeight = wrapper.offsetHeight;
-        document.body.style.height = (originalHeight * scale) + 'px';
-      } else {
-        wrapper.style.transform = 'scale(1)';
-        document.body.style.height = 'auto';
-      }
-    }
-
-    // Appliquer l'échelle au chargement et au redimensionnement
-    window.addEventListener('load', scaleContent);
-    window.addEventListener('resize', scaleContent);
-  </script>
+  <!-- Component inclusion script -->
+  <script src="components/include-example.js"></script>
 </body>
 
 </html>
