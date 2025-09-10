@@ -281,7 +281,7 @@
 .featured-article .article-meta {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   margin: 0;
 }
 
@@ -302,7 +302,7 @@
 
 .featured-article .article-author {
   color: #4A4085;
-  font-size: 12px;
+  font-size: 14px;
   font-family: "Montserrat", Helvetica;
   font-weight: 500;
   letter-spacing: 0;
@@ -383,7 +383,7 @@
 .medium-article .article-meta {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   margin: 0;
 }
 
@@ -477,7 +477,7 @@
 .small-article .article-meta {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
 }
 
 .small-article .article-tag {
@@ -553,7 +553,7 @@
   background: #0C004F;
   border: none;
   color: rgba(255, 255, 255, 0.40);
-  font-size: 12px;
+  font-size: 14px;
   font-family: "Montserrat", Helvetica;
   font-weight: 700;
   cursor: pointer;
@@ -587,9 +587,10 @@
   height: 120px;
   background: #4A4085;
   display: flex;
-  align-items: center;
-  padding: 20px;
-  gap: 18px;
+  flex-direction: column;
+  align-items: start;
+  padding: 10px 20px;
+  gap: 10px;
   box-sizing: border-box;
 }
 
@@ -825,8 +826,8 @@
   top: 759px;
 }
 
-/* Newsletter Sidebar */
-.newsletter-sidebar {
+/* News Letter Section */
+.news-letter {
   width: 360px;
   height: 136px;
   position: relative;
@@ -834,7 +835,8 @@
   overflow: hidden;
 }
 
-.newsletter-bg-circle {
+/* Cercle décoratif violet en arrière-plan */
+.news-letter .overlap-4 {
   width: 258px;
   height: 258px;
   position: absolute;
@@ -844,32 +846,35 @@
   border-radius: 50%;
 }
 
-.newsletter-content {
+/* Titre "Sign up" */
+.news-letter .text-wrapper-14 {
   position: absolute;
   left: 28px;
-  top: 24px;
-}
-
-.newsletter-title {
+  top: 18px;
   color: white;
   font-size: 32px;
-  font-family: "Harriet Text-Bold", Helvetica;
-  letter-spacing: 0;
-  text-transform: lowercase;
+  font-family: 'Harriet Text-Regular';
   font-weight: 700;
+  word-wrap: break-word;
   margin: 0;
 }
 
-.newsletter-text {
+/* Sous-titre "for our weekly newsletter!" */
+.news-letter .for-our-weekly {
+  position: absolute;
+  left: 30px;
+  top: 69px;
   color: white;
   font-size: 16px;
   font-family: "Montserrat", Helvetica;
   font-weight: 700;
   line-height: 21px;
-  margin: 20px 0 0 0;
+  word-wrap: break-word;
+  margin: 0;
 }
 
-.newsletter-icon {
+/* Container de l'icône mail */
+.news-letter .NL {
   width: 50px;
   height: 46px;
   position: absolute;
@@ -878,27 +883,43 @@
   overflow: hidden;
 }
 
-.newsletter-icon img {
+.news-letter .overlap-group-2 {
+  position: relative;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  filter: brightness(0) invert(1);
 }
 
-.newsletter-arrow {
+/* Partie extérieure de l'icône mail */
+.news-letter .vector {
+  width: 49.96px;
+  height: 45.98px;
+  position: absolute;
+  left: 0.02px;
+  top: 0px;
+}
+
+/* Bouton flèche */
+.news-letter .symboles-chevrons {
   width: 24px;
   height: 24px;
   position: absolute;
   left: 329px;
   top: 127px;
-  background: none;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+  overflow: hidden;
+  background: transparent;
   border: none;
   cursor: pointer;
-  transform: rotate(-90deg);
-  overflow: hidden;
 }
 
-.newsletter-arrow img {
+.news-letter .symboles-chevrons .icon {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.news-letter .symboles-chevrons .vector-3 {
   width: 100%;
   height: 100%;
   filter: brightness(0) invert(1);
