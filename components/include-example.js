@@ -45,5 +45,13 @@ document.addEventListener('DOMContentLoaded', async function() {
   setTimeout(() => {
     scaleContent();
     window.addEventListener('resize', scaleContent);
+    
+    // Ensure all links work after component loading
+    document.body.addEventListener('click', function(e) {
+      if (e.target.tagName === 'A' && e.target.href) {
+        // Let the browser handle normal navigation
+        return true;
+      }
+    });
   }, 100); // Small delay to ensure DOM is fully rendered
 });

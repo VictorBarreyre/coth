@@ -1,0 +1,109 @@
+/* =========================================== 
+   CGU PAGE STYLES
+   =========================================== */
+
+/* Main Container */
+.main-container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  background: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 60px;
+  padding-top: 4rem;
+}
+
+/* Logo Section */
+.logo-section {
+  width: 600px;
+  height: 117px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.logo-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* CGU Container */
+.cgu-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+/* CGU Content */
+.cgu-content {
+  width: 1040px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0 auto;
+}
+
+/* CGU Title */
+.cgu-title {
+  color: black;
+  font-size: 48px;
+  font-family: "Harriet Text-Bold", Helvetica;
+  font-weight: 700;
+  line-height: 28px;
+  margin: 0 0 20px 0;
+  text-transform: lowercase;
+}
+
+.cgu-title::first-letter {
+  text-transform: uppercase;
+}
+
+/* CGU Text */
+.cgu-text {
+  color: black;
+  font-size: 18px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+  line-height: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cgu-text p {
+  margin: 0;
+}
+
+.cgu-text strong {
+  font-weight: 700;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .cgu-content {
+    width: 90%;
+    max-width: 1040px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cgu-title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  
+  .cgu-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
