@@ -28,11 +28,14 @@ document.addEventListener('DOMContentLoaded', async function() {
       window.addEventListener('resize', scaleContent);
     }
     
-    // Initialize dropdowns after components are loaded - with longer delay
+    // Initialize dropdowns and search after components are loaded - with longer delay
     setTimeout(() => {
-      console.log('Initializing dropdowns now...');
+      console.log('Initializing dropdowns and search now...');
       if (typeof initializeDropdowns === 'function') {
         initializeDropdowns();
+      }
+      if (typeof initializeSearch === 'function') {
+        initializeSearch();
       }
     }, 500);
     

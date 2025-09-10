@@ -444,14 +444,15 @@ body {
   outline-offset: 2px !important;
 }
 
-.HEADER .loupe:hover,
-.HEADER .loupe:focus {
-  background-color: #5a4f94;
-}
-
 .HEADER .forum:hover,
 .HEADER .forum:focus {
   background-color: #5a4f94;
+}
+
+.HEADER .loupe:hover,
+.HEADER .loupe:focus {
+  background-color: #4a3f84 !important;
+  opacity: 1 !important;
 }
 
 /* =========================================== 
@@ -1321,4 +1322,157 @@ body {
 .HEADER .text-wrapper-2,
 .HEADER .text-wrapper-3 {
   display: inline-block !important;
+}
+
+/* =========================================== 
+   SEARCH EXPANDABLE STYLES
+   =========================================== */
+
+.search-container {
+  position: absolute;
+  width: 350px;
+  height: 80px;
+  top: 0;
+  right: 280px;
+  z-index: 10001;
+  display: none;
+  pointer-events: none;
+}
+
+.search-container.show {
+  display: block;
+  pointer-events: all;
+}
+
+.search-wrapper {
+  width: 350px;
+  height: 80px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.search-background {
+  width: 248px;
+  height: 80px;
+  left: 53px;
+  top: 0px;
+  position: absolute;
+  background: #4A4085;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-background.expanded {
+  transform: scaleX(1);
+}
+
+.search-loupe-button {
+  width: 104px;
+  height: 104px;
+  left: 246px;
+  top: -12px;
+  position: absolute;
+  background: #4A4085;
+  border-radius: 52px;
+  cursor: pointer;
+  border: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.search-loupe-button.show {
+  opacity: 1;
+}
+
+.search-loupe-icon {
+  width: 30px;
+  height: 30px;
+  left: 37px;
+  top: 37px;
+  position: absolute;
+}
+
+.search-input-circle {
+  width: 104px;
+  height: 104px;
+  left: 0px;
+  top: -12px;
+  position: absolute;
+  background: #4A4085;
+  border-radius: 52px;
+  transform: scale(0);
+  transform-origin: center;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-input-circle.expanded {
+  transform: scale(1);
+}
+
+.search-placeholder {
+  left: 33px;
+  top: 37px;
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  color: rgba(255, 255, 255, 0.50);
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+  cursor: text;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.2s;
+}
+
+.search-placeholder.show {
+  opacity: 1;
+}
+
+.search-input {
+  position: absolute;
+  left: 33px;
+  top: 30px;
+  width: 200px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.2s;
+}
+
+.search-input.show {
+  opacity: 1;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.50);
+}
+
+/* Push social icons when search is active */
+.HEADER.search-active .social-icons {
+  transform: translateX(-200px);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Bring main loupe above search wrapper when active */
+.HEADER.search-active .loupe {
+  z-index: 10002;
+}
+
+/* Disable hover effect on loupe when search is active */
+.HEADER.search-active .loupe:hover,
+.HEADER.search-active .loupe:focus {
+  background-color: #4a3f84 !important;
+  opacity: 1 !important;
+  transform: none !important;
 }
