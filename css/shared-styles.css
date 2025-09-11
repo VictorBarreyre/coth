@@ -1725,8 +1725,58 @@ body {
    =========================================== */
 
 /* Hide mobile elements on desktop */
-.newsletter-mobile-input {
+.newsletter-mobile-input,
+.sidebar-mobile-only {
   display: none;
+}
+
+/* Copy all sidebar styles to sidebar-mobile-only using CSS custom properties approach */
+@media (max-width: 768px) {
+  /* Copy magazine styles */
+  .sidebar-mobile-only .magazine-subscribe {
+    width: 363px !important;
+    height: 525px !important;
+    margin: 20px auto !important;
+    position: relative !important;
+  }
+  
+  .sidebar-mobile-only .magazine-subscribe .magazine-image {
+    width: 363px !important;
+    height: 473px !important;
+    object-fit: cover !important;
+    border: 1px solid #E1E1E1 !important;
+  }
+  
+  .sidebar-mobile-only .magazine-subscribe .subscribe-btn {
+    width: 363px !important;
+    height: 53px !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    background: #0C004F !important;
+    border: none !important;
+    border-bottom-left-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+    color: white !important;
+    font-size: 18px !important;
+    font-family: "Montserrat", Helvetica !important;
+    font-weight: 600 !important;
+    text-transform: lowercase !important;
+    cursor: pointer !important;
+  }
+  
+  .sidebar-mobile-only .magazine-subscribe .subscribe-btn::first-letter {
+    text-transform: uppercase !important;
+  }
+  
+  /* Copy live results styles */
+  .sidebar-mobile-only .live-results {
+    width: 363px !important;
+    margin: 20px auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
 }
 
 /* Mobile Newsletter Styles */
@@ -1940,64 +1990,49 @@ body {
     display: none !important;
   }
   
-  /* Make body flex to reorganize layout order */
-  body {
-    display: flex !important;
-    flex-direction: column !important;
+  /* Hide desktop sidebar in mobile */
+  .sidebar {
+    display: none !important;
+  }
+
+
+  .news-letter{
+    display: none;
   }
   
-  /* Force show sidebar in mobile and reposition after newsletter - High specificity */
-  html body aside.sidebar,
-  html body .sidebar,
-  body aside.sidebar,
-  body .sidebar {
+  /* Show mobile-only sidebar */
+  .sidebar-mobile-only {
     display: flex !important;
     flex-direction: column !important;
     gap: 20px !important;
     width: 100% !important;
     margin: 20px 0 !important;
     padding: 0 15px !important;
-    order: 10 !important;
-    position: static !important;
-    visibility: visible !important;
   }
   
-  /* Set order for proper mobile layout */
-  .newsletter-bottom {
-    order: 9 !important;
+  /* Hide newsletter in mobile sidebar */
+  .sidebar-mobile-only [data-include="components/newsletter-sidebar.html"] {
+    display: none !important;
   }
   
-  .main-footer, footer {
-    order: 11 !important;
+  /* Make mobile sidebar components inherit desktop styles */
+  .sidebar-mobile-only {
+    /* This makes all children inherit the same styles as if they were in .sidebar */
+    all: inherit;
   }
   
-  /* All other content should come before newsletter */
-  .main-content,
-  .container,
-  .wrapper {
-    order: 1 !important;
-  }
-  
-  /* Style sidebar elements for mobile */
-  .sidebar .magazine-subscribe {
+  /* Force specific mobile adaptations */
+  .sidebar-mobile-only {
     width: 100% !important;
-    max-width: 300px !important;
-    margin: 0 auto !important;
+    max-width: 393px !important;
+    margin: 20px auto !important;
+    padding: 0 15px !important;
   }
   
-  .sidebar .sidebar-ad {
+  .sidebar-mobile-only > * {
     width: 100% !important;
-    max-width: 300px !important;
-    margin: 0 auto !important;
-  }
-  
-  .sidebar .top-headlines {
-    width: 100% !important;
-    margin: 0 auto !important;
-  }
-  
-  .sidebar .live-results {
-    width: 100% !important;
-    margin: 0 auto !important;
+    max-width: 360px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
