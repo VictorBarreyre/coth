@@ -38,28 +38,40 @@ function initializeSearch() {
     console.log('Opening search');
     isOpen = true;
     
-    // Add search-active class to header to trigger social icons animation
-    if (header) {
-      header.classList.add('search-active');
+    // Check if we're on mobile (screen width <= 768px)
+    const isMobile = window.innerWidth <= 768;
+    
+    if (isMobile) {
+      // Mobile: show search container with active class
+      searchContainer.classList.add('active');
+      setTimeout(() => {
+        searchInput.focus();
+      }, 300);
+    } else {
+      // Desktop: use original animation
+      // Add search-active class to header to trigger social icons animation
+      if (header) {
+        header.classList.add('search-active');
+      }
+      
+      // Show search container
+      searchContainer.classList.add('show');
+      
+      // Animate elements in sequence
+      setTimeout(() => {
+        background.classList.add('expanded');
+      }, 50);
+      
+      setTimeout(() => {
+        inputCircle.classList.add('expanded');
+      }, 150);
+      
+      setTimeout(() => {
+        searchInput.classList.add('show');
+        placeholder.classList.add('show');
+        searchInput.focus();
+      }, 400);
     }
-    
-    // Show search container
-    searchContainer.classList.add('show');
-    
-    // Animate elements in sequence
-    setTimeout(() => {
-      background.classList.add('expanded');
-    }, 50);
-    
-    setTimeout(() => {
-      inputCircle.classList.add('expanded');
-    }, 150);
-    
-    setTimeout(() => {
-      searchInput.classList.add('show');
-      placeholder.classList.add('show');
-      searchInput.focus();
-    }, 400);
   }
   
   // Close search function
@@ -69,27 +81,37 @@ function initializeSearch() {
     console.log('Closing search');
     isOpen = false;
     
-    // Remove classes in reverse order
-    searchInput.classList.remove('show');
-    placeholder.classList.remove('show');
+    // Check if we're on mobile (screen width <= 768px)
+    const isMobile = window.innerWidth <= 768;
     
-    setTimeout(() => {
-      inputCircle.classList.remove('expanded');
-    }, 100);
-    
-    setTimeout(() => {
-      background.classList.remove('expanded');
-    }, 200);
-    
-    setTimeout(() => {
-      searchContainer.classList.remove('show');
+    if (isMobile) {
+      // Mobile: hide search container by removing active class
+      searchContainer.classList.remove('active');
       searchInput.value = ''; // Clear input
+    } else {
+      // Desktop: use original animation
+      // Remove classes in reverse order
+      searchInput.classList.remove('show');
+      placeholder.classList.remove('show');
       
-      // Remove search-active class to return social icons to original position
-      if (header) {
-        header.classList.remove('search-active');
-      }
-    }, 400);
+      setTimeout(() => {
+        inputCircle.classList.remove('expanded');
+      }, 100);
+      
+      setTimeout(() => {
+        background.classList.remove('expanded');
+      }, 200);
+      
+      setTimeout(() => {
+        searchContainer.classList.remove('show');
+        searchInput.value = ''; // Clear input
+        
+        // Remove search-active class to return social icons to original position
+        if (header) {
+          header.classList.remove('search-active');
+        }
+      }, 400);
+    }
   }
   
   // Event listeners
