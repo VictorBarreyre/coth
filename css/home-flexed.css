@@ -2224,20 +2224,21 @@
   }
 
   .category-featured {
-    width: 365px !important;
-    margin: 0 auto 20px auto !important;
+    width: 100% !important;
+    margin: 0 !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 20px !important;
   }
 
   .category-featured .category-header {
-    width: 365px !important;
+    width: calc(100% - 30px) !important;
     height: 50px !important;
     position: relative !important;
     background: #0C004F !important;
     border-top-right-radius: 75px !important;
     border-bottom-right-radius: 75px !important;
+    margin: 0 15px !important;
   }
 
   .category-featured .category-tag {
@@ -2274,7 +2275,7 @@
     width: 100% !important;
     height: 205px !important;
     object-fit: cover !important;
-    margin-bottom: 0 !important;
+    margin: 0 !important;
   }
 
   .category-featured .category-featured-article .article-title {
