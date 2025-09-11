@@ -22,3 +22,151 @@
     <img src="assets/header/Favicon.svg" alt="Favicon" />
   </div>
 </section>
+
+<style>
+/* Mobile Newsletter Styles */
+@media (max-width: 768px) {
+  .newsletter-bottom {
+    width: 393px !important;
+    height: 317px !important;
+    position: relative !important;
+    background: #0C004F !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Newsletter Background Elements */
+  .newsletter-bottom::before {
+    content: "";
+    width: 371px;
+    height: 336px;
+    left: 10px;
+    top: -5px;
+    position: absolute;
+    overflow: hidden;
+    background: 
+      linear-gradient(135deg, rgba(255, 255, 255, 0.10) 0%, transparent 50%),
+      linear-gradient(45deg, rgba(255, 255, 255, 0.10) 50%, transparent 100%);
+  }
+  
+  .newsletter-bottom::after {
+    content: "";
+    width: 266px;
+    height: 266px;
+    left: -168px;
+    top: 26px;
+    position: absolute;
+    background: #4A4085;
+    border-radius: 50%;
+  }
+  
+  /* Newsletter Favicon */
+  .newsletter-favicon {
+    position: absolute !important;
+    width: 38px !important;
+    height: 36px !important;
+    left: 325px !important;
+    top: 61px !important;
+    overflow: hidden !important;
+  }
+  
+  .newsletter-favicon img {
+    width: 100% !important;
+    height: 100% !important;
+    filter: brightness(0) invert(1) !important;
+  }
+  
+  /* Newsletter Form */
+  .newsletter-input-container {
+    position: absolute !important;
+    width: 333px !important;
+    height: 49px !important;
+    left: 30px !important;
+    top: 131px !important;
+  }
+  
+  .newsletter-border {
+    position: absolute !important;
+    width: 333px !important;
+    height: 1px !important;
+    left: 0px !important;
+    top: 52px !important;
+    background: white !important;
+  }
+  
+  .newsletter-label {
+    position: absolute !important;
+    width: 321.90px !important;
+    height: 22px !important;
+    left: 0px !important;
+    top: 0px !important;
+    color: white !important;
+    font-size: 16px !important;
+    font-family: "Montserrat", Helvetica !important;
+    font-weight: 500 !important;
+    line-height: 22px !important;
+  }
+  
+  .newsletter-placeholder {
+    position: absolute !important;
+    width: 321.90px !important;
+    height: 22px !important;
+    left: 0px !important;
+    top: 26px !important;
+    color: rgba(255, 255, 255, 0.70) !important;
+    font-size: 16px !important;
+    font-family: "Montserrat", Helvetica !important;
+    font-weight: 500 !important;
+    line-height: 22px !important;
+  }
+  
+  /* Newsletter Text */
+  .newsletter-text {
+    position: absolute !important;
+    width: 260px !important;
+    left: 29px !important;
+    top: 81px !important;
+    color: white !important;
+    font-size: 16px !important;
+    font-family: "Montserrat", Helvetica !important;
+    font-weight: 700 !important;
+    line-height: 21px !important;
+  }
+  
+  .newsletter-title {
+    position: absolute !important;
+    left: 27px !important;
+    top: 34px !important;
+    color: white !important;
+    font-size: 32px !important;
+    font-family: "Harriet Text", Helvetica !important;
+    font-weight: 700 !important;
+  }
+  
+  /* Newsletter Subscribe Button */
+  .newsletter-subscribe-btn {
+    position: absolute !important;
+    width: 333px !important;
+    height: 53px !important;
+    left: 30px !important;
+    top: 224px !important;
+    background: transparent !important;
+    border: 1px solid white !important;
+    border-radius: 5px !important;
+    color: white !important;
+    font-size: 18px !important;
+    font-family: "Montserrat", Helvetica !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    cursor: pointer !important;
+  }
+  
+  /* Hide desktop newsletter elements */
+  .newsletter-icon,
+  .newsletter-form,
+  .newsletter-circle {
+    display: none !important;
+  }
+}
+</style>
