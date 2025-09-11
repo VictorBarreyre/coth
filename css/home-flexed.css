@@ -1303,31 +1303,32 @@
     width: 100% !important;
     height: auto !important;
     gap: 0 !important;
+    padding: 0 !important;
   }
   
   .featured-article .article-text-content {
     gap: 0 !important;
+    padding: 0 15px !important;
   }
   
   .featured-article .article-image {
     width: 100% !important;
     height: 221px !important;
     object-fit: cover !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
   
   .featured-article .article-title {
     font-size: 20px !important;
     line-height: 26px !important;
     margin: 10px 0 !important;
-    padding: 0 15px !important;
-  }
-  
-  .featured-article {
-    padding: 0 15px !important;
+    padding: 0 !important;
   }
 
   .featured-article .article-meta {
-    margin-left: 12px !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
   
   /* Mobile Ad Banners */
