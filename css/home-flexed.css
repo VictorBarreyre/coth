@@ -1674,18 +1674,18 @@
 
   /* Fix for existing small articles - adapt for mobile */
   .small-articles-list {
-    width: 363px !important;
+    width: 100% !important;
     height: auto !important;
-    margin: 0 auto 20px auto !important;
+    margin: 20px 0 !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 15px !important;
-    padding: 0 !important;
+    padding: 0 15px !important;
     position: relative !important;
   }
 
   .small-article {
-    width: 363px !important;
+    width: 100% !important;
     height: 68px !important;
     display: flex !important;
     gap: 9px !important;
@@ -1708,6 +1708,7 @@
   }
 
   .small-article .article-title {
+    width: 100% !important;
     color: #0C004F !important;
     font-size: 14px !important;
     font-family: "Harriet Text-Bold", Helvetica !important;
@@ -1719,6 +1720,8 @@
     -webkit-line-clamp: 2 !important;
     -webkit-box-orient: vertical !important;
     overflow: hidden !important;
+    word-wrap: break-word !important;
+    box-sizing: border-box !important;
   }
 
   .small-article .article-title::first-letter {
@@ -1731,11 +1734,22 @@
     gap: 4px !important;
   }
 
+  /* Force styles for small article tags in mobile */
   .small-article .article-tag {
+    height: auto !important;
+    background: none !important;
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    display: inline !important;
+    align-items: initial !important;
+    justify-content: initial !important;
     color: #4A4085 !important;
     font-size: 12px !important;
     font-family: "Montserrat", Helvetica !important;
     font-weight: 600 !important;
+    flex-shrink: 0 !important;
+    border: none !important;
   }
 
   .small-article .article-date {
@@ -1743,6 +1757,13 @@
     font-size: 12px !important;
     font-family: "Montserrat", Helvetica !important;
     font-weight: 500 !important;
+  }
+  
+  .small-article .article-date::before {
+    content: "|" !important;
+    color: #4A4085 !important;
+    margin-right: 4px !important;
+    margin-left: 4px !important;
   }
 
   /* Mobile Live Results Complete */
@@ -2086,12 +2107,16 @@
   }
 
   .mobile-top-headlines .headline-item .headline-title {
+    width: 100% !important;
     color: #0C004F !important;
     font-size: 16px !important;
     font-family: "Harriet Text", Helvetica !important;
     font-weight: 500 !important;
     margin: 0 !important;
     text-transform: lowercase !important;
+    word-wrap: break-word !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word !important;
   }
 
   .mobile-top-headlines .headline-item .headline-title::first-letter {
@@ -2159,7 +2184,6 @@
     display: flex !important;
     flex-direction: column !important;
     gap: 20px !important;
-    margin: 20px 0 !important;
   }
 
   .content-with-ads .sidebar-ads {
@@ -2174,7 +2198,6 @@
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    margin: 20px 0 !important;
     padding: 0 !important;
   }
 
@@ -2233,8 +2256,9 @@
   }
 
   .category-featured .category-content {
-    width: 363px !important;
-    margin: 0 auto !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 15px !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 11px !important;
@@ -2247,13 +2271,14 @@
   }
 
   .category-featured .category-featured-article .article-image {
-    width: 363px !important;
+    width: 100% !important;
     height: 205px !important;
     object-fit: cover !important;
+    margin-bottom: 0 !important;
   }
 
   .category-featured .category-featured-article .article-title {
-    width: 363px !important;
+    width: 100% !important;
     color: #0C004F !important;
     font-size: 16px !important;
     font-family: "Harriet Text-Bold", Helvetica !important;
@@ -2268,8 +2293,8 @@
   }
 
   .category-featured .category-articles {
-    width: 363px !important;
-    margin: 0 auto !important;
+    width: 100% !important;
+    margin: 0 !important;
   }
 
   .category-featured .category-text-content {
@@ -2279,6 +2304,7 @@
   }
 
   .category-featured .category-text-content p {
+    width: 100% !important;
     color: #0C004F !important;
     font-size: 14px !important;
     font-family: "Harriet Text-Bold", Helvetica !important;
@@ -2288,6 +2314,9 @@
     padding: 8px 0 !important;
     border-bottom: 1px solid #D1CCEC !important;
     text-transform: lowercase !important;
+    word-wrap: break-word !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word !important;
   }
 
   .category-featured .category-text-content p:first-child {
