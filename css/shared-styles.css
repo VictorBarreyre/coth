@@ -1724,7 +1724,7 @@ body {
    NEWSLETTER MOBILE STYLES
    =========================================== */
 
-/* Hide mobile input on desktop */
+/* Hide mobile elements on desktop */
 .newsletter-mobile-input {
   display: none;
 }
@@ -1938,5 +1938,66 @@ body {
   /* Hide desktop newsletter elements */
   .newsletter-icon {
     display: none !important;
+  }
+  
+  /* Make body flex to reorganize layout order */
+  body {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  /* Force show sidebar in mobile and reposition after newsletter - High specificity */
+  html body aside.sidebar,
+  html body .sidebar,
+  body aside.sidebar,
+  body .sidebar {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    width: 100% !important;
+    margin: 20px 0 !important;
+    padding: 0 15px !important;
+    order: 10 !important;
+    position: static !important;
+    visibility: visible !important;
+  }
+  
+  /* Set order for proper mobile layout */
+  .newsletter-bottom {
+    order: 9 !important;
+  }
+  
+  .main-footer, footer {
+    order: 11 !important;
+  }
+  
+  /* All other content should come before newsletter */
+  .main-content,
+  .container,
+  .wrapper {
+    order: 1 !important;
+  }
+  
+  /* Style sidebar elements for mobile */
+  .sidebar .magazine-subscribe {
+    width: 100% !important;
+    max-width: 300px !important;
+    margin: 0 auto !important;
+  }
+  
+  .sidebar .sidebar-ad {
+    width: 100% !important;
+    max-width: 300px !important;
+    margin: 0 auto !important;
+  }
+  
+  .sidebar .top-headlines {
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+  
+  .sidebar .live-results {
+    width: 100% !important;
+    margin: 0 auto !important;
   }
 }
