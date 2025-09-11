@@ -1330,11 +1330,29 @@
   .ad-banner,
   .full-width-ad {
     width: 100% !important;
-    height: 119px !important;
     background: #F9F9F9 !important;
     margin: 20px 0 !important;
     position: relative !important;
     overflow: hidden !important;
+  }
+
+  /* Default height for ads1 */
+  .ad-banner,
+  .full-width-ad {
+    height: 119px !important;
+  }
+
+  /* Specific height for ads2 - 49px */
+  .ad-banner img[src*="ads2"],
+  .full-width-ad img[src*="ads2"] {
+    height: 49px !important;
+    object-fit: cover !important;
+  }
+
+  /* Container height for ads2 */
+  .ad-banner:has(img[src*="ads2"]),
+  .full-width-ad:has(img[src*="ads2"]) {
+    height: 49px !important;
   }
   
   .ad-banner .ad-content,
@@ -1346,6 +1364,14 @@
     top: 20px !important;
     background: #ddd !important;
     margin: 0 !important;
+  }
+
+  /* Ad content for ads2 - no background, full height */
+  .ad-banner:has(img[src*="ads2"]) .ad-content,
+  .full-width-ad:has(img[src*="ads2"]) .ad-content {
+    height: 49px !important;
+    top: 0 !important;
+    background: none !important;
   }
   
   /* Hide the original ad-label text in mobile */
@@ -1362,7 +1388,7 @@
     right: 15px !important;
     bottom: 4px !important;
     color: #848484 !important;
-    font-size: 11px !important;
+    font-size: 10px !important;
     font-family: "Montserrat", Helvetica !important;
     font-weight: 600 !important;
     text-align: right !important;
@@ -1411,7 +1437,7 @@
   .medium-article .article-meta {
     display: flex !important;
     align-items: center !important;
-    gap: 8px !important;
+    gap: 4px !important;
   }
 
   .medium-article .article-tag {
@@ -1433,5 +1459,6 @@
     font-size: 14px !important;
     font-family: "Montserrat", Helvetica !important;
     font-weight: 500 !important;
+    margin-left: 4px !important;
   }
 }
