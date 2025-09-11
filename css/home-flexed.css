@@ -1093,17 +1093,15 @@
    =========================================== */
 
 @media (max-width: 768px) {
-  /* Force viewport to 393px on mobile */
+  /* Force mobile responsive layout */
   html {
-    width: 393px !important;
-    max-width: 393px !important;
+    width: 100% !important;
     overflow-x: hidden !important;
   }
   
   body {
-    width: 393px !important;
-    max-width: 393px !important;
-    margin: 0 auto !important;
+    width: 100% !important;
+    margin: 0 !important;
     overflow-x: hidden !important;
   }
   
@@ -1111,18 +1109,17 @@
   .scale-wrapper {
     transform: none !important;
     transform-origin: initial !important;
-    width: 393px !important;
-    max-width: 393px !important;
+    width: 100% !important;
   }
   
   
   /* Main Container Mobile */
   .main-container {
-    width: 393px !important;
-    max-width: 393px !important;
+    width: 100% !important;
+    max-width: 100% !important;
     gap: 0;
     padding-top: 106px; /* Header + subscribe banner */
-    margin: 0 auto !important;
+    margin: 0 !important;
     padding-left: 0;
     padding-right: 0;
     overflow-x: hidden;
@@ -1263,20 +1260,19 @@
   
   /* Mobile Content Layout */
   .content-section {
-    width: 393px !important;
-    max-width: 393px !important;
+    width: 100% !important;
     padding: 0 !important;
   }
   
   .main-content {
-    width: 393px !important;
+    width: 100% !important;
     flex-direction: column !important;
     gap: 0 !important;
   }
   
   /* Articles Column Mobile */
   .articles-column {
-    width: 393px !important;
+    width: 100% !important;
     gap: 30px !important;
     padding: 0 15px !important;
   }
@@ -1323,19 +1319,40 @@
   }
   
   /* Mobile Ad Banners */
-  .ad-banner {
-    width: 393px !important;
+  .ad-banner,
+  .full-width-ad {
+    width: 100% !important;
     height: 119px !important;
     background: #F9F9F9 !important;
     margin: 20px 0 !important;
+    position: relative !important;
+    overflow: hidden !important;
   }
   
-  .ad-banner .ad-content {
-    width: 393px !important;
+  .ad-banner .ad-content,
+  .full-width-ad .ad-content {
+    width: 100% !important;
     height: 79px !important;
-    position: relative !important;
-    background: url('https://placehold.co/393x79') !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 20px !important;
+    background: url('https://placehold.co/100%x79') !important;
     background-size: cover !important;
-    margin: 20px 0 !important;
+    background-position: center !important;
+    margin: 0 !important;
+  }
+  
+  .ad-banner .ad-content::after,
+  .full-width-ad .ad-content::after {
+    content: "ADVERTISEMENT" !important;
+    position: absolute !important;
+    right: 27px !important;
+    bottom: -24px !important;
+    color: #848484 !important;
+    font-size: 11px !important;
+    font-family: "Montserrat", Helvetica !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    text-align: right !important;
   }
 }
