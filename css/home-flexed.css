@@ -322,7 +322,7 @@
   height: 400px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 .medium-article .article-image {
@@ -1286,7 +1286,7 @@
   .logo-section {
     width: 299px !important;
     height: 59px !important;
-    margin: 40px auto !important;
+    margin: 40px auto 10px auto !important;
     overflow: hidden !important;
     position: relative !important;
   }
@@ -1305,6 +1305,10 @@
     gap: 0 !important;
   }
   
+  .featured-article .article-text-content {
+    gap: 0 !important;
+  }
+  
   .featured-article .article-image {
     width: 100% !important;
     height: 221px !important;
@@ -1316,6 +1320,10 @@
     line-height: 26px !important;
     margin: 10px 0 !important;
     padding: 0 15px !important;
+  }
+  
+  .featured-article .article-meta {
+    margin-left: 12px !important;
   }
   
   /* Mobile Ad Banners */
@@ -1346,10 +1354,10 @@
     display: none !important;
   }
   
-  /* Add small "advertisement" label in bottom right */
+  /* Add "Advertisement" label in bottom right */
   .ad-banner::after,
   .full-width-ad::after {
-    content: "advertisement" !important;
+    content: "Advertisement" !important;
     position: absolute !important;
     right: 15px !important;
     bottom: 4px !important;
@@ -1357,7 +1365,73 @@
     font-size: 11px !important;
     font-family: "Montserrat", Helvetica !important;
     font-weight: 600 !important;
-    text-transform: lowercase !important;
     text-align: right !important;
+  }
+
+  /* Mobile Medium Articles */
+  .medium-articles-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 20px 0 !important;
+    width: 100% !important;
+  }
+
+  .medium-article {
+    width: 100% !important;
+    height: fit-content !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 3px !important;
+  }
+
+  .medium-article .article-image {
+    width: 100% !important;
+    height: 205px !important;
+    object-fit: cover !important;
+  }
+
+  .medium-article .article-text-content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+  }
+
+  .medium-article .article-title {
+    color: #0C004F !important;
+    font-size: 16px !important;
+    font-family: "Harriet Text-Bold", Helvetica !important;
+    font-weight: 700 !important;
+    line-height: 22px !important;
+    margin: 0 !important;
+  }
+
+  .medium-article .article-meta {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+
+  .medium-article .article-tag {
+    height: 24px !important;
+    background: #4A4085 !important;
+    border-radius: 12px !important;
+    padding: 0 11px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: white !important;
+    font-size: 12px !important;
+    font-family: "Montserrat", Helvetica !important;
+    font-weight: 600 !important;
+  }
+
+  .medium-article .article-author {
+    color: #4A4085 !important;
+    font-size: 14px !important;
+    font-family: "Montserrat", Helvetica !important;
+    font-weight: 500 !important;
   }
 }
