@@ -812,14 +812,14 @@ body {
 }
 
 .headlines-list {
-  width: 360px;
+  width: 100%;
   margin-top: 11px;
   display: flex;
   flex-direction: column;
 }
 
 .headline-item {
-  width: 360px;
+   width: 100% !important;
   height: auto;
   padding: 10px;
   box-sizing: border-box;
@@ -1732,11 +1732,16 @@ body {
 
 /* Copy all sidebar styles to sidebar-mobile-only using CSS custom properties approach */
 @media (max-width: 768px) {
+
+  .magazine-subscribe{
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+  }
   /* Copy magazine styles */
   .sidebar-mobile-only .magazine-subscribe {
     width: 363px !important;
     height: 525px !important;
-    margin: 20px auto !important;
+    margin: 10px auto !important;
     position: relative !important;
   }
   
@@ -1772,10 +1777,23 @@ body {
   /* Copy live results styles */
   .sidebar-mobile-only .live-results {
     width: 363px !important;
-    margin: 20px auto !important;
+    margin: 0px auto !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 10px !important;
+  }
+  
+  /* Mobile sidebar ads sizing */
+  .sidebar-mobile-only .sidebar-ad {
+    width: 339px !important;
+    height: 289px !important;
+    margin: 0 auto !important;
+  }
+  
+  .sidebar-mobile-only .sidebar-ad .ad-content {
+    width: 339px !important;
+    height: 289px !important;
+    object-fit: cover !important;
   }
 }
 
@@ -2006,7 +2024,11 @@ body {
     flex-direction: column !important;
     gap: 20px !important;
     width: 100% !important;
-    margin: 20px 0 !important;
+    margin: 20px 0 0 0 !important;
+  }
+  
+  /* Add padding to child components except top headlines, magazine-subscribe, and live-results */
+  .sidebar-mobile-only > :not(.top-headlines):not(.magazine-subscribe):not(.live-results) {
     padding: 0 15px !important;
   }
   
@@ -2025,14 +2047,12 @@ body {
   .sidebar-mobile-only {
     width: 100% !important;
     max-width: 393px !important;
-    margin: 20px auto !important;
-    padding: 0 15px !important;
+    margin: 20px auto 0 auto !important;
+    padding: 0 !important;
   }
   
   .sidebar-mobile-only > * {
     width: 100% !important;
-    max-width: 360px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+
   }
 }

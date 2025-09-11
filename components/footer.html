@@ -49,21 +49,19 @@
   .main-footer {
     width: 393px !important;
     height: 663px !important;
-    left: 0px !important;
-    top: 11678px !important;
     position: relative !important;
     background: #05001E !important;
     overflow: hidden !important;
-    padding: 33px 40px !important;
+    padding: 0 !important;
     box-sizing: border-box !important;
-    display: flex !important;
-    flex-direction: column !important;
+    margin: 0 auto !important;
   }
   
-  /* Footer Columns */
+  /* Footer Columns - Positioned absolutely to match design */
   .footer-column {
+    position: absolute !important;
     width: 238px !important;
-    margin-bottom: 33px !important;
+    left: 40px !important;
   }
   
   .footer-column.customers {
@@ -88,7 +86,8 @@
     font-family: "Montserrat", Helvetica !important;
     font-weight: 700 !important;
     line-height: 28px !important;
-    margin: 0 0 10px 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
   
   /* Footer Links */
@@ -99,7 +98,8 @@
   }
   
   .footer-links li {
-    margin-bottom: 4px !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
   
   .footer-links a {
@@ -109,6 +109,7 @@
     font-weight: 500 !important;
     line-height: 28px !important;
     text-decoration: none !important;
+    display: block !important;
   }
   
   /* Footer Logo */
