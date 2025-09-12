@@ -2315,6 +2315,44 @@ body {
     object-fit: contain !important;
   }
   
+  /* Mobile Burger Button Background */
+  .HEADER::after {
+    content: "";
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    width: 113px !important;
+    height: 66px !important;
+    background: #2F256A !important;
+    z-index: 1000 !important;
+  }
+
+  /* Mobile Search Button */
+  .mobile-search-btn {
+    position: absolute !important;
+    right: 65px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 76px !important;
+    height: 76px !important;
+    background: #4A4085 !important;
+    border: none !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 1002 !important;
+    padding: 0 !important;
+  }
+
+  .mobile-search-btn img {
+    width: 28px !important;
+    height: 28px !important;
+    filter: brightness(0) invert(1) !important;
+    display: block !important;
+  }
+
   /* Mobile Burger Button */
   .mobile-burger-btn {
     position: absolute !important;
@@ -2329,7 +2367,7 @@ body {
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
-    z-index: 1001 !important;
+    z-index: 1002 !important;
   }
 
   .mobile-burger-btn span {
@@ -2353,41 +2391,6 @@ body {
     transform: rotate(-45deg) translate(7px, -7px) !important;
   }
 
-  /* Mobile Search Button */
-  .mobile-search-btn {
-    position: absolute !important;
-    right: 60px !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    width: 30px !important;
-    height: 30px !important;
-    background: none !important;
-    border: none !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    cursor: pointer !important;
-    z-index: 1005 !important;
-  }
-  
-  /* Hide desktop search button on mobile */
-  .HEADER .overlap .loupe {
-    display: none !important;
-  }
-  
-  .mobile-search-btn .vector-wrapper {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 24px !important;
-    height: 24px !important;
-  }
-  
-  .mobile-search-btn img {
-    width: 24px !important;
-    height: 24px !important;
-    filter: brightness(0) invert(1) !important;
-  }
   
   /* Mobile Search Container */
   .search-container {
@@ -2545,7 +2548,7 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 5px;
 }
 
 .burger-nav-item {
@@ -2557,6 +2560,8 @@ body {
   font-family: "Montserrat", Helvetica;
   font-weight: 500;
   cursor: pointer;
+  height: 45px;
+
 }
 
 .burger-chevron {
@@ -2571,6 +2576,46 @@ body {
   width: 28px !important;
   height: 20px !important;
   filter: brightness(0) saturate(100%) invert(100%) !important;
+  transition: transform 0.3s ease !important;
+}
+
+.burger-chevron.rotated img {
+  transform: rotate(180deg) !important;
+}
+
+/* Burger Menu Dropdown Styles */
+.burger-dropdown-content {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 38px 0 60px;
+  box-sizing: border-box;
+}
+
+.burger-dropdown-content.open {
+  max-height: 300px;
+  padding: 0;
+}
+
+.burger-dropdown-item {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 400;
+  padding: 8px 38px 8px 0px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.burger-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.burger-dropdown-item:hover {
+  color: white;
+  padding-left: 70px;
 }
 
 .burger-forum-btn {
@@ -2587,7 +2632,7 @@ body {
   font-weight: 500;
   cursor: pointer;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 /* Login Section */
@@ -2769,6 +2814,7 @@ body {
   width: 16px !important;
   height: 22px !important;
   filter: brightness(0) saturate(100%) invert(84%) sepia(12%) saturate(19%) hue-rotate(236deg) brightness(95%) contrast(89%) !important;
+  transform: rotate(-90deg) !important;
 }
 
 .burger-login-btn {
@@ -2824,7 +2870,7 @@ body {
   .mobile-burger-btn {
     display: none !important;
   }
-  
+
   .mobile-search-btn {
     display: none !important;
   }

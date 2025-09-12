@@ -52,6 +52,91 @@ function initSimpleBurgerMenu() {
       closeBurger();
     }
   });
+  
+  // Add dropdown functionality to burger menu items
+  initBurgerDropdowns();
+}
+
+function initBurgerDropdowns() {
+  const burgerNavItems = document.querySelectorAll('.burger-nav-item');
+  
+  burgerNavItems.forEach(item => {
+    const span = item.querySelector('span');
+    const chevron = item.querySelector('.burger-chevron');
+    
+    if (span && chevron) {
+      const text = span.textContent;
+      
+      if (text === 'Jumping' || text === 'Features') {
+        // Create dropdown content
+        const dropdownContent = createBurgerDropdown(text);
+        
+        // Insert dropdown after the current nav item
+        item.parentNode.insertBefore(dropdownContent, item.nextSibling);
+        
+        // Add click event to toggle dropdown
+        item.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          const isOpen = dropdownContent.classList.contains('open');
+          
+          // Close all other dropdowns
+          document.querySelectorAll('.burger-dropdown-content').forEach(dropdown => {
+            dropdown.classList.remove('open');
+            const parentItem = dropdown.previousElementSibling;
+            if (parentItem && parentItem.querySelector('.burger-chevron')) {
+              parentItem.querySelector('.burger-chevron').classList.remove('rotated');
+            }
+          });
+          
+          if (!isOpen) {
+            dropdownContent.classList.add('open');
+            chevron.classList.add('rotated');
+          }
+        });
+      }
+    }
+  });
+}
+
+function createBurgerDropdown(type) {
+  const dropdown = document.createElement('div');
+  dropdown.className = 'burger-dropdown-content';
+  
+  let items = [];
+  
+  if (type === 'Jumping') {
+    items = [
+      'Show Jumping',
+      'Cross Country',
+      'Hunter/Jumper',
+      'Eventing',
+      'Training'
+    ];
+  } else if (type === 'Features') {
+    items = [
+      'Interviews',
+      'Behind the Scenes',
+      'Training Tips',
+      'Equipment Reviews',
+      'Event Coverage'
+    ];
+  }
+  
+  items.forEach(item => {
+    const itemElement = document.createElement('div');
+    itemElement.className = 'burger-dropdown-item';
+    itemElement.textContent = item;
+    itemElement.addEventListener('click', function(e) {
+      e.stopPropagation();
+      console.log(`Clicked on ${item}`);
+      closeBurger();
+    });
+    dropdown.appendChild(itemElement);
+  });
+  
+  return dropdown;
 }
 
 function openBurger() {
