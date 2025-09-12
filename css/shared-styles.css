@@ -1019,7 +1019,6 @@ body {
   color: #0C004F;
   font-family: "Harriet Text-Bold", Helvetica;
   letter-spacing: 0;
-  text-transform: lowercase;
   font-weight: 500;
 }
 
@@ -2099,9 +2098,12 @@ body {
     font-family: "Montserrat", Helvetica !important;
     font-weight: 500 !important;
     line-height: 22px !important;
-    z-index: 15 !important;
+    z-index: 999 !important;
     visibility: visible !important;
     opacity: 1 !important;
+    pointer-events: auto !important;
+    -webkit-user-select: auto !important;
+    user-select: auto !important;
   }
   
   .newsletter-bottom .newsletter-mobile-input::placeholder {

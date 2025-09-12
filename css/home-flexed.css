@@ -483,13 +483,6 @@
   font-weight: 700;
 }
 
-.live-text {
-  color: #0C004F;
-  font-family: "Harriet Text-Bold", Helvetica;
-  letter-spacing: 0;
-  text-transform: lowercase;
-  font-weight: 500;
-}
 
 .results-tabs {
   width: 360px;
