@@ -2513,7 +2513,7 @@ body {
   z-index: 999;
   display: none;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .burger-menu-overlay.active {
@@ -2539,9 +2539,9 @@ body {
 /* Navigation Section */
 .burger-nav-section {
   width: 100%;
-  height: 341px;
+  height: fit-content;
   background: #0C004F;
-  padding: 30px 38px 30px 38px;
+  padding: 38px 30px 30px 38px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -2593,7 +2593,7 @@ body {
 /* Login Section */
 .burger-login-section {
   width: 100%;
-  height: 472px;
+  height: fit-content;
   background: #2F256A;
   padding: 30px 40px;
   box-sizing: border-box;
@@ -2689,6 +2689,8 @@ body {
   cursor: pointer;
   width: 100%;
   height: 100%;
+  z-index: 10;
+  margin: 0;
 }
 
 .burger-checkbox-custom {
@@ -2697,13 +2699,19 @@ body {
   border: 1px solid white;
   border-radius: 5px;
   position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.burger-checkbox-container:hover .burger-checkbox-custom {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .burger-checkbox:checked + .burger-checkbox-custom::after {
   content: '';
   position: absolute;
-  left: 6px;
-  top: 6px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 12px;
   height: 12px;
   background: white;
@@ -2783,28 +2791,28 @@ body {
 
 /* Social Icons */
 .burger-social-icons {
-  position: absolute;
-  bottom: 60px;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   gap: 40px;
+  justify-content: center;
+  margin-top: auto;
+  padding: 30px 0;
 }
 
 .burger-social-icon {
-  width: 40px;
-  height: 40px;
-  background: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  width: 50px !important;
+  height: 50px !important;
+  background: transparent !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
 }
 
 .burger-social-icon img {
-  width: 20px;
-  height: 20px;
+  width: 32px !important;
+  height: 32px !important;
+  filter: brightness(0) invert(1) !important;
 }
 
 /* Hide burger menu on desktop */
