@@ -2149,6 +2149,7 @@ body {
     gap: 20px !important;
     width: 100% !important;
     margin: 20px 0 0 0 !important;
+    padding-bottom: 30px !important;
   }
   
   /* Add padding to child components except top headlines, magazine-subscribe, and live-results */
@@ -2171,7 +2172,7 @@ body {
   .sidebar-mobile-only {
     width: 100% !important;
     max-width: 393px !important;
-    margin: 20px auto 0 auto !important;
+    margin: 20px auto 30px auto !important;
     padding: 0 !important;
   }
   
