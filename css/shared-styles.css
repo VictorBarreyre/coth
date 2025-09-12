@@ -1027,6 +1027,63 @@ body {
   text-transform: uppercase;
 }
 
+/* Video Widget Title */
+.video-widget-title {
+  color: white;
+  font-size: 32px;
+  font-family: "Harriet Text-Bold", serif;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
+/* Mobile Live Video Section */
+@media (max-width: 768px) {
+  .live-video-section {
+    width: 100% !important;
+    height: 521px !important;
+    background: black !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 20px 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Mobile sidebar ads styling - like desktop with grey background and padding */
+  .sidebar-mobile-only .sidebar-ad {
+    width: 360px !important;
+    height: 310px !important;
+    margin: 30px auto !important;
+    background: #F9F9F9 !important;
+    position: relative !important;
+    padding: 30px 30px 30px 30px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+  
+  .sidebar-mobile-only .sidebar-ad .ad-content {
+    width: 300px !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    border-radius: 4px !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+  
+  .sidebar-mobile-only .sidebar-ad .ad-label {
+    position: absolute !important;
+    bottom: 5px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    color: #848484 !important;
+    font-size: 8px !important;
+    font-family: "Montserrat", Helvetica !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+  }
+}
+
 .results-tabs {
   width: 360px;
   height: 42px;
@@ -1922,6 +1979,7 @@ body {
     width: 339px !important;
     height: 289px !important;
     object-fit: cover !important;
+    padding: 20px !important;
   }
 }
 
