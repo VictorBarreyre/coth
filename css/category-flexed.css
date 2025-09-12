@@ -816,18 +816,8 @@
   border-bottom-left-radius: 5px;
 }
 
-.result-icons {
-  width: 204px;
-  height: 25px;
-  display: flex;
-  gap: 20px;
-}
 
-.result-icons img {
-  width: 20px;
-  height: 20px;
-  filter: brightness(0) invert(1);
-}
+
 
 .result-content h4 {
   width: 319px;
