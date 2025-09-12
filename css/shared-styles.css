@@ -131,6 +131,130 @@ body {
 }
 
 /* =========================================== 
+   MAIN CONTAINER - SHARED
+   =========================================== */
+
+.main-container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  background: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 60px;
+  padding-top: 4rem;
+}
+
+@media (max-width: 768px) {
+  .scale-wrapper {
+    transform: none !important;
+    transform-origin: initial !important;
+    width: 100% !important;
+  }
+  
+  /* Main Container Mobile */
+  .main-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 0;
+    padding-top: 106px; /* Header + subscribe banner */
+    margin: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
+    overflow-x: hidden;
+    background: white;
+  }
+  
+  /* Mobile Logo Section */
+  .logo-section {
+    width: 299px !important;
+    height: 59px !important;
+    margin: 40px auto 10px auto !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+  
+  .logo-section img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    filter: none !important;
+  }
+  
+  /* Mobile Ad Banners */
+  .ad-banner,
+  .full-width-ad {
+    width: 100% !important;
+    background: #F9F9F9 !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  /* Default height for ads1 */
+  .ad-banner,
+  .full-width-ad {
+    height: 119px !important;
+  }
+
+  /* Specific height for ads2 - 49px */
+  .ad-banner img[src*="ads2"],
+  .full-width-ad img[src*="ads2"] {
+    height: 49px !important;
+    object-fit: cover !important;
+  }
+
+  /* Container height for ads2 - keep grey background */
+  .ad-banner:has(img[src*="ads2"]),
+  .full-width-ad:has(img[src*="ads2"]) {
+    height: 89px !important;
+    background: #F9F9F9 !important;
+  }
+  
+  .ad-banner .ad-content,
+  .full-width-ad .ad-content {
+    width: 100% !important;
+    height: 79px !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 20px !important;
+    background: #ddd !important;
+    margin: 0 !important;
+  }
+
+  /* Ad content for ads2 - centered in grey background */
+  .ad-banner:has(img[src*="ads2"]) .ad-content,
+  .full-width-ad:has(img[src*="ads2"]) .ad-content {
+    height: 49px !important;
+    top: 20px !important;
+    background: none !important;
+  }
+  
+  /* Hide the original ad-label text in mobile */
+  .ad-banner .ad-label,
+  .full-width-ad .ad-label {
+    display: none !important;
+  }
+  
+  /* Add "Advertisement" label in bottom right */
+  .ad-banner::after,
+  .full-width-ad::after {
+    content: "Advertisement" !important;
+    position: absolute !important;
+    right: 15px !important;
+    bottom: 4px !important;
+    color: #848484 !important;
+    font-size: 10px !important;
+    font-family: "Montserrat", Helvetica !important;
+    font-weight: 600 !important;
+    text-align: right !important;
+  }
+}
+
+/* =========================================== 
    GLOBAL SCROLLBAR STYLES
    =========================================== */
 

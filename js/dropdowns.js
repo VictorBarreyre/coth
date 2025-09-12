@@ -222,7 +222,7 @@ function createDropdown(items, className) {
     // Add click handler
     itemDiv.addEventListener('click', () => {
       if (item === 'Jumping') {
-        window.location.href = 'category_flexed.html';
+        window.location.href = 'pages/category_flexed.html';
       } else {
         // For other items, you can add specific navigation logic here
         console.log(`Clicked on ${item}`);
