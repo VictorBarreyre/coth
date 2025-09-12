@@ -41,11 +41,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         initializeSearch();
       }
       
-      // Initialize burger menu after all components are loaded
-      if (typeof initializeBurgerMenu === 'function') {
-        console.log('Calling burger menu from components.js');
-        initializeBurgerMenu();
-      }
+      // Burger menu is now initialized directly in burger-menu.js
     }, 500);
     
     // Ensure all links work after component loading

@@ -2282,7 +2282,7 @@ body {
     background: #0C004F !important;
     top: 0 !important;
     left: 0 !important;
-    z-index: 1000 !important;
+    z-index: 1002 !important;
     padding: 0 !important;
     box-sizing: border-box !important;
   }
@@ -2297,7 +2297,7 @@ body {
   .icon-wrapper {
     display: none !important;
   }
-  
+
   /* Mobile Logo - ch favicon */
   .favicon {
     position: absolute !important;
@@ -2315,38 +2315,75 @@ body {
     object-fit: contain !important;
   }
   
-  /* Mobile Search Button */
-  .HEADER .loupe,
-  .loupe {
+  /* Mobile Burger Button */
+  .mobile-burger-btn {
     position: absolute !important;
-    right: 113px !important;
+    right: 15px !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
-    width: 76px !important;
-    height: 76px !important;
-    background: #4A4085 !important;
-    border-radius: 52px !important;
+    width: 30px !important;
+    height: 24px !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    z-index: 1001 !important;
+  }
+
+  .mobile-burger-btn span {
+    display: block !important;
+    width: 100% !important;
+    height: 3px !important;
+    background: white !important;
+    border-radius: 2px !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .mobile-burger-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px) !important;
+  }
+
+  .mobile-burger-btn.active span:nth-child(2) {
+    opacity: 0 !important;
+  }
+
+  .mobile-burger-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px) !important;
+  }
+
+  /* Mobile Search Button */
+  .mobile-search-btn {
+    position: absolute !important;
+    right: 60px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 30px !important;
+    height: 30px !important;
+    background: none !important;
     border: none !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     cursor: pointer !important;
     z-index: 1005 !important;
-    top: -5px !important;
   }
   
-  .HEADER .loupe .vector-wrapper,
-  .loupe .vector-wrapper {
+  /* Hide desktop search button on mobile */
+  .HEADER .overlap .loupe {
+    display: none !important;
+  }
+  
+  .mobile-search-btn .vector-wrapper {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     width: 24px !important;
     height: 24px !important;
-    transform: rotate(180deg) !important;
   }
   
-  .HEADER .loupe img,
-  .loupe img {
+  .mobile-search-btn img {
     width: 24px !important;
     height: 24px !important;
     filter: brightness(0) invert(1) !important;
@@ -2375,38 +2412,6 @@ body {
     visibility: visible !important;
   }
   
-  /* Mobile Hamburger Menu Background */
-  .HEADER::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 113px;
-    height: 66px;
-    background: #2F256A;
-    z-index: 1;
-  }
-  
-  /* Mobile Hamburger Menu */
-  .HEADER::before {
-    content: "";
-    position: absolute;
-    right: 39px;
-    top: 19px;
-    width: 34px;
-    height: 4px;
-    background: white;
-    border-radius: 2px;
-    box-shadow: 0 12px 0 white, 0 24px 0 white;
-    z-index: 2;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  /* Burger menu active state - transform to cross */
-  .HEADER.burger-active::before {
-    transform: rotate(45deg) translate(8px, 8px);
-    box-shadow: 0 -12px 0 white, 0 0 0 white;
-  }
   
   /* Mobile Subscribe Banner */
   .subscribe-now {
@@ -2505,7 +2510,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: #0C004F;
-  z-index: 9999;
+  z-index: 999;
   display: none;
   flex-direction: column;
   overflow: hidden;
@@ -2536,11 +2541,11 @@ body {
   width: 100%;
   height: 341px;
   background: #0C004F;
-  padding: 36px 38px 0 38px;
+  padding: 30px 38px 0 38px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 53px;
+  gap: 20px;
 }
 
 .burger-nav-item {
@@ -2582,7 +2587,7 @@ body {
   font-weight: 500;
   cursor: pointer;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 /* Login Section */
@@ -2805,6 +2810,14 @@ body {
 /* Hide burger menu on desktop */
 @media (min-width: 769px) {
   .burger-menu-overlay {
+    display: none !important;
+  }
+  
+  .mobile-burger-btn {
+    display: none !important;
+  }
+  
+  .mobile-search-btn {
     display: none !important;
   }
 }
