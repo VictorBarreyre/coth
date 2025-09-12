@@ -1023,6 +1023,10 @@ body {
   font-weight: 500;
 }
 
+.live-text::first-letter {
+  text-transform: uppercase;
+}
+
 .results-tabs {
   width: 360px;
   height: 42px;

@@ -2,6 +2,22 @@
    HOME FLEXED LAYOUT STYLES
    =========================================== */
 
+/* Hide ads2 banners on home page */
+.ad-banner img[src*="ads2"] {
+  display: none;
+}
+
+.ad-banner:has(img[src*="ads2"]) {
+  display: none;
+}
+
+/* Hide forum-related elements on home page */
+.sidebar-ad-before-forum,
+.forum-widget,
+.sidebar-ad-last {
+  display: none;
+}
+
 /* Main Container */
 
 /* Header */
@@ -651,14 +667,7 @@
   font-weight: 700;
 }
 
-.headlines-text {
-  color: white;
-  font-size: 28px;
-  font-family: "Harriet Text-Bold", Helvetica;
-  letter-spacing: 0;
-  text-transform: lowercase;
-  font-weight: 500;
-}
+
 
 /* Headlines list - handled in shared-styles.css */
 
@@ -963,7 +972,7 @@
   position: relative;
   background: #F0F0F0;
   overflow: hidden;
-  display: flex;
+display: none;
   align-items: center;
   justify-content: center;
 }
@@ -1160,6 +1169,10 @@
     gap: 0 !important;
     padding: 0 !important;
     margin-top: 30px;
+  }
+
+  .forum-widget  {
+    display: none !important;
   }
   
   .featured-article .article-text-content {

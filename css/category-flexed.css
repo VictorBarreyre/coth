@@ -501,14 +501,6 @@
   font-weight: 700;
 }
 
-.headlines-text {
-  color: white;
-  font-size: 28px;
-  font-family: "Harriet Text-Bold", Helvetica;
-  letter-spacing: 0;
-  text-transform: lowercase;
-  font-weight: 500;
-}
 
 /* Headlines list - handled in shared-styles.css */
 
@@ -628,14 +620,6 @@
 
 /* Article title styles handled in shared-styles.css */
 
-.headlines-text {
-  color: #FFF;
-  font-family: "Harriet Text";
-  font-size: 33px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
 
 /* Lien "More News" */
 .top-headlines .label-icon-right-2 {
