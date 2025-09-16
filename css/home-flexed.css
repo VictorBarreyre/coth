@@ -2,14 +2,7 @@
    HOME FLEXED LAYOUT STYLES
    =========================================== */
 
-/* Hide ads2 banners on home page */
-.ad-banner img[src*="ads2"] {
-  display: none;
-}
 
-.ad-banner:has(img[src*="ads2"]) {
-  display: none;
-}
 
 /* Hide forum-related elements on home page */
 .sidebar-ad-before-forum,

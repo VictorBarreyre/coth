@@ -1,23 +1,37 @@
 // Component inclusion system for static HTML
-// Usage: Include this script and use data-include attributes
+// Usage: Include component scripts and use data-include attributes
 
-document.addEventListener('DOMContentLoaded', async function() {
+document.addEventListener('DOMContentLoaded', function() {
   const includeElements = document.querySelectorAll('[data-include]');
   
   // Load all components
-  const promises = Array.from(includeElements).map(async function(element) {
+  Array.from(includeElements).forEach(function(element) {
     const componentPath = element.getAttribute('data-include');
     try {
-      const response = await fetch(componentPath);
-      const html = await response.text();
-      element.outerHTML = html;
+      let html = '';
+      
+      // Map component paths to global variables
+      if (componentPath.includes('header.html')) {
+        html = window.headerHTML || '';
+      } else if (componentPath.includes('sidebar-mobile.html')) {
+        html = window.sidebarMobileHTML || '';
+      } else if (componentPath.includes('sidebar.html')) {
+        html = window.sidebarHTML || '';
+      } else if (componentPath.includes('newsletter-bottom.html')) {
+        html = window.newsletterBottomHTML || '';
+      } else if (componentPath.includes('footer.html')) {
+        html = window.footerHTML || '';
+      }
+      
+      if (html) {
+        element.outerHTML = html;
+      } else {
+        console.error('Component not found:', componentPath);
+      }
     } catch (error) {
       console.error('Error loading component:', componentPath, error);
     }
   });
-
-  // Wait for all components to load
-  await Promise.all(promises);
   
   console.log('All components loaded, initializing...');
   

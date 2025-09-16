@@ -1,0 +1,45 @@
+// Footer Component
+window.footerHTML = `<!-- Footer -->
+<footer class="main-footer">
+  <div class="footer-column customers">
+    <h3 class="footer-title">For Customers</h3>
+    <ul class="footer-links">
+      <li><a href="#">Subscribe</a></li>
+      <li><a href="#">Advertise</a></li>
+      <li><a href="#">Subscription Management</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-column company">
+    <h3 class="footer-title">Company</h3>
+    <ul class="footer-links">
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">FAOS</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-column terms">
+    <h3 class="footer-title">Terms of Use</h3>
+    <ul class="footer-links">
+      <li><a href="pages/cgu.html">Terms of Service</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Cookie Settings</a></li>
+      <li><a href="#">RSS Terms of Service</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-logo">
+    <img src="../assets/home/Logo.svg" alt="Company Logo" />
+  </div>
+
+  <div class="footer-social">
+    <a href="#" class="social-link">
+      <img src="../assets/header/IG.svg" alt="Instagram" />
+    </a>
+    <a href="#" class="social-link">
+      <img src="../assets/header/FB.svg" alt="Facebook" />
+    </a>
+  </div>
+</footer>`;

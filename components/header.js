@@ -1,0 +1,110 @@
+// Header Component
+window.headerHTML = `<!-- Header -->
+<header class="HEADER" role="banner">
+  <div class="overlap">
+    <div class="BG" aria-hidden="true"></div>
+    <div class="avatar" aria-label="User avatar">
+      <div class="overlap-group">
+        <img src="../assets/header/Avatar.svg" alt="User Avatar" />
+      </div>
+      <!-- Login Dropdown -->
+      <div class="login-dropdown" id="loginDropdown">
+        <div class="login-form">
+          <div class="login-title">Login</div>
+          
+          <div class="input-group">
+            <label class="input-label">Your email</label>
+            <input type="email" class="login-input" placeholder="Input text">
+            <div class="input-underline"></div>
+          </div>
+          
+          <div class="input-group">
+            <label class="input-label">Password</label>
+            <input type="password" class="login-input" placeholder="Input text">
+            <div class="input-underline"></div>
+          </div>
+          
+          <div class="remember-me">
+            <div class="checkbox-container">
+              <input type="checkbox" id="rememberMe" class="checkbox">
+              <label for="rememberMe" class="checkbox-label">Remember me</label>
+            </div>
+          </div>
+          
+          <div class="login-links">
+            <div class="forgot-password">Forgot password?</div>
+            <div class="register-link">
+              <span>Register</span>
+              <div class="register-arrow">
+                <img src="../assets/header/Chevronbas.svg" alt="Arrow" class="arrow-icon">
+              </div>
+            </div>
+          </div>
+          
+          <button class="login-button">Login</button>
+        </div>
+      </div>
+    </div>
+    <div class="subscribe-now">
+      <span class="text-wrapper">Subscribe Now<br /></span>
+      <span class="span">Unlimited access</span>
+    </div>
+    <button class="loupe" type="button" aria-label="Search">
+      <div class="vector-wrapper">
+        <img src="../assets/header/Loupe.svg" alt="Search Icon" />
+      </div>
+    </button>
+  </div>
+  <div class="social-icons" style="position: absolute; width: 100px; height: 30px; top: 25px; left: 1388px; display: flex; gap: 20px; transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+    <img src="../assets/header/IG.svg" alt="RS Logo" />
+    <img src="../assets/header/FB.svg" alt="RS Logo" />
+  </div>
+  <div class="div">
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <a href="#sports" class="text-wrapper-2">Sports</a>
+      <a href="#features" class="text-wrapper-3">Features</a>
+      <a href="#videos" class="text-wrapper-4">Videos</a>
+      <a href="#live" class="text-wrapper-5">Live</a>
+      <button class="forum" type="button" aria-label="Forum">
+        <span class="text-wrapper-6">Forum</span>
+      </button>
+    </nav>
+    <button class="symboles-chevrons" type="button" aria-label="Expand sports menu">
+      <img src="../assets/header/Chevronbas.svg" alt="Chevron Icon" />
+    </button>
+    <button class="icon-wrapper" type="button" aria-label="Expand features menu">
+      <img src="../assets/header/Chevronbas.svg" alt="Chevron Icon" />
+    </button>
+  </div>
+  
+  <!-- Search Container -->
+  <div class="search-container" id="searchContainer">
+    <div class="search-wrapper">
+      <div class="search-background" id="searchBackground"></div>
+      <div class="search-input-circle" id="inputCircle">
+        <div class="search-placeholder" id="searchPlaceholder">Search</div>
+      </div>
+      <input type="text" class="search-input" id="searchInput" placeholder="">
+    </div>
+  </div>
+  
+  <div class="favicon">
+    <div class="overlap-2">
+      <a href="home_flexed.html">
+        <img src="../assets/header/Favicon.svg" alt="Logo" />
+      </a>
+    </div>
+  </div>
+  
+  <!-- Mobile Search Button -->
+  <button class="mobile-search-btn" type="button" aria-label="Search">
+    <img src="../assets/header/Loupe.svg" alt="Search Icon" />
+  </button>
+
+  <!-- Mobile Burger Menu Button -->
+  <button class="mobile-burger-btn" id="mobileBurgerBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>`;
