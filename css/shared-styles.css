@@ -2356,7 +2356,7 @@ body {
   /* Mobile Burger Button */
   .mobile-burger-btn {
     position: absolute !important;
-    right: 15px !important;
+    right: 20px !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
     width: 30px !important;
