@@ -22,7 +22,7 @@ window.sidebarMobileHTML = `<!-- MOBILE SIDEBAR COMPONENT - Displayed after vide
           <span class="headline-category">Complet</span>
           <span class="headline-time">l 9h25</span>
         </div>
-        <a href="pages/article_flexed.html">
+        <a href="article_flexed.html">
           <h3 class="headline-title">Hacque adfabilitate confisus</h3>
         </a>
       </article>
@@ -32,7 +32,7 @@ window.sidebarMobileHTML = `<!-- MOBILE SIDEBAR COMPONENT - Displayed after vide
           <span class="headline-category">Culture</span>
           <span class="headline-time">l 10h30</span>
         </div>
-        <a href="pages/article_flexed.html">
+        <a href="article_flexed.html">
           <h3 class="headline-title">Duplexque tempore etiam isdem diebus</h3>
         </a>
       </article>
@@ -42,7 +42,7 @@ window.sidebarMobileHTML = `<!-- MOBILE SIDEBAR COMPONENT - Displayed after vide
           <span class="headline-category">Jumping</span>
           <span class="headline-time">l 20.08.25</span>
         </div>
-        <a href="pages/article_flexed.html">
+        <a href="article_flexed.html">
           <h3 class="headline-title">Duplexque isdem diebus acciderat</h3>
         </a>
       </article>
@@ -52,7 +52,7 @@ window.sidebarMobileHTML = `<!-- MOBILE SIDEBAR COMPONENT - Displayed after vide
           <span class="headline-category">Complet</span>
           <span class="headline-time">l 20.08.25</span>
         </div>
-        <a href="pages/article_flexed.html">
+        <a href="article_flexed.html">
           <h3 class="headline-title">Hacque adfabilitate tempore etiam confisus</h3>
         </a>
       </article>
@@ -62,7 +62,7 @@ window.sidebarMobileHTML = `<!-- MOBILE SIDEBAR COMPONENT - Displayed after vide
           <span class="headline-category">Jumping</span>
           <span class="headline-time">l 20.08.25</span>
         </div>
-        <a href="pages/article_flexed.html">
+        <a href="article_flexed.html">
           <h3 class="headline-title">Duplexque isdem diebus acciderat</h3>
         </a>
       </article>
@@ -72,7 +72,7 @@ window.sidebarMobileHTML = `<!-- MOBILE SIDEBAR COMPONENT - Displayed after vide
           <span class="headline-category">Jumping</span>
           <span class="headline-time">l 20.08.25</span>
         </div>
-        <a href="pages/article_flexed.html">
+        <a href="article_flexed.html">
           <h3 class="headline-title">Duplexque tempore etiam isdem diebus</h3>
         </a>
       </article>
@@ -82,7 +82,7 @@ window.sidebarMobileHTML = `<!-- MOBILE SIDEBAR COMPONENT - Displayed after vide
           <span class="headline-category">Jumping</span>
           <span class="headline-time">l 20.08.25</span>
         </div>
-        <a href="pages/article_flexed.html">
+        <a href="article_flexed.html">
           <h3 class="headline-title">Duplexque isdem diebus acciderat</h3>
         </a>
       </article>
@@ -92,7 +92,7 @@ window.sidebarMobileHTML = `<!-- MOBILE SIDEBAR COMPONENT - Displayed after vide
           <span class="headline-category">Jumping</span>
           <span class="headline-time">l 20.08.25</span>
         </div>
-        <a href="pages/article_flexed.html">
+        <a href="article_flexed.html">
           <h3 class="headline-title">Duplexque tempore etiam isdem diebus</h3>
         </a>
       </article>
@@ -102,7 +102,7 @@ window.sidebarMobileHTML = `<!-- MOBILE SIDEBAR COMPONENT - Displayed after vide
           <span class="headline-category">Culture</span>
           <span class="headline-time">l 20.08.25</span>
         </div>
-        <a href="pages/article_flexed.html">
+        <a href="article_flexed.html">
           <h3 class="headline-title">Eodem tempore etiam Hymetii praeclarae</h3>
         </a>
       </article>
@@ -112,7 +112,7 @@ window.sidebarMobileHTML = `<!-- MOBILE SIDEBAR COMPONENT - Displayed after vide
           <span class="headline-category">Complet</span>
           <span class="headline-time">l 20.08.25</span>
         </div>
-        <a href="pages/article_flexed.html">
+        <a href="article_flexed.html">
           <h3 class="headline-title">Duplexque isdem diebus acciderat</h3>
         </a>
       </article>
