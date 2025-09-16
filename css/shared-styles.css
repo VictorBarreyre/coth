@@ -2674,7 +2674,7 @@ body {
 }
 
 .burger-forum-btn {
-  width: 343px;
+  width: 100%;
   height: 50px;
   background: #4A4085;
   border-radius: 52px;

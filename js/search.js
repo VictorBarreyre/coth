@@ -171,7 +171,11 @@ function initializeSearch() {
     const clickedOnSearchButton = (searchButton && searchButton.contains(e.target)) || 
                                  (mobileSearchButton && mobileSearchButton.contains(e.target));
     
-    if (isOpen && !searchContainer.contains(e.target) && !clickedOnSearchButton) {
+    // Don't close if clicked on burger menu elements
+    const clickedOnBurger = e.target.closest('.mobile-burger-btn') || 
+                           e.target.closest('.burger-menu-overlay');
+    
+    if (isOpen && !searchContainer.contains(e.target) && !clickedOnSearchButton && !clickedOnBurger) {
       closeSearch();
     }
   });
