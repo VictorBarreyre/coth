@@ -3,12 +3,13 @@
 function initializeSearch() {
   console.log('Initializing search...');
   
-  // Find the search button (loupe) in header
+  // Find the search buttons (both desktop and mobile)
   const searchButton = document.querySelector('.loupe');
+  const mobileSearchButton = document.querySelector('.mobile-search-btn');
   const header = document.querySelector('.HEADER');
   const socialIcons = document.querySelector('.social-icons');
   
-  if (!searchButton) {
+  if (!searchButton && !mobileSearchButton) {
     console.log('Search button not found');
     return;
   }
@@ -114,8 +115,8 @@ function initializeSearch() {
     }
   }
   
-  // Event listeners
-  searchButton.addEventListener('click', (e) => {
+  // Event listeners for both desktop and mobile search buttons
+  const handleSearchClick = (e) => {
     e.preventDefault();
     e.stopPropagation();
     if (isOpen) {
@@ -123,7 +124,15 @@ function initializeSearch() {
     } else {
       openSearch();
     }
-  });
+  };
+
+  if (searchButton) {
+    searchButton.addEventListener('click', handleSearchClick);
+  }
+  
+  if (mobileSearchButton) {
+    mobileSearchButton.addEventListener('click', handleSearchClick);
+  }
   
   // Close on Escape key
   document.addEventListener('keydown', (e) => {
@@ -134,7 +143,10 @@ function initializeSearch() {
   
   // Close on click outside search area
   document.addEventListener('click', (e) => {
-    if (isOpen && !searchContainer.contains(e.target) && !searchButton.contains(e.target)) {
+    const clickedOnSearchButton = (searchButton && searchButton.contains(e.target)) || 
+                                 (mobileSearchButton && mobileSearchButton.contains(e.target));
+    
+    if (isOpen && !searchContainer.contains(e.target) && !clickedOnSearchButton) {
       closeSearch();
     }
   });
