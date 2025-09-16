@@ -1177,7 +1177,7 @@ display: none;
   .featured-article .article-title {
     font-size: 20px !important;
     line-height: 26px !important;
-    margin: 10px 10px !important;
+    margin: 10px 10px 10px 0px !important;
     padding: 0 !important;
   }
 
