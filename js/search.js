@@ -144,6 +144,10 @@ function initializeSearch() {
   const handleSearchClick = (e) => {
     e.preventDefault();
     e.stopPropagation();
+    
+    // Remove focus from the button to prevent the :focus style from staying active
+    e.target.blur();
+    
     if (isOpen) {
       closeSearch();
     } else {

@@ -2353,6 +2353,14 @@ body {
     display: block !important;
   }
 
+  /* Override generic button focus/hover styles for mobile search button */
+  .mobile-search-btn:hover,
+  .mobile-search-btn:focus,
+  .mobile-search-btn:active {
+    opacity: 1 !important;
+    outline: none !important;
+  }
+
   /* Mobile Burger Button */
   .mobile-burger-btn {
     position: absolute !important;
