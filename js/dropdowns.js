@@ -2,13 +2,11 @@
 
 // Function to initialize login dropdown
 function initializeLoginDropdown() {
-  console.log('Initializing login dropdown...');
   
   const avatar = document.querySelector('.avatar');
   const loginDropdown = document.querySelector('.login-dropdown');
   
   if (!avatar || !loginDropdown) {
-    console.log('Avatar or login dropdown not found');
     return;
   }
   
@@ -16,7 +14,6 @@ function initializeLoginDropdown() {
   
   avatar.addEventListener('mouseenter', () => {
     clearTimeout(loginTimeout);
-    console.log('Avatar hover enter');
     
     loginDropdown.style.opacity = '1';
     loginDropdown.style.visibility = 'visible';
@@ -25,7 +22,6 @@ function initializeLoginDropdown() {
   });
   
   avatar.addEventListener('mouseleave', () => {
-    console.log('Avatar hover leave');
     loginTimeout = setTimeout(() => {
       loginDropdown.style.opacity = '0';
       loginDropdown.style.visibility = 'hidden';
@@ -36,11 +32,9 @@ function initializeLoginDropdown() {
   
   loginDropdown.addEventListener('mouseenter', () => {
     clearTimeout(loginTimeout);
-    console.log('Login dropdown hover enter');
   });
   
   loginDropdown.addEventListener('mouseleave', () => {
-    console.log('Login dropdown hover leave');
     loginDropdown.style.opacity = '0';
     loginDropdown.style.visibility = 'hidden';
     loginDropdown.style.transform = 'translateY(-10px)';
@@ -50,7 +44,6 @@ function initializeLoginDropdown() {
 
 // Function to initialize dropdown menus
 function initializeDropdowns() {
-  console.log('Initializing dropdowns...');
   
   // Create dropdown structure
   const dropdownData = {
@@ -62,14 +55,9 @@ function initializeDropdowns() {
   const sportsLink = document.querySelector('.text-wrapper-2');
   const featuresLink = document.querySelector('.text-wrapper-3');
   
-  console.log('Sports link found:', !!sportsLink);
-  console.log('Features link found:', !!featuresLink);
-  console.log('Sports link element:', sportsLink);
-  console.log('Features link element:', featuresLink);
   
   // Create dropdown for Sports
   if (sportsLink) {
-    console.log('Creating Sports dropdown');
     const sportsDropdown = createDropdown(dropdownData.sports, 'sports-dropdown');
     document.body.appendChild(sportsDropdown);
     
@@ -77,7 +65,6 @@ function initializeDropdowns() {
     let sportsTimeout;
     sportsLink.addEventListener('mouseenter', () => {
       clearTimeout(sportsTimeout);
-      console.log('Sports hover enter');
       
       // Position the dropdown correctly
       const rect = sportsLink.getBoundingClientRect();
@@ -92,7 +79,6 @@ function initializeDropdowns() {
     });
     
     sportsLink.addEventListener('mouseleave', () => {
-      console.log('Sports hover leave');
       sportsTimeout = setTimeout(() => {
         sportsDropdown.style.opacity = '0';
         sportsDropdown.style.transform = 'translateY(-10px)';
@@ -117,7 +103,6 @@ function initializeDropdowns() {
   
   // Create dropdown for Features
   if (featuresLink) {
-    console.log('Creating Features dropdown');
     const featuresDropdown = createDropdown(dropdownData.features, 'features-dropdown');
     document.body.appendChild(featuresDropdown);
     
@@ -125,7 +110,6 @@ function initializeDropdowns() {
     let featuresTimeout;
     featuresLink.addEventListener('mouseenter', () => {
       clearTimeout(featuresTimeout);
-      console.log('Features hover enter');
       
       // Position the dropdown correctly
       const rect = featuresLink.getBoundingClientRect();
@@ -140,7 +124,6 @@ function initializeDropdowns() {
     });
     
     featuresLink.addEventListener('mouseleave', () => {
-      console.log('Features hover leave');
       featuresTimeout = setTimeout(() => {
         featuresDropdown.style.opacity = '0';
         featuresDropdown.style.transform = 'translateY(-10px)';
@@ -225,7 +208,6 @@ function createDropdown(items, className) {
         window.location.href = 'pages/category_flexed.html';
       } else {
         // For other items, you can add specific navigation logic here
-        console.log(`Clicked on ${item}`);
       }
     });
     

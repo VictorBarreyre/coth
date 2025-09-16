@@ -1,12 +1,10 @@
 // Simple Mobile Burger Menu
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('Setting up simple burger menu...');
   
   const burgerBtn = document.querySelector('.mobile-burger-btn');
   const burgerOverlay = document.querySelector('.burger-menu-overlay');
   
   if (!burgerBtn || !burgerOverlay) {
-    console.log('Burger elements not found, waiting...');
     setTimeout(() => {
       initSimpleBurgerMenu();
     }, 1000);
@@ -21,16 +19,13 @@ function initSimpleBurgerMenu() {
   const burgerOverlay = document.querySelector('.burger-menu-overlay');
   
   if (!burgerBtn || !burgerOverlay) {
-    console.log('Burger elements still not found');
     return;
   }
   
-  console.log('Burger menu initialized successfully!');
   
   // Click on burger button
   burgerBtn.addEventListener('click', function(e) {
     e.preventDefault();
-    console.log('Burger clicked!');
     
     if (burgerOverlay.classList.contains('active')) {
       closeBurger();
@@ -130,7 +125,6 @@ function createBurgerDropdown(type) {
     itemElement.textContent = item;
     itemElement.addEventListener('click', function(e) {
       e.stopPropagation();
-      console.log(`Clicked on ${item}`);
       closeBurger();
     });
     dropdown.appendChild(itemElement);
@@ -146,7 +140,6 @@ function openBurger() {
   burgerOverlay.classList.add('active');
   burgerBtn.classList.add('active');
   document.body.style.overflow = 'hidden';
-  console.log('Burger opened');
 }
 
 function closeBurger() {
@@ -156,5 +149,4 @@ function closeBurger() {
   burgerOverlay.classList.remove('active');
   burgerBtn.classList.remove('active');
   document.body.style.overflow = '';
-  console.log('Burger closed');
 }

@@ -1,7 +1,6 @@
 // Expandable search functionality
 
 function initializeSearch() {
-  console.log('Initializing search...');
   
   // Find the search buttons (both desktop and mobile)
   const searchButton = document.querySelector('.loupe');
@@ -10,17 +9,14 @@ function initializeSearch() {
   const socialIcons = document.querySelector('.social-icons');
   
   if (!searchButton && !mobileSearchButton) {
-    console.log('Search button not found');
     return;
   }
   
-  console.log('Search button found:', searchButton);
   
   // Get search container that's already in the header
   const searchContainer = document.querySelector('#searchContainer');
   
   if (!searchContainer) {
-    console.log('Search container not found');
     return;
   }
   
@@ -36,7 +32,6 @@ function initializeSearch() {
   function openSearch() {
     if (isOpen) return;
     
-    console.log('Opening search');
     isOpen = true;
     
     // Check if we're on mobile (screen width <= 768px)
@@ -91,7 +86,6 @@ function initializeSearch() {
   function closeSearch() {
     if (!isOpen) return;
     
-    console.log('Closing search');
     isOpen = false;
     
     // Check if we're on mobile (screen width <= 768px)
@@ -195,7 +189,6 @@ function initializeSearch() {
       placeholder.style.opacity = '1';
     }
     // Here you can add search logic
-    console.log('Search query:', query);
   });
   
   // Handle Enter key for search
@@ -203,7 +196,6 @@ function initializeSearch() {
     if (e.key === 'Enter') {
       const query = e.target.value.trim();
       if (query) {
-        console.log('Searching for:', query);
         // Here you can add actual search functionality
         // For now, we'll just close the search
         closeSearch();
