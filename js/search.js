@@ -43,11 +43,23 @@ function initializeSearch() {
     const isMobile = window.innerWidth <= 768;
     
     if (isMobile) {
-      // Mobile: show search container with active class
+      // Mobile: use same animation sequence as desktop
       searchContainer.classList.add('active');
+      
+      // Animate elements in sequence (same as desktop)
       setTimeout(() => {
+        background.classList.add('expanded');
+      }, 50);
+      
+      setTimeout(() => {
+        inputCircle.classList.add('expanded');
+      }, 150);
+      
+      setTimeout(() => {
+        searchInput.classList.add('show');
+        placeholder.classList.add('show');
         searchInput.focus();
-      }, 300);
+      }, 400);
     } else {
       // Desktop: use original animation
       // Add search-active class to header to trigger social icons animation
@@ -86,9 +98,22 @@ function initializeSearch() {
     const isMobile = window.innerWidth <= 768;
     
     if (isMobile) {
-      // Mobile: hide search container by removing active class
-      searchContainer.classList.remove('active');
-      searchInput.value = ''; // Clear input
+      // Mobile: use same reverse animation sequence as desktop
+      searchInput.classList.remove('show');
+      placeholder.classList.remove('show');
+      
+      setTimeout(() => {
+        inputCircle.classList.remove('expanded');
+      }, 100);
+      
+      setTimeout(() => {
+        background.classList.remove('expanded');
+      }, 200);
+      
+      setTimeout(() => {
+        searchContainer.classList.remove('active');
+        searchInput.value = ''; // Clear input
+      }, 400);
     } else {
       // Desktop: use original animation
       // Remove classes in reverse order
