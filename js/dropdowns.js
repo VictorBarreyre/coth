@@ -227,9 +227,8 @@ function createDropdown(items, className) {
     const itemDiv = document.createElement('div');
     const topPosition = 15 + (index * 42); // 15px start, 42px spacing
     
-    // Special style for "Jumping" - semi-transparent
-    const isJumping = item === 'Jumping';
-    const color = isJumping ? 'rgba(255, 255, 255, 0.50)' : 'white';
+    // All items have same color
+    const color = 'white';
     
     itemDiv.style.cssText = `
       left: 18px;
@@ -251,9 +250,7 @@ function createDropdown(items, className) {
     
     // Add hover effect
     itemDiv.addEventListener('mouseenter', () => {
-      if (!isJumping) {
-        itemDiv.style.color = 'rgba(255, 255, 255, 0.8)';
-      }
+      itemDiv.style.color = 'rgba(255, 255, 255, 0.8)';
     });
     
     itemDiv.addEventListener('mouseleave', () => {
