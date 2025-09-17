@@ -27,7 +27,7 @@ function initializeLoginDropdown() {
       loginDropdown.style.visibility = 'hidden';
       loginDropdown.style.transform = 'translateY(-10px)';
       loginDropdown.style.pointerEvents = 'none';
-    }, 200);
+    }, 100);
   });
   
   loginDropdown.addEventListener('mouseenter', () => {
@@ -51,9 +51,11 @@ function initializeDropdowns() {
     features: ['Interviews', 'Analysis', 'Opinion', 'History', 'Training', 'Health', 'Equipment', 'Travel']
   };
 
-  // Get the nav links - they should be available now
+  // Get the nav links and chevrons - they should be available now
   const sportsLink = document.querySelector('.text-wrapper-2');
   const featuresLink = document.querySelector('.text-wrapper-3');
+  const sportsChevron = document.querySelector('.symboles-chevrons');
+  const featuresChevron = document.querySelector('.icon-wrapper');
   
   
   // Create dropdown for Sports
@@ -61,44 +63,72 @@ function initializeDropdowns() {
     const sportsDropdown = createDropdown(dropdownData.sports, 'sports-dropdown');
     document.body.appendChild(sportsDropdown);
     
-    // Add hover events
+    // Create a hover zone that includes link + chevron
     let sportsTimeout;
-    sportsLink.addEventListener('mouseenter', () => {
+    
+    const showSportsDropdown = () => {
       clearTimeout(sportsTimeout);
       
       // Position the dropdown correctly
       const rect = sportsLink.getBoundingClientRect();
       sportsDropdown.style.left = rect.left + 'px';
-      sportsDropdown.style.top = (rect.bottom + 18) + 'px';
+      sportsDropdown.style.top = (rect.bottom + 2) + 'px';
       
       sportsDropdown.style.display = 'block';
       setTimeout(() => {
         sportsDropdown.style.opacity = '1';
         sportsDropdown.style.transform = 'translateY(0)';
       }, 10);
-    });
+    };
     
-    sportsLink.addEventListener('mouseleave', () => {
+    const hideSportsDropdown = () => {
       sportsTimeout = setTimeout(() => {
         sportsDropdown.style.opacity = '0';
         sportsDropdown.style.transform = 'translateY(-10px)';
         setTimeout(() => {
           sportsDropdown.style.display = 'none';
-        }, 300);
-      }, 200);
-    });
+        }, 150);
+      }, 300);
+    };
+    
+    // Create invisible hover zone that covers link + chevron + gap
+    const sportsHoverZone = document.createElement('div');
+    sportsHoverZone.style.cssText = `
+      position: fixed;
+      pointer-events: none;
+      z-index: 9998;
+    `;
+    document.body.appendChild(sportsHoverZone);
+    
+    const updateSportsHoverZone = () => {
+      const linkRect = sportsLink.getBoundingClientRect();
+      const chevronRect = sportsChevron ? sportsChevron.getBoundingClientRect() : linkRect;
+      
+      const left = Math.min(linkRect.left, chevronRect.left) - 10;
+      const right = Math.max(linkRect.right, chevronRect.right) + 10;
+      const top = Math.min(linkRect.top, chevronRect.top) - 10;
+      const bottom = Math.max(linkRect.bottom, chevronRect.bottom) + 20; // Plus d'espace vers le dropdown
+      
+      sportsHoverZone.style.left = left + 'px';
+      sportsHoverZone.style.top = top + 'px';
+      sportsHoverZone.style.width = (right - left) + 'px';
+      sportsHoverZone.style.height = (bottom - top) + 'px';
+      sportsHoverZone.style.pointerEvents = 'auto';
+    };
+    
+    // Update hover zone on page load and resize
+    updateSportsHoverZone();
+    window.addEventListener('resize', updateSportsHoverZone);
+    
+    // Event listeners for the hover zone
+    sportsHoverZone.addEventListener('mouseenter', showSportsDropdown);
+    sportsHoverZone.addEventListener('mouseleave', hideSportsDropdown);
     
     sportsDropdown.addEventListener('mouseenter', () => {
       clearTimeout(sportsTimeout);
     });
     
-    sportsDropdown.addEventListener('mouseleave', () => {
-      sportsDropdown.style.opacity = '0';
-      sportsDropdown.style.transform = 'translateY(-10px)';
-      setTimeout(() => {
-        sportsDropdown.style.display = 'none';
-      }, 300);
-    });
+    sportsDropdown.addEventListener('mouseleave', hideSportsDropdown);
   }
   
   // Create dropdown for Features
@@ -106,44 +136,72 @@ function initializeDropdowns() {
     const featuresDropdown = createDropdown(dropdownData.features, 'features-dropdown');
     document.body.appendChild(featuresDropdown);
     
-    // Add hover events
+    // Create a hover zone that includes link + chevron
     let featuresTimeout;
-    featuresLink.addEventListener('mouseenter', () => {
+    
+    const showFeaturesDropdown = () => {
       clearTimeout(featuresTimeout);
       
       // Position the dropdown correctly
       const rect = featuresLink.getBoundingClientRect();
       featuresDropdown.style.left = rect.left + 'px';
-      featuresDropdown.style.top = (rect.bottom + 18) + 'px';
+      featuresDropdown.style.top = (rect.bottom + 2) + 'px';
       
       featuresDropdown.style.display = 'block';
       setTimeout(() => {
         featuresDropdown.style.opacity = '1';
         featuresDropdown.style.transform = 'translateY(0)';
       }, 10);
-    });
+    };
     
-    featuresLink.addEventListener('mouseleave', () => {
+    const hideFeaturesDropdown = () => {
       featuresTimeout = setTimeout(() => {
         featuresDropdown.style.opacity = '0';
         featuresDropdown.style.transform = 'translateY(-10px)';
         setTimeout(() => {
           featuresDropdown.style.display = 'none';
-        }, 300);
-      }, 200);
-    });
+        }, 150);
+      }, 300);
+    };
+    
+    // Create invisible hover zone that covers link + chevron + gap
+    const featuresHoverZone = document.createElement('div');
+    featuresHoverZone.style.cssText = `
+      position: fixed;
+      pointer-events: none;
+      z-index: 9998;
+    `;
+    document.body.appendChild(featuresHoverZone);
+    
+    const updateFeaturesHoverZone = () => {
+      const linkRect = featuresLink.getBoundingClientRect();
+      const chevronRect = featuresChevron ? featuresChevron.getBoundingClientRect() : linkRect;
+      
+      const left = Math.min(linkRect.left, chevronRect.left) - 10;
+      const right = Math.max(linkRect.right, chevronRect.right) + 10;
+      const top = Math.min(linkRect.top, chevronRect.top) - 10;
+      const bottom = Math.max(linkRect.bottom, chevronRect.bottom) + 20; // Plus d'espace vers le dropdown
+      
+      featuresHoverZone.style.left = left + 'px';
+      featuresHoverZone.style.top = top + 'px';
+      featuresHoverZone.style.width = (right - left) + 'px';
+      featuresHoverZone.style.height = (bottom - top) + 'px';
+      featuresHoverZone.style.pointerEvents = 'auto';
+    };
+    
+    // Update hover zone on page load and resize
+    updateFeaturesHoverZone();
+    window.addEventListener('resize', updateFeaturesHoverZone);
+    
+    // Event listeners for the hover zone
+    featuresHoverZone.addEventListener('mouseenter', showFeaturesDropdown);
+    featuresHoverZone.addEventListener('mouseleave', hideFeaturesDropdown);
     
     featuresDropdown.addEventListener('mouseenter', () => {
       clearTimeout(featuresTimeout);
     });
     
-    featuresDropdown.addEventListener('mouseleave', () => {
-      featuresDropdown.style.opacity = '0';
-      featuresDropdown.style.transform = 'translateY(-10px)';
-      setTimeout(() => {
-        featuresDropdown.style.display = 'none';
-      }, 300);
-    });
+    featuresDropdown.addEventListener('mouseleave', hideFeaturesDropdown);
   }
 }
 
@@ -160,7 +218,7 @@ function createDropdown(items, className) {
     display: none;
     opacity: 0;
     transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.15s ease, transform 0.15s ease;
     z-index: 9999;
   `;
   
@@ -181,12 +239,12 @@ function createDropdown(items, className) {
       display: flex;
       flex-direction: column;
       color: ${color};
-      font-size: 14px;
+      font-size: 12px;
       font-family: 'Montserrat', sans-serif;
       font-weight: 500;
       word-wrap: break-word;
       cursor: pointer;
-      transition: color 0.3s ease;
+      transition: color 0.15s ease;
     `;
     
     itemDiv.textContent = item;

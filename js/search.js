@@ -182,11 +182,13 @@ function initializeSearch() {
   searchInput.addEventListener('input', (e) => {
     const query = e.target.value;
     if (query.length > 0) {
-      // Hide placeholder when typing
-      placeholder.style.opacity = '0';
+      // Hide placeholder when typing - use !important to override CSS with faster transition
+      placeholder.style.setProperty('transition', 'opacity 0.1s ease', 'important');
+      placeholder.style.setProperty('opacity', '0', 'important');
     } else {
-      // Show placeholder when empty
-      placeholder.style.opacity = '1';
+      // Show placeholder when empty - use !important to override CSS with faster transition
+      placeholder.style.setProperty('transition', 'opacity 0.1s ease', 'important');
+      placeholder.style.setProperty('opacity', '1', 'important');
     }
     // Here you can add search logic
   });
