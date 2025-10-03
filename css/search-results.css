@@ -128,8 +128,8 @@
   overflow: hidden;
 }
 
-/* Advertisement Block */
-.ad-block {
+/* Advertisement Banner */
+.ad-banner {
   width: 1040px;
   height: 182px;
   background: #F9F9F9;
@@ -140,18 +140,17 @@
   position: relative;
 }
 
-.ad-block img {
+.ad-banner .ad-content {
   width: 980px;
   height: 122px;
   object-fit: cover;
 }
 
-.ad-label {
+.ad-banner .ad-label {
   color: #848484;
   font-size: 12px;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  text-transform: uppercase;
   margin-top: 8px;
 }
 
@@ -212,17 +211,27 @@
 
 /* Sidebar is managed by sidebar component CSS */
 
+/* Mobile Sidebar */
+.search-results-section .sidebar-mobile-only {
+  display: none;
+}
+
+/* Hide video widget on desktop */
+.live-video-section {
+  display: none;
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
   .search-results-section {
     width: 100%;
-    padding: 30px 15px;
-    gap: 30px;
+    padding: 0;
+    gap: 20px;
   }
 
   .search-title {
     font-size: 24px;
-    margin-bottom: 30px;
+    padding: 0 15px;
   }
 
   .content-grid {
@@ -232,10 +241,12 @@
 
   .main-content {
     width: 100%;
+    gap: 26px;
   }
 
   .article-list {
     gap: 30px;
+    padding: 0 15px;
   }
 
   .article-item {
@@ -251,7 +262,7 @@
   }
 
   .article-info {
-    gap: 15px;
+    gap: 10px;
   }
 
   .article-title {
@@ -266,19 +277,104 @@
     height: auto;
   }
 
-  .ad-block {
-    width: 100%;
-    height: auto;
-    padding: 20px 10px;
+  .ad-banner {
+    width: 100% !important;
+    background: #F9F9F9 !important;
+    height: 119px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    margin: 0 !important;
   }
 
-  .ad-block img {
-    width: 100%;
-    height: auto;
+  .ad-banner .ad-content {
+    width: 100% !important;
+    height: 79px !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 20px !important;
+    background: #ddd !important;
+    margin: 0 !important;
+  }
+
+  .ad-banner:has(img[src*="ads2"]) {
+    height: 89px !important;
+    background: #F9F9F9 !important;
+  }
+
+  .ad-banner:has(img[src*="ads2"]) .ad-content {
+    height: 49px !important;
+    top: 20px !important;
+    background: none !important;
+  }
+
+  .ad-banner .ad-label {
+    display: none !important;
+  }
+
+  .ad-banner::after {
+    content: "Advertisement" !important;
+    position: absolute !important;
+    right: 15px !important;
+    bottom: 4px !important;
+    color: #848484 !important;
+    font-size: 10px !important;
+    font-family: "Montserrat", Helvetica !important;
+    font-weight: 600 !important;
+    text-align: right !important;
   }
 
   .pagination {
-    gap: 20px;
-    flex-wrap: wrap;
+    display: none;
+  }
+
+  /* Show video widget on mobile */
+  .live-video-section {
+    display: block;
+    width: 100%;
+    padding: 0 15px;
+    margin: 30px 0;
+  }
+
+  .video-widget-title {
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 32px;
+    font-family: "Harriet Text", serif;
+    font-weight: 700;
+  }
+
+  /* Hide desktop sidebar, show mobile sidebar */
+  .content-grid > [data-include*="sidebar"] {
+    display: none !important;
+  }
+
+  .search-results-section .sidebar-mobile-only {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .sidebar-mobile-only .forum-widget {
+    width: 100%;
+    height: 521px;
+    background: #F0F0F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sidebar-mobile-only .forum-title {
+    text-align: center;
+    color: #0C004F;
+    font-size: 32px;
+    font-family: "Harriet Text", serif;
+    font-weight: 700;
+  }
+
+  .main-container {
+    margin-top: 30px !important;
   }
 }
