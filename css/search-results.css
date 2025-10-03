@@ -1,0 +1,284 @@
+/* ===========================================
+   SEARCH RESULTS PAGE STYLES
+   =========================================== */
+
+/* Main Container */
+.search-results-section {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+/* Search Title */
+.search-title {
+  margin: 0 0 0px 0;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.title-label {
+  color: #0C004F;
+  font-family: "Harriet Text", serif;
+  font-weight: 700;
+}
+
+.title-query {
+  color: #0C004F;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+/* Content Grid */
+.content-grid {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+}
+
+/* Main Content */
+.main-content {
+  width: 1040px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* Article List */
+.article-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Article Item */
+.article-item {
+  width: 1040px;
+  height: 256px;
+  display: flex;
+  gap: 24px;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.article-item:hover {
+  opacity: 0.8;
+}
+
+.article-image {
+  width: 454px;
+  height: 256px;
+  object-fit: cover;
+}
+
+.article-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.article-title {
+  color: #0C004F;
+  font-size: 24px;
+  font-family: "Harriet Text", serif;
+  font-weight: 700;
+  line-height: 32px;
+  margin: 0;
+  height: 64px;
+  overflow: hidden;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.article-category {
+  background: #4A4085;
+  color: white;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding: 4px 11px;
+  border-radius: 12px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.article-date {
+  color: #4A4085;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.article-excerpt {
+  color: #0C004F;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 0;
+  height: 64px;
+  overflow: hidden;
+}
+
+/* Advertisement Block */
+.ad-block {
+  width: 1040px;
+  height: 182px;
+  background: #F9F9F9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.ad-block img {
+  width: 980px;
+  height: 122px;
+  object-fit: cover;
+}
+
+.ad-label {
+  color: #848484;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  margin: 45px 0 0 0;
+}
+
+.pagination-arrow {
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.3s ease;
+}
+
+.pagination-arrow:hover {
+  opacity: 0.7;
+}
+
+.pagination-arrow.prev img {
+  transform: rotate(90deg);
+}
+
+.pagination-arrow.next img {
+  transform: rotate(-90deg);
+}
+
+.pagination-number {
+  color: #0C004F;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: font-weight 0.3s ease;
+}
+
+.pagination-number:hover,
+.pagination-number.active {
+  font-weight: 700;
+}
+
+.pagination-dots {
+  color: #0C004F;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+/* Sidebar is managed by sidebar component CSS */
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .search-results-section {
+    width: 100%;
+    padding: 30px 15px;
+    gap: 30px;
+  }
+
+  .search-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .content-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  .article-list {
+    gap: 30px;
+  }
+
+  .article-item {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .article-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .article-info {
+    gap: 15px;
+  }
+
+  .article-title {
+    font-size: 20px;
+    line-height: 26px;
+    height: auto;
+  }
+
+  .article-excerpt {
+    font-size: 14px;
+    line-height: 20px;
+    height: auto;
+  }
+
+  .ad-block {
+    width: 100%;
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .ad-block img {
+    width: 100%;
+    height: auto;
+  }
+
+  .pagination {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
