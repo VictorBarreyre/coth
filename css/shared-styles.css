@@ -1814,12 +1814,18 @@ body {
 }
 
 .forgot-password {
-  color: white;
+  color: white !important;
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   line-height: 22px;
   cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.forgot-password:hover {
+  opacity: 0.8 !important;
 }
 
 .register-link {
@@ -2842,12 +2848,18 @@ body {
 }
 
 .burger-forgot-password {
-  color: white;
+  color: white !important;
   font-size: 16px;
   font-family: "Montserrat", Helvetica;
   font-weight: 600;
   line-height: 22px;
   cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.burger-forgot-password:hover {
+  opacity: 0.8 !important;
 }
 
 .burger-register-link {

@@ -237,6 +237,12 @@
   gap: 20px;
 }
 
+/* Remove underline from all article title links */
+.article-title a,
+a .article-title {
+  text-decoration: none;
+}
+
 .featured-article .article-image {
   width: 1040px;
   height: 585px;
@@ -297,7 +303,8 @@
 .small-article .article-title::first-letter,
 .category-featured-article .article-title::first-letter,
 .forum-title::first-letter,
-.category-text-content p::first-letter {
+.category-text-content p::first-letter,
+.category-text-content a::first-letter {
   text-transform: uppercase;
 }
 
@@ -1031,7 +1038,8 @@ display: none;
 
 }
 
-.category-text-content p {
+.category-text-content p,
+.category-text-content a {
   width: 453px;
   color: #0C004F;
   font-size: 22px;
@@ -1043,6 +1051,8 @@ display: none;
   margin: 0 0 18px 0;
   padding-bottom: 18px;
   border-bottom: 1px solid #D1CCEC;
+  text-decoration: none;
+  display: block;
 }
 
 .category-featured-article {
@@ -1067,6 +1077,10 @@ display: none;
   text-transform: lowercase;
   font-weight: 700;
   margin: 0;
+}
+
+.category-featured-article a {
+  text-decoration: none;
 }
 
 /* =========================================== 
@@ -2156,6 +2170,10 @@ display: none;
     text-transform: uppercase !important;
   }
 
+  .category-featured .category-featured-article a {
+    text-decoration: none !important;
+  }
+
   .category-featured .category-articles {
     width: 100% !important;
     margin: 0 !important;
@@ -2167,7 +2185,8 @@ display: none;
     gap: 4px !important;
   }
 
-  .category-featured .category-text-content p {
+  .category-featured .category-text-content p,
+  .category-featured .category-text-content a {
     width: 100% !important;
     color: #0C004F !important;
     font-size: 14px !important;
@@ -2181,13 +2200,16 @@ display: none;
     word-wrap: break-word !important;
     box-sizing: border-box !important;
     overflow-wrap: break-word !important;
+    text-decoration: none !important;
+    display: block !important;
   }
 
   .category-featured .category-text-content p:first-child {
     border-top: 1px solid #D1CCEC !important;
   }
 
-  .category-featured .category-text-content p::first-letter {
+  .category-featured .category-text-content p::first-letter,
+  .category-featured .category-text-content a::first-letter {
     text-transform: uppercase !important;
   }
 
