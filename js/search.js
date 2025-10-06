@@ -198,9 +198,8 @@ function initializeSearch() {
     if (e.key === 'Enter') {
       const query = e.target.value.trim();
       if (query) {
-        // Here you can add actual search functionality
-        // For now, we'll just close the search
-        closeSearch();
+        // Redirect to search results page with query parameter
+        window.location.href = `search_results.html?q=${encodeURIComponent(query)}`;
       }
     }
   });
