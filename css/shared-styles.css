@@ -1508,10 +1508,8 @@ body {
   gap: 8px;
 }
 
-/* Static dropdown items styling - exact match to JS generated styles */
+/* Static dropdown items styling - using flexbox */
 .nav-dropdown .dropdown-item {
-  position: absolute;
-  left: 18px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1524,46 +1522,29 @@ body {
   transition: color 0.15s ease;
   text-decoration: none !important;
   line-height: 1.2;
-  padding: 8px 0;
+  padding: 10px 0;
+  margin-left: 18px;
 }
 
 .nav-dropdown .dropdown-item:hover {
   color: rgba(255, 255, 255, 0.8) !important;
 }
 
-/* Dropdown separators - exact match to JS generated styles */
+/* Dropdown separators - using flexbox */
 .nav-dropdown .dropdown-separator {
-  width: 166px;
+  width: 200px;
   height: 0px;
-  left: 20px;
-  position: absolute;
+  margin: 6px 0 6px 20px;
   outline: 1px rgba(255, 255, 255, 0.50) solid;
   outline-offset: -0.50px;
 }
-
-/* Position each dropdown item and separator - remonté de 10px */
-.nav-dropdown .dropdown-item:nth-of-type(1) { top: 5px; }
-.nav-dropdown .dropdown-separator:nth-of-type(1) { top: 40px; }
-.nav-dropdown .dropdown-item:nth-of-type(2) { top: 48px; }
-.nav-dropdown .dropdown-separator:nth-of-type(2) { top: 83px; }
-.nav-dropdown .dropdown-item:nth-of-type(3) { top: 91px; }
-.nav-dropdown .dropdown-separator:nth-of-type(3) { top: 126px; }
-.nav-dropdown .dropdown-item:nth-of-type(4) { top: 134px; }
-.nav-dropdown .dropdown-separator:nth-of-type(4) { top: 169px; }
-.nav-dropdown .dropdown-item:nth-of-type(5) { top: 177px; }
-.nav-dropdown .dropdown-separator:nth-of-type(5) { top: 212px; }
-.nav-dropdown .dropdown-item:nth-of-type(6) { top: 220px; }
-.nav-dropdown .dropdown-separator:nth-of-type(6) { top: 255px; }
-.nav-dropdown .dropdown-item:nth-of-type(7) { top: 263px; }
-.nav-dropdown .dropdown-separator:nth-of-type(7) { top: 298px; }
-.nav-dropdown .dropdown-item:nth-of-type(8) { top: 306px; }
 
 /* CSS-only dropdown positioning and animations */
 .nav-dropdown {
   position: fixed !important;
   background: #0C004F !important;
-  width: 206px !important;
-  height: 345px !important;
+  width: 240px !important;
+  min-height: 345px !important;
   border-radius: 0 !important;
   z-index: 9999 !important;
   top: 80px; /* Sous le header complet */
@@ -1574,20 +1555,26 @@ body {
   border: none !important;
   box-shadow: none !important;
   pointer-events: none;
-  
+
   /* Prevent viewport overflow */
   max-height: calc(100vh - 100px);
   overflow-y: auto;
+
+  /* Flexbox layout */
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 5px 0;
 }
 
 /* Sports dropdown - à gauche */
 .sports-dropdown {
-  left: 150px !important; /* Décalé plus à gauche */
+  left: 115px !important; /* Décalé plus à gauche */
 }
 
 /* Features dropdown - à droite */
 .features-dropdown {
-  left: 300px !important; /* Décalé plus à gauche */
+  left: 235px !important; /* Décalé plus à gauche */
 }
 
 /* Auto-adjust dropdown position based on viewport space */
