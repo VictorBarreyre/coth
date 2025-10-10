@@ -1500,7 +1500,65 @@ body {
    DROPDOWN NAVIGATION STYLES
    =========================================== */
 
-/* Ensure dropdown containers have proper positioning */
+/* Navigation dropdown container */
+.nav-dropdown-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Static dropdown items styling - exact match to JS generated styles */
+.nav-dropdown .dropdown-item {
+  position: absolute;
+  left: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white !important;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+  cursor: pointer;
+  transition: color 0.15s ease;
+  text-decoration: none !important;
+  line-height: 1.2;
+  padding: 8px 0;
+}
+
+.nav-dropdown .dropdown-item:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Dropdown separators - exact match to JS generated styles */
+.nav-dropdown .dropdown-separator {
+  width: 166px;
+  height: 0px;
+  left: 20px;
+  position: absolute;
+  outline: 1px rgba(255, 255, 255, 0.50) solid;
+  outline-offset: -0.50px;
+}
+
+/* Position each dropdown item and separator - remonté de 10px */
+.nav-dropdown .dropdown-item:nth-of-type(1) { top: 5px; }
+.nav-dropdown .dropdown-separator:nth-of-type(1) { top: 40px; }
+.nav-dropdown .dropdown-item:nth-of-type(2) { top: 48px; }
+.nav-dropdown .dropdown-separator:nth-of-type(2) { top: 83px; }
+.nav-dropdown .dropdown-item:nth-of-type(3) { top: 91px; }
+.nav-dropdown .dropdown-separator:nth-of-type(3) { top: 126px; }
+.nav-dropdown .dropdown-item:nth-of-type(4) { top: 134px; }
+.nav-dropdown .dropdown-separator:nth-of-type(4) { top: 169px; }
+.nav-dropdown .dropdown-item:nth-of-type(5) { top: 177px; }
+.nav-dropdown .dropdown-separator:nth-of-type(5) { top: 212px; }
+.nav-dropdown .dropdown-item:nth-of-type(6) { top: 220px; }
+.nav-dropdown .dropdown-separator:nth-of-type(6) { top: 255px; }
+.nav-dropdown .dropdown-item:nth-of-type(7) { top: 263px; }
+.nav-dropdown .dropdown-separator:nth-of-type(7) { top: 298px; }
+.nav-dropdown .dropdown-item:nth-of-type(8) { top: 306px; }
+
+/* CSS-only dropdown positioning and animations */
 .nav-dropdown {
   position: fixed !important;
   background: #0C004F !important;
@@ -1508,17 +1566,50 @@ body {
   height: 345px !important;
   border-radius: 0 !important;
   z-index: 9999 !important;
-  display: none;
+  top: 80px; /* Sous le header complet */
   opacity: 0;
+  visibility: hidden;
   transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s ease;
   border: none !important;
   box-shadow: none !important;
+  pointer-events: none;
+  
+  /* Prevent viewport overflow */
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
 }
 
-.nav-dropdown.show {
-  display: block !important;
+/* Sports dropdown - à gauche */
+.sports-dropdown {
+  left: 150px !important; /* Décalé plus à gauche */
+}
+
+/* Features dropdown - à droite */
+.features-dropdown {
+  left: 300px !important; /* Décalé plus à gauche */
+}
+
+/* Auto-adjust dropdown position based on viewport space */
+@media (max-height: 600px) {
+  .nav-dropdown {
+    height: auto;
+    max-height: calc(100vh - 120px);
+  }
+}
+
+/* If dropdown would overflow right edge */
+.nav-dropdown-container:last-child .nav-dropdown,
+.nav-dropdown-container:nth-last-child(-n+2) .nav-dropdown {
+  left: auto;
+  right: 0;
+}
+
+/* Show dropdown on container hover */
+.nav-dropdown-container:hover .nav-dropdown {
   opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: all !important;
   transform: translateY(0) !important;
 }
 
@@ -1695,6 +1786,14 @@ body {
   transform: translateY(-10px);
   transition: all 0.3s ease;
   pointer-events: none;
+}
+
+/* Show login dropdown on avatar hover - CSS only */
+.avatar:hover .login-dropdown {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+  pointer-events: all !important;
 }
 
 
@@ -2648,7 +2747,19 @@ body {
   font-weight: 500;
   cursor: pointer;
   height: 45px;
+}
 
+.burger-nav-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+  flex: 1;
+}
+
+.burger-nav-item a:hover {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .burger-chevron {
@@ -2670,7 +2781,32 @@ body {
   transform: rotate(180deg) !important;
 }
 
-/* Burger Menu Dropdown Styles */
+/* CSS-Only Burger Menu System */
+.burger-menu-toggle,
+.burger-submenu-checkbox {
+  display: none;
+}
+
+/* Main burger menu toggle */
+.burger-menu-toggle:checked ~ * .burger-menu-overlay {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.burger-menu-toggle:checked ~ * .mobile-burger-btn span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px) !important;
+}
+
+.burger-menu-toggle:checked ~ * .mobile-burger-btn span:nth-child(2) {
+  opacity: 0 !important;
+}
+
+.burger-menu-toggle:checked ~ * .mobile-burger-btn span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px) !important;
+}
+
+/* Burger Menu Dropdown Styles - CSS Only */
 .burger-dropdown-content {
   width: 100%;
   max-height: 0;
@@ -2680,20 +2816,42 @@ body {
   box-sizing: border-box;
 }
 
-.burger-dropdown-content.open {
+/* Sports submenu toggle */
+#sportsToggle:checked ~ .burger-dropdown-content {
   max-height: 300px;
-  padding: 0;
+  padding: 12px 0;
+}
+
+#sportsToggle:checked ~ .burger-nav-item .burger-chevron img {
+  transform: rotate(180deg);
+}
+
+/* Features submenu toggle */
+#featuresToggle:checked ~ .burger-dropdown-content {
+  max-height: 300px;
+  padding: 12px 0;
+}
+
+#featuresToggle:checked ~ .burger-nav-item .burger-chevron img {
+  transform: rotate(180deg);
+}
+
+/* Group container for burger nav */
+.burger-nav-group {
+  width: 100%;
 }
 
 .burger-dropdown-item {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.9) !important;
   font-size: 16px;
   font-family: "Montserrat", Helvetica;
   font-weight: 400;
-  padding: 8px 38px 8px 0px;
+  padding: 8px 38px 8px 60px;
   cursor: pointer;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   transition: color 0.2s ease, padding-left 0.2s ease;
+  text-decoration: none !important;
+  display: block;
 }
 
 .burger-dropdown-item:last-child {
@@ -2701,7 +2859,7 @@ body {
 }
 
 .burger-dropdown-item:hover {
-  color: white;
+  color: white !important;
   padding-left: 70px;
 }
 
@@ -2720,6 +2878,18 @@ body {
   cursor: pointer;
   margin: 0 auto;
   margin-top: 20px;
+}
+
+.burger-forum-btn a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Harriet Text-Bold", Helvetica;
+  font-weight: 500;
+}
+
+.burger-forum-btn a:hover {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* Login Section */

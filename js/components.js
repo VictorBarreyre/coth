@@ -27,19 +27,13 @@ document.addEventListener('DOMContentLoaded', async function() {
       window.addEventListener('resize', scaleContent);
     }
     
-    // Initialize dropdowns and search after components are loaded - with longer delay
+    // Initialize search after components are loaded - with longer delay
     setTimeout(() => {
-      if (typeof initializeDropdowns === 'function') {
-        initializeDropdowns();
-      }
-      if (typeof initializeLoginDropdown === 'function') {
-        initializeLoginDropdown();
-      }
       if (typeof initializeSearch === 'function') {
         initializeSearch();
       }
       
-      // Burger menu is now initialized directly in burger-menu.js
+      // Dropdowns and burger menu are now CSS-only, no JavaScript needed
     }, 500);
     
     // Ensure all links work after component loading
