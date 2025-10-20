@@ -26,6 +26,7 @@
   gap: 40px;
   display: flex;
   width: 1440px;
+  margin: 0 auto;
 }
 
 /* Main Content */

@@ -204,6 +204,7 @@
 /* Content Section */
 .content-section {
   width: 1440px;
+  margin: 0 auto;
   display: flex;
   gap: 40px;
   align-items: flex-start;

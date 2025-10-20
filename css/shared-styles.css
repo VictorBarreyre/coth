@@ -118,8 +118,8 @@
   min-height: calc(100vh / var(--scale-factor));
   position: relative;
   transform: scale(var(--scale-factor));
-  transform-origin: top center;
-  margin: 0 auto;
+  transform-origin: top left;
+  margin: 0;
 }
 
 /* Adjust body height for scaled content */
@@ -127,11 +127,11 @@ body {
   overflow-x: auto;
 }
 
-/* Adjust for very small screens */
-@media screen and (max-width: 768px) {
+/* For desktop screens >= 1920px, center the content */
+@media screen and (min-width: 1920px) {
   .scale-wrapper {
-    transform-origin: top left;
-    margin: 0;
+    margin: 0 auto;
+    transform-origin: top center;
   }
 }
 
