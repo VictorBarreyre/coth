@@ -25,9 +25,7 @@
   align-items: flex-start;
   gap: 40px;
   display: flex;
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
+  width: 1440px;
 }
 
 /* Main Content */
@@ -561,13 +559,6 @@
     overflow-y: hidden !important;
     scroll-behavior: smooth !important;
     -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: none !important;
-    -ms-overflow-style: none !important;
-  }
-
-  /* Hide scrollbar */
-  .article-breadcrumb::-webkit-scrollbar {
-    display: none !important;
   }
 
   .breadcrumb-item {

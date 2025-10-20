@@ -19,9 +19,7 @@
   align-items: flex-start;
   gap: 40px;
   display: flex;
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
+  width: 1440px;
 }
 
 

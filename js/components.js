@@ -20,12 +20,8 @@ document.addEventListener('DOMContentLoaded', async function() {
   await Promise.all(promises);
   
   
-  // Apply scaling after components are loaded
+  // Components loaded, initialize other features
   setTimeout(() => {
-    if (typeof scaleContent === 'function') {
-      scaleContent();
-      window.addEventListener('resize', scaleContent);
-    }
     
     // Initialize search after components are loaded - with longer delay
     setTimeout(() => {
