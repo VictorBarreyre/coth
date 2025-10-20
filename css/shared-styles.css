@@ -101,7 +101,7 @@
 :root {
   /* Scaling factor based on viewport width - responsive to screen size */
   --scale-factor: min(1, calc(100vw / 1920px));
-  
+
   /* Responsive font base */
   --base-font-size: max(12px, calc(16px * var(--scale-factor)));
 }
@@ -203,20 +203,21 @@ body {
     transform-origin: initial !important;
     width: 100% !important;
   }
-  
+
   /* Main Container Mobile */
   .main-container {
     width: 100% !important;
     max-width: 100% !important;
     gap: 0;
-    padding-top: 106px; /* Header + subscribe banner */
+    padding-top: 106px;
+    /* Header + subscribe banner */
     margin: 0 !important;
     padding-left: 0;
     padding-right: 0;
     overflow-x: hidden;
     background: white;
   }
-  
+
   /* Mobile Logo Section */
   .logo-section {
     width: 299px !important;
@@ -225,14 +226,14 @@ body {
     overflow: hidden !important;
     position: relative !important;
   }
-  
+
   .logo-section img {
     width: 100% !important;
     height: 100% !important;
     object-fit: contain !important;
     filter: none !important;
   }
-  
+
   /* Mobile Ad Banners */
   .ad-banner,
   .full-width-ad {
@@ -261,7 +262,7 @@ body {
     height: 89px !important;
     background: #F9F9F9 !important;
   }
-  
+
   .ad-banner .ad-content,
   .full-width-ad .ad-content {
     width: 100% !important;
@@ -280,13 +281,13 @@ body {
     top: 20px !important;
     background: none !important;
   }
-  
+
   /* Hide the original ad-label text in mobile */
   .ad-banner .ad-label,
   .full-width-ad .ad-label {
     display: none !important;
   }
-  
+
   /* Add "Advertisement" label in bottom right */
   .ad-banner::after,
   .full-width-ad::after {
@@ -919,7 +920,7 @@ body {
 .live-results .more-link {
   position: absolute;
   left: 114px;
-  top: 598px;
+  top: 580px;
 }
 
 /* Top Headlines Section - SHARED */
@@ -978,7 +979,7 @@ body {
 }
 
 .headline-item {
-   width: 100% !important;
+  width: 100% !important;
   height: auto;
   padding: 10px;
   box-sizing: border-box;
@@ -1095,7 +1096,7 @@ body {
     box-sizing: border-box !important;
     overflow: hidden !important;
   }
-  
+
   .sidebar-mobile-only .sidebar-ad .ad-content {
     width: 300px !important;
     height: 250px !important;
@@ -1104,7 +1105,7 @@ body {
     display: block !important;
     margin: 0 auto !important;
   }
-  
+
   .sidebar-mobile-only .sidebar-ad .ad-label {
     position: absolute !important;
     bottom: 5px !important;
@@ -1138,6 +1139,14 @@ body {
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+.sidebar {
+    width: 360px;
+    display: flex
+;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .tab-button:first-child {
@@ -1582,7 +1591,8 @@ body {
   min-height: 345px !important;
   border-radius: 0 !important;
   z-index: 9999 !important;
-  top: 80px; /* Sous le header complet */
+  top: 80px;
+  /* Sous le header complet */
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
@@ -1604,12 +1614,14 @@ body {
 
 /* Sports dropdown - à gauche */
 .sports-dropdown {
-  left: 115px !important; /* Décalé plus à gauche */
+  left: 115px !important;
+  /* Décalé plus à gauche */
 }
 
 /* Features dropdown - à droite */
 .features-dropdown {
-  left: 235px !important; /* Décalé plus à gauche */
+  left: 235px !important;
+  /* Décalé plus à gauche */
 }
 
 /* Auto-adjust dropdown position based on viewport space */
@@ -2069,27 +2081,28 @@ body {
 /* Copy all sidebar styles to sidebar-mobile-only using CSS custom properties approach */
 @media (max-width: 768px) {
 
-  .magazine-subscribe{
+  .magazine-subscribe {
     padding: 0 !important;
     margin-bottom: 0 !important;
   }
+
   /* Copy magazine styles */
   .sidebar-mobile-only .magazine-subscribe {
-    width: 363px !important;
+    width: 94vw !important;
     height: 525px !important;
     margin: 10px auto !important;
     position: relative !important;
   }
-  
+
   .sidebar-mobile-only .magazine-subscribe .magazine-image {
-    width: 363px !important;
+    width: 94vw !important;
     height: 473px !important;
     object-fit: cover !important;
     border: 1px solid #E1E1E1 !important;
   }
-  
+
   .sidebar-mobile-only .magazine-subscribe .subscribe-btn {
-    width: 363px !important;
+    width: 100% !important;
     height: 53px !important;
     position: absolute !important;
     bottom: 0 !important;
@@ -2105,27 +2118,41 @@ body {
     text-transform: lowercase !important;
     cursor: pointer !important;
   }
-  
+
   .sidebar-mobile-only .magazine-subscribe .subscribe-btn::first-letter {
     text-transform: uppercase !important;
   }
-  
+
   /* Copy live results styles */
   .sidebar-mobile-only .live-results {
-    width: 363px !important;
+    width: 94vw !important;
     margin: 0px auto !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 10px !important;
   }
-  
+
+  .results-tabs{
+ width: 94vw !important;
+  }
+
+  .results-list{
+    width: 94vw !important;
+  }
+
+  .result-item {
+    width: 94vw !important;
+    height: auto !important;
+    padding: 10px !important;
+  }
+
   /* Mobile sidebar ads sizing */
   .sidebar-mobile-only .sidebar-ad {
     width: 339px !important;
     height: 289px !important;
     margin: 0 auto !important;
   }
-  
+
   .sidebar-mobile-only .sidebar-ad .ad-content {
     width: 339px !important;
     height: 289px !important;
@@ -2137,7 +2164,7 @@ body {
 /* Mobile Newsletter Styles */
 @media (max-width: 768px) {
   .newsletter-bottom {
-    width: 393px !important;
+    width: 100% !important;
     height: 317px !important;
     position: relative !important;
     background: #0C004F !important;
@@ -2145,7 +2172,7 @@ body {
     margin: 0 !important;
     padding: 0 !important;
   }
-  
+
   /* Newsletter Background Logo */
   .newsletter-bottom::before {
     content: "";
@@ -2162,7 +2189,7 @@ body {
     filter: brightness(0) invert(1);
     z-index: 1;
   }
-  
+
   /* Purple Circle */
   .newsletter-circle {
     width: 266px !important;
@@ -2175,7 +2202,7 @@ body {
     display: block !important;
     z-index: 0 !important;
   }
-  
+
   /* Newsletter Favicon - Mobile Override */
   .newsletter-favicon {
     position: absolute !important;
@@ -2186,18 +2213,18 @@ body {
     overflow: hidden !important;
     z-index: 10 !important;
   }
-  
+
   .newsletter-favicon img {
     width: 100% !important;
     height: 100% !important;
     filter: brightness(0) invert(1) !important;
     content: url('../assets/home/NL.svg') !important;
   }
-  
+
   /* Newsletter Form Mobile */
   .newsletter-bottom .newsletter-input-container {
     position: relative !important;
-    width: 333px !important;
+      width: 85vw !important;
     height: 49px !important;
     left: 0px !important;
     top: 0px !important;
@@ -2205,16 +2232,16 @@ body {
     display: block !important;
     margin-bottom: 43px !important;
   }
-  
+
   .newsletter-border {
     position: absolute !important;
-    width: 333px !important;
+    width: 85vw !important;
     height: 1px !important;
     left: 0px !important;
     top: 52px !important;
     background: white !important;
   }
-  
+
   .newsletter-label {
     position: absolute !important;
     width: 321.90px !important;
@@ -2227,18 +2254,18 @@ body {
     font-weight: 500 !important;
     line-height: 22px !important;
   }
-  
+
   .newsletter-placeholder {
     display: none !important;
   }
-  
+
   /* Show mobile input - Force display */
   .newsletter-bottom .newsletter-mobile-input {
     display: block !important;
     position: absolute !important;
     left: 0px !important;
     top: 26px !important;
-    width: 321.90px !important;
+       width: 85vw !important;
     height: 22px !important;
     background: transparent !important;
     border: none !important;
@@ -2255,15 +2282,15 @@ body {
     -webkit-user-select: auto !important;
     user-select: auto !important;
   }
-  
+
   .newsletter-bottom .newsletter-mobile-input::placeholder {
     color: rgba(255, 255, 255, 0.70) !important;
   }
-  
+
   .newsletter-bottom .newsletter-mobile-input:focus {
     color: white !important;
   }
-  
+
   /* Newsletter Text */
   .newsletter-text {
     position: absolute !important;
@@ -2277,11 +2304,11 @@ body {
     line-height: 21px !important;
     z-index: 10 !important;
   }
-  
+
   .newsletter-text br {
     display: none !important;
   }
-  
+
   .newsletter-title {
     position: absolute !important;
     left: 27px !important;
@@ -2293,16 +2320,16 @@ body {
     z-index: 10 !important;
     text-transform: lowercase !important;
   }
-  
+
   .newsletter-title::first-letter {
     text-transform: uppercase !important;
   }
-  
+
   /* Newsletter Subscribe Button - Force display */
   .newsletter-bottom .newsletter-subscribe-btn {
     display: block !important;
     position: relative !important;
-    width: 333px !important;
+    width: 85vw !important;
     height: 53px !important;
     left: 0px !important;
     top: 0px !important;
@@ -2319,80 +2346,79 @@ body {
     visibility: visible !important;
     opacity: 1 !important;
   }
-  
+
   /* Show newsletter form in mobile */
   .newsletter-form {
     display: block !important;
     position: absolute !important;
-    width: 333px !important;
+       width: 85vw !important;
     left: 30px !important;
     top: 131px !important;
     z-index: 15 !important;
   }
-  
+
   .newsletter-form .newsletter-subscribe-btn {
     display: block !important;
   }
-  
+
   /* Override any conflicting styles from main CSS */
   .newsletter-bottom .newsletter-form {
     position: absolute !important;
-    width: 333px !important;
+    width: 85vw !important;
     left: 30px !important;
     top: 131px !important;
     z-index: 15 !important;
   }
-  
+
   /* Hide desktop newsletter elements */
   .newsletter-icon {
     display: none !important;
   }
-  
+
   /* Hide desktop sidebar in mobile */
   .sidebar {
     display: none !important;
   }
 
 
-  .news-letter{
+  .news-letter {
     display: none;
   }
-  
+
   /* Show mobile-only sidebar */
   .sidebar-mobile-only {
     display: flex !important;
     flex-direction: column !important;
     gap: 20px !important;
     width: 100% !important;
-    margin: 20px 0 0 0 !important;
+
     padding-bottom: 30px !important;
   }
-  
+
   /* Add padding to child components except top headlines, magazine-subscribe, and live-results */
-  .sidebar-mobile-only > :not(.top-headlines):not(.magazine-subscribe):not(.live-results) {
+  .sidebar-mobile-only> :not(.top-headlines):not(.magazine-subscribe):not(.live-results) {
     padding: 0 15px !important;
   }
-  
+
   /* Hide newsletter in mobile sidebar */
   .sidebar-mobile-only [data-include="components/newsletter-sidebar.html"] {
     display: none !important;
   }
-  
+
   /* Make mobile sidebar components inherit desktop styles */
   .sidebar-mobile-only {
     /* This makes all children inherit the same styles as if they were in .sidebar */
     all: inherit;
   }
-  
+
   /* Force specific mobile adaptations */
   .sidebar-mobile-only {
     width: 100% !important;
-    max-width: 393px !important;
-    margin: 20px auto 30px auto !important;
+    margin-bottom: 30px !important;
     padding: 0 !important;
   }
-  
-  .sidebar-mobile-only > * {
+
+  .sidebar-mobile-only>* {
     width: 100% !important;
   }
 
@@ -2419,8 +2445,10 @@ body {
    MOBILE HEADER STYLES (moved from header.html)
    =========================================== */
 @media (max-width: 768px) {
+
   /* Mobile Header */
-  .HEADER, header.HEADER {
+  .HEADER,
+  header.HEADER {
     position: fixed !important;
     width: 100% !important;
     height: 66px !important;
@@ -2431,7 +2459,7 @@ body {
     padding: 0 !important;
     box-sizing: border-box !important;
   }
-  
+
   /* Hide desktop header elements */
   .nav,
   .div,
@@ -2452,14 +2480,14 @@ body {
     width: 35px !important;
     height: 38px !important;
   }
-  
+
   .favicon img {
     width: 100% !important;
     height: 100% !important;
     filter: brightness(0) invert(1) !important;
     object-fit: contain !important;
   }
-  
+
   /* Mobile Burger Button Background */
   .HEADER::after {
     content: "";
@@ -2544,7 +2572,7 @@ body {
     transform: rotate(-45deg) translate(7px, -7px) !important;
   }
 
-  
+
   /* Mobile Search Container */
   .search-container {
     position: fixed !important;
@@ -2563,15 +2591,15 @@ body {
     display: block !important;
     pointer-events: none !important;
   }
-  
+
   .search-container.active {
     transform: translateY(0) !important;
     opacity: 1 !important;
     visibility: visible !important;
     pointer-events: none !important;
   }
-  
-  
+
+
   /* Mobile Subscribe Banner */
   .subscribe-now {
     position: fixed !important;
@@ -2590,22 +2618,22 @@ body {
     line-height: 24px !important;
     z-index: 999 !important;
   }
-  
+
   .subscribe-now .text-wrapper::before {
     content: "Subscribe Now to the Magazine" !important;
     font-size: 14px !important;
     line-height: 24px !important;
   }
-  
+
   .subscribe-now .text-wrapper {
     font-size: 0 !important;
   }
-  
+
   .subscribe-now .span {
     display: none !important;
   }
-  
-  
+
+
   .search-wrapper {
     position: relative !important;
     width: 280px !important;
@@ -2615,7 +2643,7 @@ body {
     transform: translateX(-50%) !important;
     margin: 0 !important;
   }
-  
+
   .search-background {
     width: 200px !important;
     height: 70px !important;
@@ -2629,11 +2657,11 @@ body {
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
     display: block !important;
   }
-  
+
   .search-background.expanded {
     transform: scaleX(1) !important;
   }
-  
+
   .search-input-circle {
     width: 80px !important;
     height: 80px !important;
@@ -2647,11 +2675,11 @@ body {
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
     display: block !important;
   }
-  
+
   .search-input-circle.expanded {
     transform: scale(1) !important;
   }
-  
+
   .search-placeholder {
     left: 0px !important;
     top: 27px !important;
@@ -2668,11 +2696,11 @@ body {
     opacity: 0 !important;
     transition: opacity 0.3s ease 0.2s !important;
   }
-  
+
   .search-placeholder.show {
     opacity: 1 !important;
   }
-  
+
   .search-input {
     position: absolute !important;
     left: 50px !important;
@@ -2689,16 +2717,16 @@ body {
     opacity: 0 !important;
     transition: opacity 0.3s ease 0.2s !important;
   }
-  
+
   .search-input.show {
     opacity: 1 !important;
     pointer-events: all !important;
   }
-  
+
   .search-input::placeholder {
     color: rgba(255, 255, 255, 0.50) !important;
   }
-  
+
   /* Article Author Mobile - Shared across all pages */
   .article-item .article-author,
   .related-meta .article-author {
@@ -2744,7 +2772,8 @@ body {
   font-family: "Montserrat", Helvetica;
   font-weight: 500;
   line-height: 24px;
-  margin-top: 66px; /* Header height */
+  margin-top: 66px;
+  /* Header height */
 }
 
 /* Navigation Section */
@@ -2810,26 +2839,26 @@ body {
 }
 
 /* Main burger menu toggle - works when checkbox is at body level */
-#burgerMenuToggle:checked ~ .scale-wrapper .burger-menu-overlay,
-#burgerMenuToggle:checked ~ .burger-menu-overlay,
+#burgerMenuToggle:checked~.scale-wrapper .burger-menu-overlay,
+#burgerMenuToggle:checked~.burger-menu-overlay,
 body:has(#burgerMenuToggle:checked) .burger-menu-overlay {
   display: flex !important;
 }
 
-#burgerMenuToggle:checked ~ .scale-wrapper .HEADER .mobile-burger-btn span:nth-child(1),
-#burgerMenuToggle:checked ~ .HEADER .mobile-burger-btn span:nth-child(1),
+#burgerMenuToggle:checked~.scale-wrapper .HEADER .mobile-burger-btn span:nth-child(1),
+#burgerMenuToggle:checked~.HEADER .mobile-burger-btn span:nth-child(1),
 body:has(#burgerMenuToggle:checked) .mobile-burger-btn span:nth-child(1) {
   transform: rotate(45deg) translate(7px, 7px) !important;
 }
 
-#burgerMenuToggle:checked ~ .scale-wrapper .HEADER .mobile-burger-btn span:nth-child(2),
-#burgerMenuToggle:checked ~ .HEADER .mobile-burger-btn span:nth-child(2),
+#burgerMenuToggle:checked~.scale-wrapper .HEADER .mobile-burger-btn span:nth-child(2),
+#burgerMenuToggle:checked~.HEADER .mobile-burger-btn span:nth-child(2),
 body:has(#burgerMenuToggle:checked) .mobile-burger-btn span:nth-child(2) {
   opacity: 0 !important;
 }
 
-#burgerMenuToggle:checked ~ .scale-wrapper .HEADER .mobile-burger-btn span:nth-child(3),
-#burgerMenuToggle:checked ~ .HEADER .mobile-burger-btn span:nth-child(3),
+#burgerMenuToggle:checked~.scale-wrapper .HEADER .mobile-burger-btn span:nth-child(3),
+#burgerMenuToggle:checked~.HEADER .mobile-burger-btn span:nth-child(3),
 body:has(#burgerMenuToggle:checked) .mobile-burger-btn span:nth-child(3) {
   transform: rotate(-45deg) translate(7px, -7px) !important;
 }
@@ -2847,22 +2876,22 @@ body:has(#burgerMenuToggle:checked) .mobile-burger-btn span:nth-child(3) {
 }
 
 /* Sports submenu toggle */
-#sportsToggle:checked ~ .burger-dropdown-content {
+#sportsToggle:checked~.burger-dropdown-content {
   max-height: 300px;
   padding: 0 0 12px 0;
 }
 
-#sportsToggle:checked ~ .burger-nav-item .burger-chevron img {
+#sportsToggle:checked~.burger-nav-item .burger-chevron img {
   transform: rotate(180deg);
 }
 
 /* Features submenu toggle */
-#featuresToggle:checked ~ .burger-dropdown-content {
+#featuresToggle:checked~.burger-dropdown-content {
   max-height: 300px;
   padding: 0 0 12px 0;
 }
 
-#featuresToggle:checked ~ .burger-nav-item .burger-chevron img {
+#featuresToggle:checked~.burger-nav-item .burger-chevron img {
   transform: rotate(180deg);
 }
 
@@ -2886,8 +2915,8 @@ body:has(#burgerMenuToggle:checked) .mobile-burger-btn span:nth-child(3) {
 
 a.burger-dropdown-item:last-child,
 a.burger-dropdown-item:last-of-type,
-.burger-dropdown-content > a:last-child,
-.burger-dropdown-content > a:last-of-type {
+.burger-dropdown-content>a:last-child,
+.burger-dropdown-content>a:last-of-type {
   border-bottom: 0 !important;
   border: 0 !important;
 }
@@ -3042,7 +3071,7 @@ a.burger-dropdown-item:last-of-type,
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.burger-checkbox:checked + .burger-checkbox-custom::after {
+.burger-checkbox:checked+.burger-checkbox-custom::after {
   content: '';
   position: absolute;
   left: 50%;
@@ -3163,7 +3192,7 @@ a.burger-dropdown-item:last-of-type,
   .burger-menu-overlay {
     display: none !important;
   }
-  
+
   .mobile-burger-btn {
     display: none !important;
   }
@@ -3178,7 +3207,6 @@ a.burger-dropdown-item:last-of-type,
    =========================================== */
 @media (max-width: 768px) {
   .main-footer {
-    width: 393px !important;
     height: 663px !important;
     position: relative !important;
     background: #05001E !important;
@@ -3187,29 +3215,29 @@ a.burger-dropdown-item:last-of-type,
     box-sizing: border-box !important;
     margin: 0 auto !important;
   }
-  
+
   /* Footer Columns - Positioned absolutely to match design */
   .footer-column {
     position: absolute !important;
     width: 238px !important;
     left: 40px !important;
   }
-  
+
   .footer-column.customers {
     height: 129px !important;
     top: 33px !important;
   }
-  
+
   .footer-column.company {
     height: 161px !important;
     top: 172px !important;
   }
-  
+
   .footer-column.terms {
     height: 161px !important;
     top: 339px !important;
   }
-  
+
   /* Footer Titles */
   .footer-title {
     color: white !important;
@@ -3220,19 +3248,19 @@ a.burger-dropdown-item:last-of-type,
     margin: 0 !important;
     padding: 0 !important;
   }
-  
+
   /* Footer Links */
   .footer-links {
     list-style: none !important;
     padding: 0 !important;
     margin: 0 !important;
   }
-  
+
   .footer-links li {
     margin: 0 !important;
     padding: 0 !important;
   }
-  
+
   .footer-links a {
     color: white !important;
     font-size: 14px !important;
@@ -3242,7 +3270,7 @@ a.burger-dropdown-item:last-of-type,
     text-decoration: none !important;
     display: block !important;
   }
-  
+
   /* Footer Logo */
   .footer-logo {
     position: absolute !important;
@@ -3252,13 +3280,13 @@ a.burger-dropdown-item:last-of-type,
     top: 511px !important;
     overflow: hidden !important;
   }
-  
+
   .footer-logo img {
     width: 100% !important;
     height: 100% !important;
     filter: brightness(0) invert(1) !important;
   }
-  
+
   /* Footer Social */
   .footer-social {
     position: absolute !important;
@@ -3267,14 +3295,14 @@ a.burger-dropdown-item:last-of-type,
     display: flex !important;
     gap: 20px !important;
   }
-  
+
   .footer-social .social-link {
     width: 30px !important;
     height: 30px !important;
     overflow: hidden !important;
     display: block !important;
   }
-  
+
   .footer-social img {
     width: 100% !important;
     height: 100% !important;
