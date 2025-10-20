@@ -144,7 +144,7 @@ body {
 
 /* Final body adjustments */
 body {
-  height: auto;
+  height: 100vh;
   font-size: var(--base-font-size);
 }
 
