@@ -585,11 +585,11 @@
     line-height: 24px !important;
   }
 
+
   .modal-with-button {
-    width: 353px !important;
+    width: 100% !important;
     height: auto !important;
-    padding: 41px 21px !important;
-    margin: 20px !important;
+    padding: 21px 21px !important;
   }
 
   .modal-with-button .modal-title {
@@ -611,7 +611,7 @@
   }
 
   .modal-buttons-double {
-    flex-direction: column-reverse !important;
+    flex-direction: row-reverse !important;
   }
 
   .modal-btn {
