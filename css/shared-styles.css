@@ -1107,6 +1107,7 @@ body {
   }
 
   .sidebar-mobile-only .sidebar-ad .ad-label {
+    display: block !important;
     position: absolute !important;
     bottom: 5px !important;
     left: 50% !important;
@@ -2224,7 +2225,7 @@ body {
   /* Newsletter Form Mobile */
   .newsletter-bottom .newsletter-input-container {
     position: relative !important;
-      width: 85vw !important;
+      width: 83vw !important;
     height: 49px !important;
     left: 0px !important;
     top: 0px !important;
@@ -2235,7 +2236,7 @@ body {
 
   .newsletter-border {
     position: absolute !important;
-    width: 85vw !important;
+    width: 83vw !important;
     height: 1px !important;
     left: 0px !important;
     top: 52px !important;
@@ -2329,7 +2330,7 @@ body {
   .newsletter-bottom .newsletter-subscribe-btn {
     display: block !important;
     position: relative !important;
-    width: 85vw !important;
+    width: 83vw !important;
     height: 53px !important;
     left: 0px !important;
     top: 0px !important;
@@ -2416,6 +2417,7 @@ body {
     width: 100% !important;
     margin-bottom: 30px !important;
     padding: 0 !important;
+    margin-top: 30px !important;
   }
 
   .sidebar-mobile-only>* {

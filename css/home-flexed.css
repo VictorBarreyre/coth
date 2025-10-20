@@ -1248,12 +1248,7 @@ display: none;
     background: none !important;
   }
   
-  /* Hide the original ad-label text in mobile */
-  .ad-banner .ad-label,
-  .full-width-ad .ad-label {
-    display: none !important;
-  }
-  
+
   /* Add "Advertisement" label in bottom right */
   .ad-banner::after,
   .full-width-ad::after {
@@ -2121,5 +2116,9 @@ display: none;
     text-transform: uppercase !important;
   }
 
+
+  .sidebar-mobile-only{
+    margin-top: 30px !important;
+  }
  
 }
