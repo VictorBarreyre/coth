@@ -6,7 +6,6 @@
 
 /* Hide forum-related elements on home page */
 .sidebar-ad-before-forum,
-.forum-widget,
 .sidebar-ad-last {
   display: none;
 }
@@ -965,7 +964,6 @@ a .article-title {
   position: relative;
   background: #F0F0F0;
   overflow: hidden;
-display: none;
   align-items: center;
   justify-content: center;
 }
@@ -978,6 +976,9 @@ display: none;
   text-transform: lowercase;
   font-weight: 700;
   text-align: center;
+  position: absolute;
+  top: 320px;
+  left: 600px;
 }
 
 /* Category Featured Sections */
@@ -1083,6 +1084,10 @@ display: none;
   text-decoration: none;
 }
 
+
+.forum-widget-home-hidden{
+  display: none;
+}
 /* =========================================== 
    MOBILE RESPONSIVE STYLES
    =========================================== */
@@ -2119,6 +2124,10 @@ display: none;
 
   .sidebar-mobile-only{
     margin-top: 30px !important;
+  }
+
+  .forum-widget{
+    display: none !important;
   }
  
 }
