@@ -29,6 +29,8 @@
   margin: 0 auto;
 }
 
+
+
 /* Main Content */
 .main-content {
   width: 1040px;
@@ -842,7 +844,7 @@
 
   /* Newsletter Bottom Mobile */
   .newsletter-bottom {
-    width: 393px !important;
+    width: 100% !important;
     height: 317px !important;
     position: relative !important;
     background: #0C004F !important;
@@ -899,8 +901,26 @@
 /* Hide mobile components on desktop */
 @media (min-width: 769px) {
 
-  .sidebar-mobile-only,
-  .forum-widget {
-    display: none !important;
+
+ .forum-widget{
+  width: 360px;
+    height: 521px;
+    background: #F0F0F0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forum-title {
+    color: #0C004F;
+    font-size: 32px;
+    font-family: "Harriet Text-Bold", serif;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+}
+  .sidebar-mobile-only{
+    display: none;
   }
 }

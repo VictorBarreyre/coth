@@ -2114,11 +2114,6 @@ a .article-title {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    text-transform: lowercase !important;
-  }
-
-  .magazine-subscribe .subscribe-btn::first-letter {
-    text-transform: uppercase !important;
   }
 
 

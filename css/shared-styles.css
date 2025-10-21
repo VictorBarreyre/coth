@@ -2116,12 +2116,7 @@ body {
     font-size: 18px !important;
     font-family: "Montserrat", Helvetica !important;
     font-weight: 600 !important;
-    text-transform: lowercase !important;
     cursor: pointer !important;
-  }
-
-  .sidebar-mobile-only .magazine-subscribe .subscribe-btn::first-letter {
-    text-transform: uppercase !important;
   }
 
   /* Copy live results styles */
@@ -2139,6 +2134,11 @@ body {
 
   .results-list{
     width: 94vw !important;
+  }
+
+  .tab-button {
+    flex: 1 !important;
+    width: auto !important;
   }
 
   .result-item {
