@@ -489,7 +489,6 @@
   /* Content Section Mobile */
   .content-section {
     width: 100% !important;
-    max-width: 393px !important;
     margin: 0 auto !important;
     padding: 0 !important;
     display: flex !important;
@@ -500,7 +499,6 @@
   /* Main Content Mobile */
   .main-content {
     width: 100% !important;
-    max-width: 393px !important;
     padding: 0 !important;
     margin: 0 auto !important;
     gap: 20px !important;
@@ -613,7 +611,6 @@
   /* Mobile Featured Article */
   .featured-article {
     width: 100% !important;
-    max-width: 393px !important;
     margin: 0 auto 10px auto !important;
     display: flex !important;
     flex-direction: column !important;
@@ -622,7 +619,6 @@
 
   .featured-article .article-image {
     width: 100% !important;
-    max-width: 393px !important;
     height: 221px !important;
     object-fit: cover !important;
   }
@@ -706,7 +702,6 @@
   /* Mobile Article Body */
   .article-body {
     width: 100% !important;
-    max-width: 393px !important;
     margin: 0 auto !important;
     padding: 0 !important;
     display: flex !important;
@@ -750,8 +745,6 @@
   /* Mobile Related Articles */
   .related-articles {
     width: 100% !important;
-    max-width: 393px !important;
-    margin: 0px auto 30px auto !important;
     padding: 0 15px !important;
     display: flex !important;
     flex-direction: column !important;
@@ -760,7 +753,6 @@
 
   .related-article {
     width: 100% !important;
-    max-width: 363px !important;
     height: auto !important;
     display: flex !important;
     flex-direction: column !important;
@@ -770,7 +762,6 @@
 
   .related-image {
     width: 100% !important;
-    max-width: 363px !important;
     height: 205px !important;
     flex-shrink: 0 !important;
     object-fit: cover !important;
