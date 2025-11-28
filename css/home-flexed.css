@@ -41,7 +41,6 @@
 .full-width-ad,
 .ad-banner {
   width: 100%;
-  max-width: var(--max-content-width);
   margin: 0 auto;
   position: relative;
   background: #F9F9F9;

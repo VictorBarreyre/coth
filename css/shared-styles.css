@@ -278,30 +278,30 @@ body {
 
 .HEADER .overlap {
   position: absolute;
-  width: 392px;
-  height: 104px;
-  top: -12px;
-  left: 1528px;
+  width: 24.5rem; /* 392px */
+  height: 6.5rem; /* 104px */
+  top: -0.75rem; /* -12px */
+  right: 0;
 }
 
 .HEADER .BG {
   position: absolute;
-  width: 316px;
-  height: 80px;
-  top: 12px;
-  left: 76px;
+  width: 19.75rem; /* 316px */
+  height: 5rem; /* 80px */
+  top: 0.75rem; /* 12px */
+  left: 4.75rem; /* 76px */
   background-color: #2f2469;
 }
 
 .HEADER .avatar {
   position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 37px;
-  left: 322px;
+  width: 1.875rem; /* 30px */
+  height: 1.875rem; /* 30px */
+  top: 2.3125rem; /* 37px */
+  left: 20.125rem; /* 322px */
   z-index: 10004;
-  padding: 10px;
-  margin: -10px;
+  padding: 0.625rem; /* 10px */
+  margin: -0.625rem; /* -10px */
   cursor: pointer;
 }
 
@@ -336,16 +336,16 @@ body {
 
 .HEADER .subscribe-now {
   position: absolute;
-  height: 50px;
-  top: 26px;
-  left: 144px;
+  height: 3.125rem; /* 50px */
+  top: 1.625rem; /* 26px */
+  left: 9rem; /* 144px */
   font-family: "Montserrat", Helvetica;
   font-weight: 500;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px */
   text-align: center;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem; /* 24px */
 }
 
 .HEADER .text-wrapper {
@@ -363,12 +363,12 @@ body {
 
 .HEADER .loupe {
   position: absolute;
-  width: 104px;
-  height: 104px;
+  width: 6.5rem; /* 104px */
+  height: 6.5rem; /* 104px */
   top: 0;
   left: 0;
   background-color: #4a3f84;
-  border-radius: 52px;
+  border-radius: 3.25rem; /* 52px */
   border: none;
   cursor: pointer;
 }
@@ -391,24 +391,24 @@ body {
 
 .HEADER .RS {
   position: absolute;
-  width: 100px;
-  height: 30px;
-  top: 25px;
-  left: 1388px;
+  width: 6.25rem; /* 100px */
+  height: 1.875rem; /* 30px */
+  top: 1.5625rem; /* 25px */
+  right: 24.5rem; /* 392px - to the left of .overlap */
 }
 
 .HEADER .div {
   position: absolute;
-  width: 580px;
-  height: 104px;
-  top: -12px;
-  left: 127px;
+  width: 36.25rem; /* 580px */
+  height: 6.5rem; /* 104px */
+  top: -0.75rem; /* -12px */
+  left: 7.9375rem; /* 127px */
 }
 
 .HEADER .nav {
   position: absolute;
-  width: 580px;
-  height: 104px;
+  width: 36.25rem; /* 580px */
+  height: 6.5rem; /* 104px */
   top: 0;
   left: 0;
 }
