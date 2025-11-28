@@ -397,6 +397,25 @@ body {
   right: 24.5rem; /* 392px - to the left of .overlap */
 }
 
+/* Social Icons - Override inline styles */
+.HEADER .social-icons {
+  position: absolute !important;
+  width: 6.25rem !important; /* 100px */
+  height: 1.875rem !important; /* 30px */
+  top: 1.5625rem !important; /* 25px */
+  right: 26rem !important; /* Just to the left of .overlap (392px + gap) */
+  left: auto !important;
+  display: flex !important;
+  gap: 1.25rem !important; /* 20px */
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.HEADER .social-icons img {
+  width: 1.875rem; /* 30px */
+  height: 1.875rem; /* 30px */
+  filter: brightness(0) invert(1);
+}
+
 .HEADER .div {
   position: absolute;
   width: 36.25rem; /* 580px */
@@ -1749,7 +1768,7 @@ body {
 
 /* Push social icons when search is active */
 .HEADER.search-active .social-icons {
-  transform: translateX(-200px);
+  transform: translateX(-14.5rem); /* -300px - more spacing when search opens */
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
