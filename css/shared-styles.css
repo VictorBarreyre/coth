@@ -2627,7 +2627,7 @@ body {
   .search-background {
     width: 200px !important;
     height: 70px !important;
-    left: 22px !important;
+    left: 30px !important;
     top: 0px !important;
     position: absolute !important;
     background: #4A4085 !important;
@@ -2716,6 +2716,7 @@ body {
     font-weight: 500 !important;
     margin-left: 4px !important;
     display: inline !important;
+    width: 100%;
   }
 }
 
