@@ -1,22 +1,44 @@
 /* ===========================================
-   SEARCH RESULTS PAGE STYLES
+   SEARCH RESULTS PAGE STYLES - RESPONSIVE
    =========================================== */
 
+/* Root variables */
+:root {
+  --max-content-width: 90rem; /* 1440px */
+  --content-width: 65rem; /* 1040px */
+  --sidebar-width: 23.125rem; /* 370px */
+  --spacing-xs: 0.625rem; /* 10px */
+  --spacing-sm: 1.25rem; /* 20px */
+  --spacing-md: 2.5rem; /* 40px */
+  --spacing-lg: 3.25rem; /* 52px */
+}
+
 /* Main Container */
-.search-results-section {
-  width: 1440px;
+.main-container {
+  max-width: 120rem; /* 1920px */
   margin: 0 auto;
-  padding: 0 0 0 0;
+  width: 100%;
+}
+
+/* Search Results Section */
+.search-results-section {
+  width: 100%;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 52px;
+  gap: var(--spacing-lg);
 }
 
 /* Search Title */
 .search-title {
-  margin: 0 0 0px 0;
-  font-size: 32px;
-  line-height: 38px;
+  margin: 0;
+  font-size: 2rem; /* 32px */
+  line-height: 2.375rem; /* 38px */
+  color: #0C004F;
+  font-family: "Harriet Text-Bold", serif;
+  font-weight: 700;
 }
 
 .title-label {
@@ -34,31 +56,34 @@
 /* Content Grid */
 .content-grid {
   display: flex;
-  gap: 40px;
+  gap: 2.5rem; /* 40px */
   width: 100%;
+  align-items: flex-start;
 }
 
 /* Main Content */
 .main-content {
-  width: 1040px;
+  width: 100%;
+  max-width: var(--content-width);
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 3.75rem; /* 60px */
 }
 
 /* Article List */
 .article-list {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: var(--spacing-md);
 }
 
 /* Article Item */
 .article-item {
-  width: 1040px;
-  height: 256px;
+  width: 100%;
+  max-width: 65rem; /* 1040px */
+  height: 16rem; /* 256px */
   display: flex;
-  gap: 24px;
+  gap: 1.5rem; /* 24px */
   text-decoration: none;
   transition: opacity 0.3s ease;
 }
@@ -68,8 +93,9 @@
 }
 
 .article-image {
-  width: 454px;
-  height: 256px;
+  width: 28.375rem; /* 454px */
+  height: 16rem; /* 256px */
+  flex-shrink: 0;
   object-fit: cover;
 }
 
@@ -77,67 +103,67 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem; /* 10px */
 }
 
 .article-title {
   color: #0C004F;
-  font-size: 24px;
+  font-size: 1.5rem; /* 24px */
   font-family: "Harriet Text", serif;
   font-weight: 700;
-  line-height: 32px;
+  line-height: 2rem; /* 32px */
   margin: 0;
-  height: 64px;
+  height: 4rem; /* 64px */
   overflow: hidden;
 }
 
 .article-meta {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem; /* 8px */
 }
 
 .ad-banner .ad-content {
-    width: 980px;
-    height: 122px;
-    margin: 30px;
+  width: 61.25rem; /* 980px */
+  height: 7.625rem; /* 122px */
+  margin: 1.875rem; /* 30px */
 }
 
 .ad-banner .ad-content img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .article-category {
   background: #4A4085;
   color: white;
-  font-size: 12px;
+  font-size: 0.75rem; /* 12px */
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  padding: 4px 11px;
-  border-radius: 12px;
-  height: 24px;
+  padding: 0.25rem 0.6875rem; /* 4px 11px */
+  border-radius: 0.75rem; /* 12px */
+  height: 1.5rem; /* 24px */
   display: inline-flex;
   align-items: center;
 }
 
 .article-date {
   color: #4A4085;
-  font-size: 14px;
+  font-size: 0.875rem; /* 14px */
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
 
 .article-excerpt {
   color: #0C004F;
-  font-size: 16px;
+  font-size: 1rem; /* 16px */
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 1.5rem; /* 24px */
   margin: 0;
-  height: 64px;
+  height: 4rem; /* 64px */
   overflow: hidden;
 }
 
@@ -148,13 +174,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 48px;
-  margin: 45px 0 0 0;
+  gap: 3rem; /* 48px */
+  margin: 2.8125rem 0 0 0; /* 45px */
 }
 
 .pagination-arrow {
-  width: 24px;
-  height: 24px;
+  width: 1.5rem; /* 24px */
+  height: 1.5rem; /* 24px */
   background: transparent;
   border: none;
   cursor: pointer;
@@ -176,7 +202,7 @@
 
 .pagination-number {
   color: #0C004F;
-  font-size: 20px;
+  font-size: 1.25rem; /* 20px */
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   background: transparent;
@@ -193,7 +219,7 @@
 
 .pagination-dots {
   color: #0C004F;
-  font-size: 20px;
+  font-size: 1.25rem; /* 20px */
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
@@ -215,34 +241,34 @@
   .search-results-section {
     width: 100%;
     padding: 0;
-    gap: 20px;
+    gap: 1.25rem; /* 20px */
   }
 
   .search-title {
-    font-size: 24px;
-    padding: 0 15px;
+    font-size: 1.5rem; /* 24px */
+    padding: 0 0.9375rem; /* 15px */
   }
 
   .content-grid {
     flex-direction: column;
-    gap: 30px;
+    gap: 1.875rem; /* 30px */
   }
 
   .main-content {
     width: 100%;
-    gap: 26px;
+    gap: 1.625rem; /* 26px */
   }
 
   .article-list {
-    gap: 30px;
-    padding: 0 15px;
+    gap: 1.875rem; /* 30px */
+    padding: 0 0.9375rem; /* 15px */
   }
 
   .article-item {
     width: 100%;
     height: auto;
     flex-direction: column;
-    gap: 15px;
+    gap: 0.9375rem; /* 15px */
   }
 
   .article-image {
@@ -251,25 +277,25 @@
   }
 
   .article-info {
-    gap: 10px;
+    gap: 0.625rem; /* 10px */
   }
 
   .article-title {
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.625rem; /* 26px */
     height: auto;
   }
 
   .article-excerpt {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.25rem; /* 20px */
     height: auto;
   }
 
   .ad-banner {
     width: 100% !important;
     background: #F9F9F9 !important;
-    height: 119px !important;
+    height: 7.4375rem !important; /* 119px */
     position: relative !important;
     overflow: hidden !important;
     margin: 0 !important;
@@ -277,22 +303,22 @@
 
   .ad-banner .ad-content {
     width: 100% !important;
-    height: 79px !important;
+    height: 4.9375rem !important; /* 79px */
     position: absolute !important;
     left: 0 !important;
-    top: 20px !important;
+    top: 1.25rem !important; /* 20px */
     background: #ddd !important;
     margin: 0 !important;
   }
 
   .ad-banner:has(img[src*="ads2"]) {
-    height: 89px !important;
+    height: 5.5625rem !important; /* 89px */
     background: #F9F9F9 !important;
   }
 
   .ad-banner:has(img[src*="ads2"]) .ad-content {
-    height: 49px !important;
-    top: 20px !important;
+    height: 3.0625rem !important; /* 49px */
+    top: 1.25rem !important; /* 20px */
     background: none !important;
   }
 
@@ -303,10 +329,10 @@
   .ad-banner::after {
     content: "Advertisement" !important;
     position: absolute !important;
-    right: 15px !important;
-    bottom: 4px !important;
+    right: 0.9375rem !important; /* 15px */
+    bottom: 0.25rem !important; /* 4px */
     color: #848484 !important;
-    font-size: 10px !important;
+    font-size: 0.625rem !important; /* 10px */
     font-family: "Montserrat", Helvetica !important;
     font-weight: 600 !important;
     text-align: right !important;
@@ -320,15 +346,15 @@
   .live-video-section {
     display: block;
     width: 100%;
-    padding: 0 15px;
-    margin: 30px 0;
+    padding: 0 0.9375rem; /* 15px */
+    margin: 1.875rem 0; /* 30px */
   }
 
   .video-widget-title {
     width: 100%;
     text-align: center;
     color: #ffffff;
-    font-size: 32px;
+    font-size: 2rem; /* 32px */
     font-family: "Harriet Text", serif;
     font-weight: 700;
   }
@@ -341,14 +367,14 @@
   .search-results-section .sidebar-mobile-only {
     display: flex !important;
     flex-direction: column !important;
-    gap: 20px !important;
+    gap: 1.25rem !important; /* 20px */
     width: 100%;
-    margin-top: 30px;
+    margin-top: 1.875rem; /* 30px */
   }
 
   .sidebar-mobile-only .forum-widget {
     width: 100%;
-    height: 521px;
+    height: 32.5625rem; /* 521px */
     background: #F0F0F0;
     display: flex;
     align-items: center;
@@ -358,13 +384,19 @@
   .sidebar-mobile-only .forum-title {
     text-align: center;
     color: #0C004F;
-    font-size: 32px;
+    font-size: 2rem; /* 32px */
     font-family: "Harriet Text", serif;
     font-weight: 700;
   }
 
   .main-container {
-    margin-top: 30px !important;
+    margin-top: 1.875rem !important; /* 30px */
+  }
+
+  /* Ensure mobile header buttons are visible */
+  .mobile-search-btn,
+  .mobile-burger-btn {
+    display: flex !important;
   }
 }
 
@@ -402,22 +434,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 63px 80px;
+  padding: 3.9375rem 5rem; /* 63px 80px */
 }
 
 /* Modal Simple (with icon) */
 .modal-simple {
-  width: 600px;
-  height: 265px;
+  width: 37.5rem; /* 600px */
+  height: 16.5625rem; /* 265px */
   justify-content: center;
 }
 
 .modal-simple .modal-icon {
   position: absolute;
-  width: 40px;
-  height: 40px;
-  left: 78px;
-  top: 58px;
+  width: 2.5rem; /* 40px */
+  height: 2.5rem; /* 40px */
+  left: 4.875rem; /* 78px */
+  top: 3.625rem; /* 58px */
 }
 
 .modal-simple .modal-icon img {
@@ -428,11 +460,11 @@
 
 .modal-simple .modal-title {
   position: absolute;
-  width: 295px;
-  left: 130px;
-  top: 63px;
+  width: 18.4375rem; /* 295px */
+  left: 8.125rem; /* 130px */
+  top: 3.9375rem; /* 63px */
   color: #0C004F;
-  font-size: 24px;
+  font-size: 1.5rem; /* 24px */
   font-family: "Harriet Text", serif;
   font-weight: 700;
   margin: 0;
@@ -441,54 +473,54 @@
 
 .modal-simple .modal-text {
   position: absolute;
-  width: 390px;
-  left: 130px;
-  top: 119px;
+  width: 24.375rem; /* 390px */
+  left: 8.125rem; /* 130px */
+  top: 7.4375rem; /* 119px */
   color: #0C004F;
-  font-size: 16px;
+  font-size: 1rem; /* 16px */
   font-family: "Montserrat", Helvetica;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 1.5rem; /* 24px */
   margin: 0;
 }
 
 /* Modal with button */
 .modal-with-button {
-  width: 600px;
-  height: 318px;
+  width: 37.5rem; /* 600px */
+  height: 19.875rem; /* 318px */
   justify-content: flex-start;
 }
 
 .modal-with-button .modal-title {
-  width: 440px;
-  margin: 0 0 25px 0;
+  width: 27.5rem; /* 440px */
+  margin: 0 0 1.5625rem 0; /* 25px bottom */
   color: #0C004F;
-  font-size: 24px;
+  font-size: 1.5rem; /* 24px */
   font-family: "Harriet Text", serif;
   font-weight: 700;
-  line-height: 31px;
+  line-height: 1.9375rem; /* 31px */
   text-align: left;
   align-self: flex-start;
 }
 
 .modal-with-button .modal-text {
-  width: 440px;
+  width: 27.5rem; /* 440px */
   color: #0C004F;
-  font-size: 16px;
+  font-size: 1rem; /* 16px */
   font-family: "Montserrat", Helvetica;
   font-weight: 500;
-  line-height: 24px;
-  margin: 0 0 31px 0;
+  line-height: 1.5rem; /* 24px */
+  margin: 0 0 1.9375rem 0; /* 31px bottom */
   text-align: left;
   align-self: flex-start;
 }
 
 /* Modal buttons */
 .modal-buttons {
-  width: 440px;
+  width: 27.5rem; /* 440px */
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 2.5rem; /* 40px */
   align-self: flex-start;
 }
 
@@ -497,10 +529,10 @@
 }
 
 .modal-btn {
-  width: 200px;
-  height: 53px;
-  border-radius: 5px;
-  font-size: 18px;
+  width: 12.5rem; /* 200px */
+  height: 3.3125rem; /* 53px */
+  border-radius: 0.3125rem; /* 5px */
+  font-size: 1.125rem; /* 18px */
   font-family: "Montserrat", Helvetica;
   font-weight: 600;
   cursor: pointer;
@@ -529,10 +561,10 @@
 /* Modal close button */
 .modal-close {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 24px;
-  height: 24px;
+  top: 1.25rem; /* 20px */
+  right: 1.25rem; /* 20px */
+  width: 1.5rem; /* 24px */
+  height: 1.5rem; /* 24px */
   background: transparent;
   border: none;
   cursor: pointer;
@@ -554,60 +586,59 @@
 /* Mobile Modal Styles */
 @media (max-width: 768px) {
   .modal-simple {
-    width: 353px !important;
-    height: 200px !important;
-    margin: 20px !important;
-    padding: 41px 21px !important;
+    width: 22.0625rem !important; /* 353px */
+    height: 12.5rem !important; /* 200px */
+    margin: 1.25rem !important; /* 20px */
+    padding: 2.5625rem 1.3125rem !important; /* 41px 21px */
   }
 
   .modal-simple .modal-icon {
-    width: 40px !important;
-    height: 40px !important;
-    left: 21px !important;
-    top: 36px !important;
+    width: 2.5rem !important; /* 40px */
+    height: 2.5rem !important; /* 40px */
+    left: 1.3125rem !important; /* 21px */
+    top: 2.25rem !important; /* 36px */
   }
 
   .modal-simple .modal-title {
-    width: 256px !important;
-    height: 31px !important;
-    left: 71px !important;
-    top: 41px !important;
-    font-size: 20px !important;
-    line-height: 31px !important;
+    width: 16rem !important; /* 256px */
+    height: 1.9375rem !important; /* 31px */
+    left: 4.4375rem !important; /* 71px */
+    top: 2.5625rem !important; /* 41px */
+    font-size: 1.25rem !important; /* 20px */
+    line-height: 1.9375rem !important; /* 31px */
   }
 
   .modal-simple .modal-text {
-    width: 251px !important;
-    height: 64px !important;
-    left: 71px !important;
-    top: 86px !important;
-    font-size: 14px !important;
-    line-height: 24px !important;
+    width: 15.6875rem !important; /* 251px */
+    height: 4rem !important; /* 64px */
+    left: 4.4375rem !important; /* 71px */
+    top: 5.375rem !important; /* 86px */
+    font-size: 0.875rem !important; /* 14px */
+    line-height: 1.5rem !important; /* 24px */
   }
-
 
   .modal-with-button {
     width: 100% !important;
     height: auto !important;
-    padding: 21px 21px !important;
+    padding: 1.3125rem 1.3125rem !important; /* 21px */
   }
 
   .modal-with-button .modal-title {
     width: 100% !important;
-    font-size: 20px !important;
-    margin: 0 0 20px 0 !important;
+    font-size: 1.25rem !important; /* 20px */
+    margin: 0 0 1.25rem 0 !important; /* 20px bottom */
   }
 
   .modal-with-button .modal-text {
     width: 100% !important;
-    font-size: 14px !important;
-    margin: 0 0 25px 0 !important;
+    font-size: 0.875rem !important; /* 14px */
+    margin: 0 0 1.5625rem 0 !important; /* 25px bottom */
   }
 
   .modal-buttons {
     width: 100% !important;
     flex-direction: column !important;
-    gap: 15px !important;
+    gap: 0.9375rem !important; /* 15px */
   }
 
   .modal-buttons-double {
@@ -619,9 +650,9 @@
   }
 
   .modal-close {
-    width: 20px !important;
-    height: 20px !important;
-    top: 15px !important;
-    right: 15px !important;
+    width: 1.25rem !important; /* 20px */
+    height: 1.25rem !important; /* 20px */
+    top: 0.9375rem !important; /* 15px */
+    right: 0.9375rem !important; /* 15px */
   }
 }

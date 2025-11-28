@@ -2068,14 +2068,14 @@ body {
   /* Copy magazine styles */
   .sidebar-mobile-only .magazine-subscribe {
     width: 94vw !important;
-    height: 525px !important;
+    height: fit-content !important;
     margin: 10px auto !important;
     position: relative !important;
   }
 
   .sidebar-mobile-only .magazine-subscribe .magazine-image {
     width: 94vw !important;
-    height: 473px !important;
+    height: fit-content !important;
     object-fit: cover !important;
     border: 1px solid #E1E1E1 !important;
   }
@@ -2083,7 +2083,7 @@ body {
   .sidebar-mobile-only .magazine-subscribe .subscribe-btn {
     width: 100% !important;
     height: 53px !important;
-    position: absolute !important;
+    position: unset !important;
     bottom: 0 !important;
     left: 0 !important;
     background: #0C004F !important;
