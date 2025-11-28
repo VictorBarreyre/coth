@@ -2056,6 +2056,10 @@ body {
 /* Copy all sidebar styles to sidebar-mobile-only using CSS custom properties approach */
 @media (max-width: 768px) {
 
+  .loupe{
+    display: none;
+  }
+
   .magazine-subscribe {
     padding: 0 !important;
     margin-bottom: 0 !important;
