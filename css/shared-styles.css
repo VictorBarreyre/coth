@@ -93,60 +93,11 @@
   font-display: swap;
 }
 
-/* =========================================== 
-   RESPONSIVE SCALING SYSTEM (CSS VARIABLES)
+/* ===========================================
+   RESPONSIVE SYSTEM (NO SCALING)
    =========================================== */
 
-/* CSS Variables pour le scaling responsive */
-:root {
-  /* Scaling factor based on viewport width - responsive to screen size */
-  --scale-factor: min(1, calc(100vw / 1920px));
-
-  /* Responsive font base */
-  --base-font-size: max(12px, calc(16px * var(--scale-factor)));
-}
-
-/* Helper class to apply scaling to any element */
-.responsive-scale {
-  transform: scale(var(--scale-factor));
-  transform-origin: top left;
-}
-
-/* Apply responsive scaling to the main container */
-.scale-wrapper {
-  width: 1920px;
-  min-height: calc(100vh / var(--scale-factor));
-  position: relative;
-  transform: scale(var(--scale-factor));
-  transform-origin: top left;
-  margin: 0;
-}
-
-/* Adjust body height for scaled content */
-body {
-  overflow-x: auto;
-}
-
-/* For desktop screens >= 1920px, center the content */
-@media screen and (min-width: 1920px) {
-  .scale-wrapper {
-    margin: 0 auto;
-    transform-origin: top center;
-  }
-}
-
-/* Ensure scaled content doesn't cause horizontal scroll */
-@media screen and (max-width: 1920px) {
-  body {
-    min-height: calc(100vh * var(--scale-factor));
-  }
-}
-
-/* Final body adjustments */
-body {
-  height: 100vh;
-  font-size: var(--base-font-size);
-}
+/* No scale-wrapper needed - using native responsive CSS */
 
 /* CSS Reset et configuration moderne */
 * {
@@ -185,7 +136,9 @@ body {
    =========================================== */
 
 .main-container {
-  width: 1920px;
+  max-width: 120rem; /* 1920px */
+  width: 100%;
+  margin: 0 auto;
   position: relative;
   background: white;
   overflow: hidden;
@@ -193,7 +146,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 60px;
+  gap: 3.75rem; /* 60px */
   padding-top: 4rem;
 }
 
@@ -315,10 +268,12 @@ body {
 
 .HEADER {
   position: relative;
-  width: 1920px;
-  height: 80px;
+  max-width: 120rem; /* 1920px */
+  width: 100%;
+  height: 5rem; /* 80px */
   background-color: #0c004f;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .HEADER .overlap {
