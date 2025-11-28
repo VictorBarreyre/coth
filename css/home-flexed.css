@@ -50,7 +50,6 @@
 
 .ad-label {
   position: absolute;
-  right: 1rem;
   bottom: 0.5rem;
   color: #848484;
   font-size: 0.625rem;
@@ -685,20 +684,6 @@ a .article-title {
   padding: 1.25rem 0;
 }
 
-.sidebar-ad .ad-content {
-  width: 100%;
-  height: auto;
-}
-
-.sidebar-ad .ad-label {
-  position: absolute;
-  right: 1rem;
-  bottom: 0.5rem;
-  color: #848484;
-  font-size: 0.625rem;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 600;
-}
 
 /* Forum Widget */
 .forum-widget {
