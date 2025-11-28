@@ -22,19 +22,20 @@
       display: flex;
       visibility: visible;
       overflow-y: auto;
-      padding: 50px 0;
+      padding: 3.125rem 0; /* 50px */
     }
 
     .modals-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-      column-gap: 40px;
-      row-gap: 40px;
-      max-width: 1400px;
+      grid-template-columns: repeat(auto-fit, minmax(37.5rem, 1fr)); /* 600px */
+      column-gap: 2.5rem; /* 40px */
+      row-gap: 2.5rem; /* 40px */
+      max-width: 87.5rem; /* 1400px */
       margin: 0 auto;
-      padding: 0 80px;
+      padding: 0 5rem; /* 80px */
       width: 100%;
       align-items: start;
+      margin-top: 20em;
     }
 
     .modal-container {
@@ -43,7 +44,7 @@
 
     /* Reduce spacing for icon modals in right column */
     .modal-container.compact {
-      margin-top: -20px;
+      margin-top: -1.25rem; /* -20px */
     }
 
     @media (max-width: 768px) {
@@ -54,10 +55,11 @@
 
       .modals-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
-        padding: 0 20px;
+        gap: 1.875rem; /* 30px */
+        padding: 0 1.25rem; /* 20px */
         align-items: center;
         justify-content: center;
+        margin-top: 3rem;
       }
 
       /* Hide Success, Error, Information modals on mobile */
@@ -70,29 +72,29 @@
 
       /* Mobile modal sizing */
       .modal-content {
-        width: 353px !important;
-        max-width: calc(100vw - 40px) !important;
+        width: 22.0625rem !important; /* 353px */
+        max-width: calc(100vw - 2.5rem) !important; /* 40px total padding */
         height: auto !important;
-        padding: 30px 21px !important;
+        padding: 1.875rem 1.3125rem !important; /* 30px 21px */
         margin: 0 auto !important;
       }
 
       .modal-with-button .modal-title {
         width: 100% !important;
-        font-size: 20px !important;
-        margin: 0 0 20px 0 !important;
+        font-size: 1.25rem !important; /* 20px */
+        margin: 0 0 1.25rem 0 !important; /* 20px */
       }
 
       .modal-with-button .modal-text {
         width: 100% !important;
-        font-size: 14px !important;
-        margin: 0 0 25px 0 !important;
+        font-size: 0.875rem !important; /* 14px */
+        margin: 0 0 1.5625rem 0 !important; /* 25px */
       }
 
       .modal-buttons {
         width: 100% !important;
         flex-direction: row !important;
-        gap: 15px !important;
+        gap: 0.9375rem !important; /* 15px */
         justify-content: space-between !important;
       }
 
@@ -101,15 +103,15 @@
       }
 
       .modal-btn {
-        width: calc(50% - 7.5px) !important;
+        width: calc(50% - 0.46875rem) !important; /* calc(50% - 7.5px) */
         flex: 1 !important;
       }
 
       .modal-close {
-        width: 20px !important;
-        height: 20px !important;
-        top: 15px !important;
-        right: 15px !important;
+        width: 1.25rem !important; /* 20px */
+        height: 1.25rem !important; /* 20px */
+        top: 0.9375rem !important; /* 15px */
+        right: 0.9375rem !important; /* 15px */
       }
     }
   </style>
@@ -118,10 +120,9 @@
 <body>
   <!-- CSS-Only Burger Menu Toggle -->
   <input type="checkbox" id="burgerMenuToggle" class="burger-menu-toggle">
-  
-  <div class="scale-wrapper" id="scaleWrapper">
-    <!-- HEADER COMPONENT -->
-    <div data-include="../components/header.html"></div>
+
+  <!-- HEADER COMPONENT -->
+  <div data-include="../components/header.html"></div>
 
     <!-- Modal Overlay with all modals visible -->
     <div class="modal-overlay show-all" id="modalsOverlay">
@@ -203,8 +204,6 @@
 
       </div>
     </div>
-
-  </div>
 
   <!-- Scripts -->
   <script src="../js/search.js"></script>
