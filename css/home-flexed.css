@@ -1089,7 +1089,6 @@ a .article-title {
     display: flex !important;
     flex-direction: column !important;
     gap: 15px !important;
-    padding: 0 15px !important;
     position: relative !important;
   }
 
@@ -1264,13 +1263,12 @@ a .article-title {
   }
 
   .category-featured .category-header {
-    width: calc(100% - 30px) !important;
     height: 50px !important;
     position: relative !important;
     background: #0C004F !important;
     border-top-right-radius: 75px !important;
     border-bottom-right-radius: 75px !important;
-    margin: 0 15px !important;
+    margin: 0 0px !important;
   }
 
   .category-featured .category-tag {
@@ -1291,7 +1289,6 @@ a .article-title {
   .category-featured .category-content {
     width: 100% !important;
     margin: 0 !important;
-    padding: 0 15px !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 11px !important;
