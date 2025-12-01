@@ -1339,7 +1339,7 @@ width: 85%;
 
 .newsletter-bottom {
   width: min(75rem, 75vw);
-  height: min(14.375rem, 12vw);
+  height: min(14.375rem, 15vw);
   position: relative;
   background: #0C004F;
   overflow: hidden;
@@ -1463,7 +1463,7 @@ width: 85%;
 
 .newsletter-circle {
   width: min(19.125rem, 15.9vw);
-  height: min(19.125rem, 15.9vw);
+  height: min(19.125rem, 19vw);
   left: min(-5.5rem, -4.6vw);
   top: min(-2.375rem, -2.6vw);
   position: absolute;
