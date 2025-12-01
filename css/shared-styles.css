@@ -678,8 +678,8 @@ body {
 
 /* Sidebar Ad */
 .sidebar-ad {
-  width: 360px;
-  height: 310px;
+  width: min(22.5rem, 18.75vw);
+  height: min(19.375rem, 16.15vw);
   position: relative;
   background: #F9F9F9;
   overflow: hidden;
@@ -696,9 +696,9 @@ width: 85%;
 
 .sidebar-ad .ad-label {
   position: absolute;
-  bottom: 5px;
+  bottom: min(0.3125rem, 0.35vw);
   color: #848484;
-  font-size: 12px;
+  font-size: min(0.75rem, 0.625vw);
   font-family: "Montserrat", Helvetica;
   font-weight: 600;
 }
@@ -890,8 +890,8 @@ width: 85%;
 /* Live Results More Link positioning */
 .live-results .more-link {
   position: absolute;
-  left: 114px;
-  top: 580px;
+  left: min(7.125rem, 5vw);
+  bottom: min(36.25rem, 0.2vw);
 }
 
 /* Top Headlines Section - SHARED */
@@ -1180,13 +1180,12 @@ width: 85%;
 }
 
 .result-content h4 {
-  width: 319px;
   height: 22px;
   color: white;
   font-size: 12px;
   font-family: "Montserrat", Helvetica;
   font-weight: 700;
-  line-height: 22.30px;
+  line-height: min(1.3875rem, 1.15vw);
   margin: 0 0 14px 0;
 }
 
@@ -1202,7 +1201,7 @@ width: 85%;
 /* Magazine Subscribe - SHARED */
 .magazine-subscribe {
   width: 360px;
-  height: 552px;
+
   position: relative;
 }
 
@@ -1215,9 +1214,7 @@ width: 85%;
 .subscribe-btn {
   width: 360px;
   height: 53px;
-  position: absolute;
-  left: 0px;
-  top: 468px;
+
   background: #0C004F;
   border: none;
   border-bottom-right-radius: 5px;
@@ -1239,8 +1236,7 @@ width: 85%;
    =========================================== */
 
 .news-letter {
-  width: 360px;
-  height: 136px;
+  height: min(8.5rem, 9.4vw);
   position: relative;
   background: #0C004F;
   overflow: hidden;
@@ -1248,11 +1244,11 @@ width: 85%;
 
 /* Cercle décoratif violet en arrière-plan */
 .news-letter .overlap-4 {
-  width: 258px;
-  height: 258px;
+  width: min(16.125rem, 16.9vw);
+  height: min(16.125rem, 17.9vw);
   position: absolute;
-  left: -54px;
-  top: -61px;
+  left: min(-3.375rem, -3.75vw);
+  top: min(-3.8125rem, -4.2vw);
   background: #4A4085;
   border-radius: 50%;
 }
@@ -1286,11 +1282,12 @@ width: 85%;
 
 /* Container de l'icône mail */
 .news-letter .NL {
-  width: 50px;
-  height: 46px;
+  width: min(3.125rem, 3.5vw);
+  height: min(2.875rem, 3.2vw);
   position: absolute;
-  left: 257px;
-  top: 45px;
+  right: min(2rem, 2.2vw);
+  top: min(2.8125rem, 3.1vw);
+  left: auto;
   overflow: hidden;
 }
 
@@ -1341,8 +1338,8 @@ width: 85%;
    =========================================== */
 
 .newsletter-bottom {
-  width: 1440px;
-  height: 230px;
+  width: min(75rem, 75vw);
+  height: min(14.375rem, 12vw);
   position: relative;
   background: #0C004F;
   overflow: hidden;
@@ -1377,10 +1374,11 @@ width: 85%;
 }
 
 .newsletter-icon {
-  width: 110px;
-  height: 102px;
-  left: 1202px;
-  top: 64px;
+  width: min(6.875rem, 5.7vw);
+  height: min(6.375rem, 5.3vw);
+  right: min(16rem, 12.5vw);
+  top: min(4rem, 4.4vw);
+  left: auto;
   position: absolute;
   overflow: hidden;
 }
@@ -1392,34 +1390,35 @@ width: 85%;
 }
 
 .newsletter-form {
-  width: 710px;
-  height: 55px;
-  left: 365px;
-  top: 88px;
+  width: min(44.375rem, 37vw);
+  height: min(3.4375rem, 3.8vw);
+  left: 50%;
+  transform: translateX(-50%);
+  top: min(5.5rem, 6vw);
   position: absolute;
   display: flex;
   align-items: flex-start;
-  gap: 60px;
+  gap: min(3.75rem, 3.1vw);
 }
 
 .newsletter-input-container {
-  width: 450px;
-  height: 49px;
+  width: min(28.125rem, 23.4vw);
+  height: min(3.0625rem, 3.4vw);
   position: relative;
 }
 
 .newsletter-border {
-  width: 450px;
+  width: min(28.125rem, 23.4vw);
   height: 1px;
   left: 0px;
-  top: 52px;
+  top: min(3.25rem, 3.6vw);
   position: absolute;
   background: white;
 }
 
 .newsletter-label {
-  width: 435px;
-  height: 22px;
+  width: min(27.1875rem, 22.7vw);
+  height: min(1.375rem, 1.5vw);
   left: 0px;
   top: 0px;
   position: absolute;
@@ -1431,27 +1430,27 @@ width: 85%;
 }
 
 .newsletter-placeholder {
-  width: 435px;
-  height: 22px;
+  width: min(27.1875rem, 22.7vw);
+  height: min(1.375rem, 1.5vw);
   left: 0px;
-  top: 26px;
+  top: min(1.625rem, 1.8vw);
   position: absolute;
   color: rgba(255, 255, 255, 0.70);
-  font-size: 16px;
+  font-size: min(1rem, 0.83vw);
   font-family: "Montserrat", Helvetica;
   font-weight: 500;
-  line-height: 22px;
+  line-height: min(1.375rem, 1.5vw);
 }
 
 .newsletter-subscribe-btn {
-  width: 200px;
-  height: 53px;
+  width: min(12.5rem, 10.4vw);
+  height: min(3.3125rem, 3.7vw);
   overflow: hidden;
   border-radius: 5px;
   border: 1px solid white;
   background: transparent;
   color: white;
-  font-size: 18px;
+  font-size: min(1.125rem, 0.94vw);
   font-family: "Montserrat", Helvetica;
   font-weight: 600;
   cursor: pointer;
@@ -1463,41 +1462,41 @@ width: 85%;
 }
 
 .newsletter-circle {
-  width: 306px;
-  height: 306px;
-  left: -88px;
-  top: -38px;
+  width: min(19.125rem, 15.9vw);
+  height: min(19.125rem, 15.9vw);
+  left: min(-5.5rem, -4.6vw);
+  top: min(-2.375rem, -2.6vw);
   position: absolute;
   background: #4A4085;
   border-radius: 50%;
 }
 
 .newsletter-text {
-  left: 40px;
-  top: 116px;
+  left: min(2.5rem, 2.08vw);
+  top: min(7.25rem, 8vw);
   position: absolute;
   color: white;
-  font-size: 16px;
+  font-size: min(1rem, 0.83vw);
   font-family: "Montserrat", Helvetica;
   font-weight: 700;
-  line-height: 21px;
+  line-height: min(1.3125rem, 1.15vw);
 }
 
 .newsletter-title {
-  left: 38px;
-  top: 71px;
+  left: min(2.375rem, 1.98vw);
+  top: min(4.4375rem, 4.9vw);
   position: absolute;
   color: white;
-  font-size: 32px;
+  font-size: min(2rem, 1.67vw);
   font-family: "Harriet Text-Bold", serif;
   font-weight: 700;
 }
 
 .newsletter-favicon {
-  width: 463px;
-  height: 420px;
-  left: 486px;
-  top: -95px;
+  width: min(28.9375rem, 24.1vw);
+  height: min(26.25rem, 21.9vw);
+  left: min(30.375rem, 25.3vw);
+  top: min(-5.9375rem, -6.6vw);
   position: absolute;
   opacity: 0.1;
   pointer-events: none;
@@ -1507,8 +1506,8 @@ width: 85%;
 }
 
 .newsletter-favicon img {
-  width: 300px;
-  height: 300px;
+  width: min(18.75rem, 15.625vw);
+  height: min(18.75rem, 15.625vw);
   object-fit: contain;
 }
 
