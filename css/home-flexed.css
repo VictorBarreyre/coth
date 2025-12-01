@@ -864,7 +864,7 @@ a .article-title {
   }
 
   .forum-widget {
-    max-width: min(90rem, 90vw) !important;
+    max-width: min(90rem, 86vw) !important;
     margin: 0 auto;
     padding: 0 2vw !important;
   }
@@ -892,7 +892,7 @@ a .article-title {
   .newsletter-bottom {
     max-width: min(90rem, 90vw);
     margin: 5px auto 0 auto;
-    width: min(75rem, 75vw) !important; /* 1200px base = 75% of 1600px */
+    width: min(75rem, 87vw) !important; /* 1200px base = 75% of 1600px */
   }
 
   .newsletter-icon {
@@ -921,7 +921,7 @@ a .article-title {
  
   /* Articles column responsive */
   .articles-column {
-    max-width: min(65rem, 54vw) !important; /* 1040px base = 54% of 1920px */
+    max-width: min(65rem, 64vw) !important; /* 1040px base = 54% of 1920px */
   }
 
   /* Medium articles grid responsive */
@@ -1205,6 +1205,11 @@ a .article-title {
     flex-direction: column !important;
     gap: 15px !important;
     position: relative !important;
+  }
+  
+  /* Add padding only to small-articles-list in main content */
+  .main-content .small-articles-list {
+    padding: 0 15px !important;
   }
 
   .small-article {

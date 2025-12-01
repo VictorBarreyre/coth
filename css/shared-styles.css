@@ -2101,6 +2101,16 @@ width: 85%;
     flex-direction: column !important;
     gap: 10px !important;
   }
+  
+  /* Center more-link horizontally and put at bottom in mobile */
+  .live-results .more-link {
+    display: flex !important;
+    justify-content: center !important;
+    position: relative !important;
+    left: auto !important;
+    bottom: auto !important;
+    margin-top: auto !important;
+  }
 
   .results-tabs{
  width: 94vw !important;
@@ -2340,8 +2350,9 @@ width: 85%;
   .newsletter-bottom .newsletter-form {
     position: absolute !important;
     width: 85vw !important;
-    left: 30px !important;
+    left: 50% !important;
     top: 131px !important;
+    transform: translateX(-50%) !important;
     z-index: 15 !important;
   }
 
