@@ -418,16 +418,19 @@
 /* Modal Simple (with icon) */
 .modal-simple {
   width: 37.5rem; /* 600px */
-  height: 16.5625rem; /* 265px */
-  justify-content: center;
+  min-height: 18.75rem; /* 300px */
+  height: auto;
+  padding: 3.625rem 4.875rem; /* 58px 78px */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem; /* 16px */
 }
 
 .modal-simple .modal-icon {
-  position: absolute;
   width: 2.5rem; /* 40px */
   height: 2.5rem; /* 40px */
-  left: 4.875rem; /* 78px */
-  top: 3.625rem; /* 58px */
+  flex-shrink: 0;
 }
 
 .modal-simple .modal-icon img {
@@ -436,11 +439,21 @@
   object-fit: contain;
 }
 
+.modal-simple .modal-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* 16px */
+  flex: 1;
+}
+
+.modal-simple .modal-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem; /* 12px */
+}
+
 .modal-simple .modal-title {
-  position: absolute;
-  width: 18.4375rem; /* 295px */
-  left: 8.125rem; /* 130px */
-  top: 3.9375rem; /* 63px */
   color: #0C004F;
   font-size: 1.5rem; /* 24px */
   font-family: "Harriet Text", serif;
@@ -450,10 +463,6 @@
 }
 
 .modal-simple .modal-text {
-  position: absolute;
-  width: 24.375rem; /* 390px */
-  left: 8.125rem; /* 130px */
-  top: 7.4375rem; /* 119px */
   color: #0C004F;
   font-size: 1rem; /* 16px */
   font-family: "Montserrat", Helvetica;
@@ -465,41 +474,41 @@
 /* Modal with button */
 .modal-with-button {
   width: 37.5rem; /* 600px */
-  height: 19.875rem; /* 318px */
-  justify-content: flex-start;
+  min-height: 18.75rem; /* 300px */
+  height: auto;
+  padding: 3.9375rem 5rem; /* 63px 80px */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5625rem; /* 25px */
 }
 
 .modal-with-button .modal-title {
-  width: 27.5rem; /* 440px */
-  margin: 0 0 1.5625rem 0; /* 25px bottom */
   color: #0C004F;
   font-size: 1.5rem; /* 24px */
   font-family: "Harriet Text", serif;
   font-weight: 700;
   line-height: 1.9375rem; /* 31px */
   text-align: left;
-  align-self: flex-start;
+  margin: 0;
 }
 
 .modal-with-button .modal-text {
-  width: 27.5rem; /* 440px */
   color: #0C004F;
   font-size: 1rem; /* 16px */
   font-family: "Montserrat", Helvetica;
   font-weight: 500;
   line-height: 1.5rem; /* 24px */
-  margin: 0 0 1.9375rem 0; /* 31px bottom */
   text-align: left;
-  align-self: flex-start;
+  margin: 0;
 }
 
 /* Modal buttons */
 .modal-buttons {
-  width: 27.5rem; /* 440px */
   display: flex;
   justify-content: center;
   gap: 2.5rem; /* 40px */
-  align-self: flex-start;
+  width: 100%;
 }
 
 .modal-buttons-double {
@@ -565,56 +574,46 @@
 @media (max-width: 768px) {
   .modal-simple {
     width: 22.0625rem !important; /* 353px */
-    height: 12.5rem !important; /* 200px */
+    min-height: auto !important;
+    height: auto !important;
     margin: 1.25rem !important; /* 20px */
-    padding: 2.5625rem 1.3125rem !important; /* 41px 21px */
+    padding: 2rem 1.3125rem !important; /* 32px 21px */
+    gap: 1rem !important; /* 16px */
   }
 
   .modal-simple .modal-icon {
     width: 2.5rem !important; /* 40px */
     height: 2.5rem !important; /* 40px */
-    left: 1.3125rem !important; /* 21px */
-    top: 2.25rem !important; /* 36px */
   }
 
   .modal-simple .modal-title {
-    width: 16rem !important; /* 256px */
-    height: 1.9375rem !important; /* 31px */
-    left: 4.4375rem !important; /* 71px */
-    top: 2.5625rem !important; /* 41px */
     font-size: 1.25rem !important; /* 20px */
     line-height: 1.9375rem !important; /* 31px */
   }
 
   .modal-simple .modal-text {
-    width: 15.6875rem !important; /* 251px */
-    height: 4rem !important; /* 64px */
-    left: 4.4375rem !important; /* 71px */
-    top: 5.375rem !important; /* 86px */
     font-size: 0.875rem !important; /* 14px */
     line-height: 1.5rem !important; /* 24px */
   }
 
   .modal-with-button {
-    width: 100% !important;
+    width: calc(100% - 2.5rem) !important; /* 100% - 40px margin */
     height: auto !important;
-    padding: 1.3125rem 1.3125rem !important; /* 21px */
+    min-height: auto !important;
+    padding: 1.5rem 1.3125rem !important; /* 24px 21px */
+    margin: 1.25rem !important;
+    gap: 1rem !important;
   }
 
   .modal-with-button .modal-title {
-    width: 100% !important;
     font-size: 1.25rem !important; /* 20px */
-    margin: 0 0 1.25rem 0 !important; /* 20px bottom */
   }
 
   .modal-with-button .modal-text {
-    width: 100% !important;
     font-size: 0.875rem !important; /* 14px */
-    margin: 0 0 1.5625rem 0 !important; /* 25px bottom */
   }
 
   .modal-buttons {
-    width: 100% !important;
     flex-direction: column !important;
     gap: 0.9375rem !important; /* 15px */
   }
@@ -738,32 +737,30 @@
   /* Modal responsive */
   .modal-simple {
     width: min(37.5rem, 39vw);
-    height: min(16.5625rem, 17.2vw);
+    min-height: min(18.75rem, 19.5vw); /* 300px base */
+    padding: min(3.625rem, 3.77vw) min(4.875rem, 5.1vw);
+    gap: min(1rem, 1.04vw); /* 16px base */
   }
 
   .modal-with-button {
     width: min(37.5rem, 39vw);
-    height: min(19.875rem, 20.7vw);
+    min-height: min(18.75rem, 19.5vw); /* 300px base */
+    padding: min(3.9375rem, 4.1vw) min(5rem, 5.2vw);
+    gap: min(1.5625rem, 1.63vw);
   }
 
   .modal-simple .modal-icon {
     width: min(2.5rem, 2.6vw);
     height: min(2.5rem, 2.6vw);
-    left: min(4.875rem, 5.1vw);
-    top: min(3.625rem, 3.77vw);
   }
 
-  .modal-simple .modal-title {
-    width: min(18.4375rem, 19.2vw);
-    left: min(8.125rem, 8.46vw);
-    top: min(3.9375rem, 4.1vw);
+  .modal-simple .modal-title,
+  .modal-with-button .modal-title {
     font-size: min(1.5rem, 1.56vw);
   }
 
-  .modal-simple .modal-text {
-    width: min(24.375rem, 25.4vw);
-    left: min(8.125rem, 8.46vw);
-    top: min(7.4375rem, 7.75vw);
+  .modal-simple .modal-text,
+  .modal-with-button .modal-text {
     font-size: min(1rem, 1.04vw);
     line-height: min(1.5rem, 1.56vw);
   }
