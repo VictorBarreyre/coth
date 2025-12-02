@@ -162,3 +162,30 @@
     font-weight: 700 !important;
   }
 }
+
+/* ===========================================
+   RESPONSIVE DYNAMIC SIZING (Desktop 1440px+)
+   =========================================== */
+
+@media (min-width: 769px) {
+  :root {
+    --max-content-width: min(90rem, 90vw);
+    --content-width: min(65rem, 67.7vw); /* 1040px base */
+  }
+
+  .cgu-container {
+    max-width: min(90rem, 90vw);
+    margin: 0 auto;
+    padding: 0 2vw;
+  }
+
+  .cgu-content {
+    max-width: min(65rem, 67.7vw);
+  }
+
+  .logo-section {
+    max-width: min(37.5rem, 39vw); /* 600px base */
+    height: min(7.3125rem, 7.6vw); /* 117px base */
+    margin: 0 auto;
+  }
+}

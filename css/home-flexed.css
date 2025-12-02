@@ -895,10 +895,6 @@ a .article-title {
     width: min(75rem, 87vw) !important; /* 1200px base = 75% of 1600px */
   }
 
-  .newsletter-icon {
-    right: 2vw;
-    left: auto;
-  }
 
   .newsletter-form {
     width: min(37vw, 550px) !important; /* Adjusted for better proportion */

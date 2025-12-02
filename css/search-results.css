@@ -226,6 +226,30 @@
 
 /* Sidebar is managed by sidebar component CSS */
 
+/* Forum Widget */
+.forum-widget {
+  width: 100%;
+  min-height: 32.5625rem; /* 521px */
+  background: #F0F0F0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.forum-title {
+  text-align: center;
+  color: #0C004F;
+  font-size: 2rem; /* 32px */
+  font-family: "Harriet Text", serif;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+.forum-title::first-letter {
+  text-transform: uppercase;
+}
+
 /* Mobile Sidebar */
 .search-results-section .sidebar-mobile-only {
   display: none;
@@ -654,5 +678,145 @@
     height: 1.25rem !important; /* 20px */
     top: 0.9375rem !important; /* 15px */
     right: 0.9375rem !important; /* 15px */
+  }
+}
+
+/* ===========================================
+   RESPONSIVE DYNAMIC SIZING (Desktop 1440px+)
+   =========================================== */
+
+@media (min-width: 769px) {
+  :root {
+    --max-content-width: min(90rem, 90vw);
+    --content-width: min(65rem, 67.7vw);
+    --sidebar-width: min(22.5rem, 18.75vw); /* 360px base */
+  }
+
+  .search-results-section {
+    max-width: min(90rem, 90vw);
+    padding: 0 2vw;
+  }
+
+  .content-grid {
+    gap: min(2.5rem, 2.6vw);
+  }
+
+  .main-content {
+    max-width: min(65rem, 67.7vw);
+  }
+
+  /* Article items responsive */
+  .article-item {
+    max-width: min(65rem, 67.7vw);
+  }
+
+  .article-image {
+    width: min(28.375rem, 29.5vw); /* 454px base */
+    height: min(16rem, 16.6vw); /* 256px base */
+  }
+
+  /* Article text responsive - prevent text cutoff */
+  .article-title {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .article-excerpt {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+  /* Ad banner responsive */
+  .ad-banner .ad-content {
+    width: min(61.25rem, 63.8vw); /* 980px base */
+    height: min(7.625rem, 7.94vw); /* 122px base */
+    margin: min(1.875rem, 1.95vw);
+  }
+
+  /* Pagination responsive */
+  .pagination {
+    gap: min(3rem, 3.13vw);
+  }
+
+  .pagination-number,
+  .pagination-dots {
+    font-size: min(1.25rem, 1.3vw);
+  }
+
+  /* Sidebar responsive */
+  .sidebar {
+    width: var(--sidebar-width) !important;
+  }
+
+  /* Top headlines responsive */
+  .top-headlines {
+    width: var(--sidebar-width) !important;
+  }
+
+  /* Magazine subscribe responsive */
+  .magazine-subscribe {
+    width: var(--sidebar-width) !important;
+  }
+
+  .magazine-image {
+    width: var(--sidebar-width) !important;
+    height: auto !important;
+  }
+
+  .subscribe-btn {
+    width: var(--sidebar-width) !important;
+  }
+
+  /* Forum widget responsive */
+  .forum-widget {
+    width: var(--sidebar-width) !important;
+  }
+
+  /* Live results responsive */
+  .live-results {
+    width: var(--sidebar-width) !important;
+  }
+
+
+
+  /* Modal responsive */
+  .modal-simple {
+    width: min(37.5rem, 39vw);
+    height: min(16.5625rem, 17.2vw);
+  }
+
+  .modal-with-button {
+    width: min(37.5rem, 39vw);
+    height: min(19.875rem, 20.7vw);
+  }
+
+  .modal-simple .modal-icon {
+    width: min(2.5rem, 2.6vw);
+    height: min(2.5rem, 2.6vw);
+    left: min(4.875rem, 5.1vw);
+    top: min(3.625rem, 3.77vw);
+  }
+
+  .modal-simple .modal-title {
+    width: min(18.4375rem, 19.2vw);
+    left: min(8.125rem, 8.46vw);
+    top: min(3.9375rem, 4.1vw);
+    font-size: min(1.5rem, 1.56vw);
+  }
+
+  .modal-simple .modal-text {
+    width: min(24.375rem, 25.4vw);
+    left: min(8.125rem, 8.46vw);
+    top: min(7.4375rem, 7.75vw);
+    font-size: min(1rem, 1.04vw);
+    line-height: min(1.5rem, 1.56vw);
+  }
+
+  .modal-btn {
+    width: min(12.5rem, 13vw);
+    height: min(3.3125rem, 3.45vw);
+    font-size: min(1.125rem, 1.17vw);
   }
 }

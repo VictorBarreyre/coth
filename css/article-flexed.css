@@ -932,3 +932,128 @@
     display: none;
   }
 }
+
+/* ===========================================
+   RESPONSIVE DYNAMIC SIZING (Desktop 1440px+)
+   =========================================== */
+
+@media (min-width: 769px) {
+  :root {
+    --max-content-width: min(90rem, 90vw);
+    --sidebar-width: min(22.5rem, 18.75vw); /* 360px base = 18.75% of 1920px */
+  }
+
+  .content-section {
+    max-width: min(90rem, 90vw);
+    margin: 0 auto;
+    padding: 0 2vw;
+  }
+
+  /* Main content responsive */
+  .main-content {
+    max-width: min(65rem, 64vw); /* 1040px base */
+  }
+
+  /* Sidebar responsive sizing */
+  .sidebar {
+    width: var(--sidebar-width) !important;
+  }
+
+  /* Article breadcrumb responsive */
+  .article-breadcrumb {
+    grid-template-columns: repeat(auto-fit, minmax(min(15rem, 15.6vw), 1fr));
+  }
+
+  .breadcrumb-item {
+    min-height: min(8.5rem, 8.85vw);
+  }
+
+  .breadcrumb-image {
+    width: min(5.625rem, 5.85vw);
+    height: min(5.625rem, 5.85vw);
+  }
+
+  /* Related articles responsive */
+  .related-image {
+    width: min(28.375rem, 29.5vw); /* 454px base */
+    height: min(16rem, 16.6vw); /* 256px base */
+  }
+
+  /* Related content text responsive - prevent text cutoff */
+  .related-title {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .related-excerpt {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+  /* Live video section responsive */
+  .live-video-section {
+    padding: 0 min(15rem, 7.8vw);
+  }
+
+  .live-logo {
+    left: min(15rem, 7.8vw);
+  }
+
+  .video-main {
+    width: min(46.875rem, 48.7vw); /* 750px base */
+    height: min(26.375rem, 27.4vw); /* 422px base */
+  }
+
+  .live-panel {
+    width: min(40.625rem, 42.2vw); /* 650px base */
+    height: min(26.375rem, 27.4vw); /* 422px base */
+  }
+
+  /* Top headlines responsive */
+  .top-headlines {
+    width: var(--sidebar-width) !important;
+  }
+
+  /* Magazine subscribe responsive */
+  .magazine-subscribe {
+    width: var(--sidebar-width) !important;
+  }
+
+  .magazine-image {
+    width: var(--sidebar-width) !important;
+    height: auto !important;
+  }
+
+  .subscribe-btn {
+    width: var(--sidebar-width) !important;
+  }
+
+  /* Forum widget responsive */
+  .forum-widget {
+    width: var(--sidebar-width) !important;
+  }
+
+  /* Live results responsive */
+  .live-results {
+    width: var(--sidebar-width) !important;
+  }
+
+  /* Sidebar ads responsive */
+  .display-col-droite-3,
+  .display-col-droite-2,
+  .display-col-droite-4,
+  .display-col-droite-5 {
+    width: var(--sidebar-width) !important;
+    height: min(19.375rem, 20.2vw) !important;
+  }
+
+  .display-col-droite-3 .image,
+  .display-col-droite-2 .image,
+  .display-col-droite-4 .image,
+  .display-col-droite-5 .image {
+    width: min(18.75rem, 19.5vw) !important;
+    height: min(15.625rem, 16.3vw) !important;
+  }
+}
