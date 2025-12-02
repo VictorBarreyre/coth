@@ -1114,11 +1114,10 @@ width: 85%;
 }
 
 .sidebar {
-    width: 360px;
-    display: flex
-;
-    flex-direction: column;
-    gap: 40px;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .tab-button:first-child {
@@ -1169,7 +1168,6 @@ width: 85%;
   height: 25px;
   display: flex;
   gap: 20px;
-  display: flex;
   justify-content: space-between;
 }
 
@@ -2374,8 +2372,9 @@ width: 85%;
     flex-direction: column !important;
     gap: 20px !important;
     width: 100% !important;
-
-    padding-bottom: 30px !important;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+    padding: 0 !important;
   }
 
   /* Add padding to child components except top headlines, magazine-subscribe, and live-results */
@@ -2386,20 +2385,6 @@ width: 85%;
   /* Hide newsletter in mobile sidebar */
   .sidebar-mobile-only [data-include="components/newsletter-sidebar.html"] {
     display: none !important;
-  }
-
-  /* Make mobile sidebar components inherit desktop styles */
-  .sidebar-mobile-only {
-    /* This makes all children inherit the same styles as if they were in .sidebar */
-    all: inherit;
-  }
-
-  /* Force specific mobile adaptations */
-  .sidebar-mobile-only {
-    width: 100% !important;
-    margin-bottom: 30px !important;
-    padding: 0 !important;
-    margin-top: 30px !important;
   }
 
   .sidebar-mobile-only>* {

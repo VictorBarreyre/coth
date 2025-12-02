@@ -12,11 +12,6 @@
   --spacing-xl: 3.6875rem; /* 59px */
 }
 
-/* Hide forum-related elements on home page */
-.sidebar-ad-before-forum,
-.sidebar-ad-last {
-  display: none;
-}
 
 /* Main Container */
 .main-container {
@@ -715,9 +710,6 @@ a .article-title {
   text-align: center;
 }
 
-.forum-widget-home-hidden {
-  display: none;
-}
 
 /* Category Featured Sections */
 .category-featured-sections {
@@ -1060,69 +1052,6 @@ a .article-title {
   .featured-article .article-meta {
     margin: 0 !important;
     padding: 0 !important;
-  }
-
-  /* Mobile Ad Banners */
-  .ad-banner,
-  .full-width-ad {
-    width: 100% !important;
-    background: #F9F9F9 !important;
-    position: relative !important;
-    overflow: hidden !important;
-  }
-
-  /* Default height for ads1 */
-  .ad-banner,
-  .full-width-ad {
-    height: 119px !important;
-  }
-
-  /* Specific height for ads2 - 49px */
-  .ad-banner img[src*="ads2"],
-  .full-width-ad img[src*="ads2"] {
-    height: 49px !important;
-    object-fit: cover !important;
-  }
-
-  /* Container height for ads2 - keep grey background */
-  .ad-banner:has(img[src*="ads2"]),
-  .full-width-ad:has(img[src*="ads2"]) {
-    height: 89px !important;
-    background: #F9F9F9 !important;
-  }
-
-  .ad-banner .ad-content,
-  .full-width-ad .ad-content {
-    width: 100% !important;
-    height: 79px !important;
-    position: absolute !important;
-    left: 0 !important;
-    top: 20px !important;
-    background: #ddd !important;
-    margin: 0 !important;
-  }
-
-  /* Ad content for ads2 - centered in grey background */
-  .ad-banner:has(img[src*="ads2"]) .ad-content,
-  .full-width-ad:has(img[src*="ads2"]) .ad-content {
-    height: 49px !important;
-    top: 20px !important;
-    background: none !important;
-  }
-
-
-  /* Add "Advertisement" label in bottom right */
-  .ad-banner::after,
-  .full-width-ad::after {
-    content: "Advertisement" !important;
-    position: absolute !important;
-    right: 15px !important;
-    bottom: 4px !important;
-    color: #848484 !important;
-    font-size: 10px !important;
-    font-family: "Montserrat", Helvetica !important;
-    font-weight: 600 !important;
-    text-align: right !important;
   }
 
   /* Mobile Medium Articles */

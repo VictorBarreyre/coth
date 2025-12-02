@@ -316,52 +316,6 @@
     height: auto;
   }
 
-  .ad-banner {
-    width: 100% !important;
-    background: #F9F9F9 !important;
-    height: 7.4375rem !important; /* 119px */
-    position: relative !important;
-    overflow: hidden !important;
-    margin: 0 !important;
-  }
-
-  .ad-banner .ad-content {
-    width: 100% !important;
-    height: 4.9375rem !important; /* 79px */
-    position: absolute !important;
-    left: 0 !important;
-    top: 1.25rem !important; /* 20px */
-    background: #ddd !important;
-    margin: 0 !important;
-  }
-
-  .ad-banner:has(img[src*="ads2"]) {
-    height: 5.5625rem !important; /* 89px */
-    background: #F9F9F9 !important;
-  }
-
-  .ad-banner:has(img[src*="ads2"]) .ad-content {
-    height: 3.0625rem !important; /* 49px */
-    top: 1.25rem !important; /* 20px */
-    background: none !important;
-  }
-
-  .ad-banner .ad-label {
-    display: none !important;
-  }
-
-  .ad-banner::after {
-    content: "Advertisement" !important;
-    position: absolute !important;
-    right: 0.9375rem !important; /* 15px */
-    bottom: 0.25rem !important; /* 4px */
-    color: #848484 !important;
-    font-size: 0.625rem !important; /* 10px */
-    font-family: "Montserrat", Helvetica !important;
-    font-weight: 600 !important;
-    text-align: right !important;
-  }
-
   .pagination {
     display: none;
   }
