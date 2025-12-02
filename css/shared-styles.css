@@ -890,8 +890,8 @@ width: 85%;
 /* Live Results More Link positioning */
 .live-results .more-link {
   position: absolute;
-  left: min(7.125rem, 5vw);
-  bottom: min(36.25rem, 1vw);
+  left: min(7.125rem);
+  bottom: min(36.25rem, 5vw);
 }
 
 /* Top Headlines Section - SHARED */
@@ -2106,10 +2106,7 @@ width: 85%;
   .live-results .more-link {
     display: flex !important;
     justify-content: center !important;
-    position: relative !important;
-    left: auto !important;
-    bottom: auto !important;
-    margin-top: auto !important;
+
   }
 
   .results-tabs{
