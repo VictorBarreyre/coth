@@ -1336,7 +1336,7 @@ width: 85%;
    =========================================== */
 
 .newsletter-bottom {
-  width: min(75rem, 75vw);
+  width: min(75rem, 87vw);
   height: min(14.375rem, 15vw);
   position: relative;
   background: #0C004F;
