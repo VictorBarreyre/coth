@@ -47,6 +47,25 @@
       margin-top: -1.25rem; /* -20px */
     }
 
+    /* 1440px layout - 2x2 grid */
+    @media (min-width: 1440px) and (max-width: 1599px) {
+      .modals-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 80rem; /* 1280px */
+        gap: 3rem; /* 48px */
+        align-items: start;
+      }
+
+      .modal-container.compact {
+        margin-top: 0;
+      }
+
+      /* Hide the empty space div for better 2x2 layout */
+      .modal-container[style*="visibility: hidden"] {
+        display: none;
+      }
+    }
+
     @media (max-width: 768px) {
       .modal-overlay.show-all {
         align-items: center;
