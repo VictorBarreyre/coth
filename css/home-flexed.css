@@ -700,6 +700,13 @@ a .article-title {
   justify-content: center;
 }
 
+/* Hide specific sidebar elements on home page only */
+.sidebar .sidebar-ad-before-forum,
+.sidebar .forum-widget-home-hidden,
+.sidebar .sidebar-ad-last {
+  display: none !important;
+}
+
 .forum-title {
   color: #0C004F;
   font-size: 2rem;
@@ -1025,8 +1032,16 @@ a .article-title {
     margin-top: 30px;
   }
 
-  .forum-widget  {
-    display: none !important;
+  /* Forum Widget Mobile - Keep main forum widget visible */
+  .forum-widget {
+    width: 100% !important;
+    height: 521px !important;
+    background: #F0F0F0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 20px 0 !important;
   }
 
   .featured-article .article-text-content {
@@ -1265,16 +1280,6 @@ a .article-title {
     display: none !important;
   }
 
-  /* Forum Widget Mobile */
-  .forum-widget {
-    width: 100% !important;
-    height: 521px !important;
-    background: #F0F0F0 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 0 !important;
-  }
 
   .forum-widget .forum-title {
     color: #0C004F !important;
@@ -1459,7 +1464,8 @@ a .article-title {
     margin-top: 30px !important;
   }
 
-  .forum-widget{
+  /* Hide only sidebar forum widget, not main forum widget */
+  .sidebar .forum-widget-home-hidden {
     display: none !important;
   }
 
